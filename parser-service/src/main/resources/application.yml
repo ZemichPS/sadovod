@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: parser-service
+  config:
+    import: optional:configserver:http://localhost:8888, local-config.yml

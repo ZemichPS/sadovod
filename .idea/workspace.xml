@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="86291b75-3256-443f-b698-e6125749b7fe" name="Changes" comment="global refactor" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2cmIYKgyouAwQsqNCnzIK33UYF4" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.preview.features.used": "true",
+    "last_opened_file_path": "E:/JAVA projects/sadovod/vk-service/src/main/java/by/zemich/vkservice/core",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "spring.configuration.checksum": "1d12b87a114001ef1c3aeb7a71bc07cd",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="by.zemich.vkservice.service.impl" />
+      <recent name="by.zemich.gatewayservice.service.impl" />
+      <recent name="by.zemich.supplierservice.core.exception" />
+      <recent name="by.zemich.supplierservice.service.impl" />
+      <recent name="by.zemich.userservice.service.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\JAVA projects\sadovod\vk-service\src\main\java\by\zemich\vkservice\core" />
+      <recent name="E:\JAVA projects\sadovod\authorization-server\src\main\java\by\zemich\authorizationserver" />
+      <recent name="E:\JAVA projects\sadovod\authorization-server\src\main\java\by\zemich\authorizationserver\core" />
+      <recent name="E:\JAVA projects\sadovod\gateway-service\src\main\java\by\zemich\gatewayservice\config" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="by.zemich.supplierservice.application.ports.input" />
+      <recent name="by.zemich.vkservice.application.dto" />
+      <recent name="by.zemich.vkservice.dao.entity" />
+      <recent name="by.zemich.vkservice.config.properties" />
+      <recent name="by.zemich.vkservice.config" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="excludedTypes">
+      <set>
+        <option value="HttpClient.HttpRequestRunConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.VkServiceApplication">
+    <configuration name="GatewayServiceApplication | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/GatewayServiceApplication.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="UserServiceApplication | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/UserServiceApplication.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="AuthorizationServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="authorization-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.authorizationserver.AuthorizationServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.Eureka.server.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.gatewayservice.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="parser-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.parserservice.ParserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.Serverconfig.ServerConfigApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SupplierServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="supplier-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.supplierservice.SupplierServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TelegramServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="telegram-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.telegramservice.TelegramServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.userservice.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ViberServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="viber-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.viberservice.ViberServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VkServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="vk-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.vkservice.VkServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="HTTP Request.GatewayServiceApplication | #1" />
+      <item itemvalue="HTTP Request.UserServiceApplication | #1" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.AuthorizationServerApplication" />
+      <item itemvalue="Spring Boot.ParserServiceApplication" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.ServerConfigApplication" />
+      <item itemvalue="Spring Boot.SupplierServiceApplication" />
+      <item itemvalue="Spring Boot.TelegramServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+      <item itemvalue="Spring Boot.ViberServiceApplication" />
+      <item itemvalue="Spring Boot.VkServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.GatewayServiceApplication | #1" />
+        <item itemvalue="HTTP Request.UserServiceApplication | #1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86291b75-3256-443f-b698-e6125749b7fe" name="Changes" comment="" />
+      <created>1708710375352</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708710375352</updated>
+      <workItem from="1708710377192" duration="6595000" />
+      <workItem from="1708722611738" duration="373000" />
+      <workItem from="1708753940226" duration="7752000" />
+      <workItem from="1708804553927" duration="3189000" />
+      <workItem from="1708949352991" duration="12534000" />
+      <workItem from="1708965760244" duration="5381000" />
+      <workItem from="1708975740558" duration="911000" />
+      <workItem from="1708977300438" duration="9102000" />
+      <workItem from="1709020759722" duration="1271000" />
+      <workItem from="1709023635880" duration="611000" />
+      <workItem from="1709034498106" duration="5637000" />
+      <workItem from="1709045727775" duration="3950000" />
+      <workItem from="1709051825330" duration="11353000" />
+      <workItem from="1709223004161" duration="1806000" />
+      <workItem from="1709282397733" duration="36373000" />
+      <workItem from="1709835159426" duration="821000" />
+      <workItem from="1710101033346" duration="17000" />
+      <workItem from="1710525880064" duration="1931000" />
+      <workItem from="1710528125908" duration="6413000" />
+      <workItem from="1710575524461" duration="1104000" />
+      <workItem from="1710860036697" duration="22000" />
+      <workItem from="1710860068335" duration="2118000" />
+      <workItem from="1710862199847" duration="179000" />
+      <workItem from="1710862422598" duration="300000" />
+      <workItem from="1710869965612" duration="130000" />
+      <workItem from="1710878734856" duration="808000" />
+      <workItem from="1710879583371" duration="21000" />
+      <workItem from="1711392783539" duration="1986000" />
+      <workItem from="1712363515840" duration="739000" />
+      <workItem from="1712411349494" duration="28115000" />
+    </task>
+    <task id="LOCAL-00001" summary="something">
+      <created>1709055815548</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709055815548</updated>
+    </task>
+    <task id="LOCAL-00002" summary="something">
+      <created>1709064278248</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709064278248</updated>
+    </task>
+    <task id="LOCAL-00003" summary="something">
+      <created>1710879502437</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710879502437</updated>
+    </task>
+    <task id="LOCAL-00004" summary="global refactor">
+      <created>1712442683912</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712442683912</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="something" />
+    <MESSAGE value="global refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="global refactor" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/service/impl/AuthWebServiceImpl.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authorization-server/src/main/java/by/zemich/authorizationserver/service/impl/RemoteUserDetailsManager.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
