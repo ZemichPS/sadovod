@@ -7,8 +7,7 @@ import java.util.UUID;
 
 public interface SupplierServicePort {
     Supplier save(Supplier newSupplier);
-
-    Supplier update(UUID supplierUuid, Supplier updateSupplier);
+    Supplier update(UUID supplierUuid, Supplier fromRequestSupplier);
     List<Supplier> getAll();
     Supplier getByUuid(UUID supplierUuid);
     Supplier getByName(String supplierName);

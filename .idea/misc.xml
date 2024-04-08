@@ -15,7 +15,6 @@
         <option value="$PROJECT_DIR$/gateway-service/pom.xml" />
         <option value="$PROJECT_DIR$/supplier-service/pom.xml" />
         <option value="$PROJECT_DIR$/telegram-service/pom.xml" />
-        <option value="$PROJECT_DIR$/authorization-server/pom.xml" />
       </list>
     </option>
   </component>

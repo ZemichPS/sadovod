@@ -7,16 +7,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="vk-service" />
         <module name="supplier-service" />
+        <module name="vk-service" />
         <module name="config-server" />
         <module name="telegram-service" />
-        <module name="authorization-server" />
-        <module name="parser-service" />
         <module name="gateway-service" />
+        <module name="parser-service" />
         <module name="user-service" />
-        <module name="eureka-server" />
         <module name="viber-service" />
+        <module name="eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

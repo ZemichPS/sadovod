@@ -25,10 +25,11 @@ public class SupplierEntity {
     private String vkLink;
     private String address;
     private String phone;
+    @Enumerated(EnumType.STRING)
     private Specialization specialization;
 
     public enum Specialization{
-        DRESS, OTHER
+        DRESS, OTHER, WOMEN_CLOTHES
     }
 
     public SupplierEntity() {

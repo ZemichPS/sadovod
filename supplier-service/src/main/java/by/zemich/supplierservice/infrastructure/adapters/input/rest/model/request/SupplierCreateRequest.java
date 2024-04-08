@@ -13,7 +13,7 @@ public class SupplierCreateRequest {
     private String name;
     @NotBlank(message = "Field vk id cannot be empty")
     private String vkId;
-    @NotBlank(message = "Field vk id cannot be empty")
+    @NotBlank(message = "Field link on page cannot be empty")
     private String vkLink;
     @NotBlank(message = "Field address cannot be empty")
     private String address;

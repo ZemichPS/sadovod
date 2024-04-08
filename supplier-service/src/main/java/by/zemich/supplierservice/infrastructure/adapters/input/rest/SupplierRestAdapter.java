@@ -36,7 +36,7 @@ public class SupplierRestAdapter {
         return ResponseEntity.ok(mapper.map(supplier, SupplierResponse.class));
     }
 
-    @PostMapping("/v1/api/")
+    @PostMapping("/v1/api")
     public ResponseEntity<SupplierResponse> create(@Valid @RequestBody SupplierCreateRequest createRequest) {
         Supplier newSupplier = mapper.map(createRequest, Supplier.class);
         supplierServicePort.save(newSupplier);

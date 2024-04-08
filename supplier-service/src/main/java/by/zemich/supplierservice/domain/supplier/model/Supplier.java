@@ -24,6 +24,6 @@ public class Supplier {
     private Specialization specialization;
 
     public enum Specialization{
-        DRESS, OTHER
+        DRESS, OTHER, WOMEN_CLOTHES
     }
 }

@@ -10,17 +10,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RouteConfig {
     @Bean
-    public RouteLocator routes(RouteLocatorBuilder builder) {
-        return builder
-                .routes()
-                .route("supplier-service", route -> route
-                        .path("/api/suppliers/all")
-                     //   .filters(GatewayFilterSpec::tokenRelay)
-                        .uri("lb://SUPPLIER-SERVICE"))
+    RouteLocator gateway(RouteLocatorBuilder locatorBuilder) {
 
+        return locatorBuilder.routes()
+                .route("supplier", r-> r.path("/supplier/**").uri("lb://SUPPLIER-SERVICE"))
                 .build();
-
     }
-
 
 }
