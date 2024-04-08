@@ -4,63 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86291b75-3256-443f-b698-e6125749b7fe" name="Changes" comment="global refactor">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_32_1_3_jre.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_nimbus_jose_jwt_9_37_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_registry_prometheus_1_12_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_minio_minio_8_5_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_prometheus_simpleclient_0_16_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_prometheus_simpleclient_common_0_16_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_prometheus_simpleclient_tracer_common_0_16_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_prometheus_simpleclient_tracer_otel_0_16_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_prometheus_simpleclient_tracer_otel_agent_0_16_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_24_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk18on_1_76.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_oauth2_authorization_server_3_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_3_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_authorization_server_1_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="86291b75-3256-443f-b698-e6125749b7fe" name="Changes" comment="add security">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/by/zemich/authorizationserver/AuthorizationServerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/by/zemich/authorizationserver/config/PasswordEncodingConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/by/zemich/authorizationserver/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/by/zemich/authorizationserver/config/UserAuthenticationProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/by/zemich/authorizationserver/core/model/AuthRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/by/zemich/authorizationserver/core/model/AuthResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/by/zemich/authorizationserver/core/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/by/zemich/authorizationserver/core/model/UserCreateDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/by/zemich/authorizationserver/core/model/enums/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/by/zemich/authorizationserver/core/model/enums/Status.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/by/zemich/authorizationserver/service/api/FeignClientUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/by/zemich/authorizationserver/service/impl/RemoteUserDetailsManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/test/java/by/zemich/authorizationserver/AuthorizationServerApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/RouteConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/RouteConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/application/ports/input/SupplierServicePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/application/ports/input/SupplierServicePort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/application/service/SupplierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/application/service/SupplierService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/domain/supplier/exception/SupplierNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/domain/supplier/exception/SupplierNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/domain/supplier/model/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/domain/supplier/model/Supplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/input/rest/SupplierRestAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/input/rest/SupplierRestAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/input/rest/model/request/SupplierCreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/input/rest/model/request/SupplierCreateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/output/postgresql/SupplierPersistenceAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/output/postgresql/SupplierPersistenceAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/output/postgresql/entity/SupplierEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/output/postgresql/entity/SupplierEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/application/ports/output/PostAsynchronousTransferPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/application/ports/output/PostAsynchronousTransferPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/adapters/output/kafka/KafkaProducerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/adapters/output/kafka/KafkaProducerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/config/KafkaConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,30 +39,30 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.preview.features.used": "true",
-    "last_opened_file_path": "E:/JAVA projects/sadovod/vk-service/src/main/java/by/zemich/vkservice/core",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
-    "spring.configuration.checksum": "1a12aa587e80f99defb63f174a254916",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/JAVA projects/sadovod/vk-service/src/main/java/by/zemich/vkservice/core&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;06f47184f6110c6393cf9c13220e0c12&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -160,19 +106,6 @@
     </configuration>
     <configuration name="UserServiceApplication | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/UserServiceApplication.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="sadovod" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="sadovod" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="eureka-server" />
@@ -298,7 +231,8 @@
       <workItem from="1712469543828" duration="715000" />
       <workItem from="1712470443482" duration="6701000" />
       <workItem from="1712502405933" duration="10060000" />
-      <workItem from="1712515452271" duration="17935000" />
+      <workItem from="1712515452271" duration="18369000" />
+      <workItem from="1712555404974" duration="1553000" />
     </task>
     <task id="LOCAL-00001" summary="something">
       <created>1709055815548</created>
@@ -328,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712442683912</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add security">
+      <created>1712537851708</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712537851708</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +301,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="something" />
     <MESSAGE value="global refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="global refactor" />
+    <MESSAGE value="add security" />
+    <option name="LAST_COMMIT_MESSAGE" value="add security" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
