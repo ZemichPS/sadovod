@@ -22,14 +22,23 @@ spring:
       auto-commit: true
     url: jdbc:postgresql://localhost:5432/vk-service
 
+
+
   # kafka config
   kafka:
     bootstrap-servers: localhost:9092
+
 
   # cloud config
   cloud:
     discovery:
       enabled: true
+    stream:
+      bindings:
+        output:
+          destination: vkmsevent
+
+
 
   # eureka config
 eureka:

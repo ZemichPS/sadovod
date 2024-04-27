@@ -4,9 +4,97 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86291b75-3256-443f-b698-e6125749b7fe" name="Changes" comment="add security">
+    <list default="true" id="0e389683-0101-48ea-9bad-2d2898598800" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_esotericsoftware_kryo_shaded_3_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_esotericsoftware_minlog_1_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_minio_minio_8_5_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_jodah_typetools_0_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_function_context_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_function_core_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_stream_kafka_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_2_1_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_binder_kafka_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_binder_kafka_core_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_test_support_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_core_6_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_jmx_6_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_kafka_6_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_test_6_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_test_support_6_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_tuple_1_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_kafka_spring_kafka_3_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tuple_1_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/ClientBeans.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/OAuthClientHttpRequestInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/shareddomain/events/VkPostCreatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/shareddomain/events/VkPostCreatedEventData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/VkApplicationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/commandservices/VkPostCommandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/outboundservices/VkPostEventPublisherService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/outboundservices/alc/ExternalVKService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/outboundservices/alc/model/VKPostQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/queryservices/VkPostQueryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/aggregates/VkPost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/aggregates/VkPostId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/commands/CreateVkPostCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/entities/FullPost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/entities/Supplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/exception/VkPostNotFountException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/adapters/brokers/kafka/VkPostSavedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/adapters/brokers/kafka/VkPostSavedEventData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/adapters/brokers/kafka/VkServiceEventSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/adapters/repositories/VkPostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-02-26T222414.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_minio_minio_8_5_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk18on_1_77.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk18on_1_78.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/input/rest/GlobalControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/interfaces/rest/GlobalControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/input/rest/SupplierRestAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/interfaces/rest/SupplierRestAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/input/rest/model/request/SupplierCreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/interfaces/rest/model/request/SupplierCreateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/input/rest/model/response/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/interfaces/rest/model/response/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/input/rest/model/response/SupplierResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/interfaces/rest/model/response/SupplierResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/output/postgresql/SupplierPersistenceAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/repositories/jpa/SupplierPersistenceAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/output/postgresql/entity/SupplierEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/repositories/jpa/entity/SupplierEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/output/postgresql/repository/SupplierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/adapters/repositories/jpa/repository/SupplierRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/VkServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/VkServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/application/model/VKPostQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/application/model/VkPostDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/application/ports/input/SupplierInputPort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/application/ports/input/VKServicePort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/application/ports/output/PostAsynchronousTransferPort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/application/ports/output/PostPersistencePort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/application/service/VkService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/domain/exception/VkPostNotFountException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/domain/model/supplier/Supplier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/domain/model/supplier/SupplierType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/domain/model/vkpost/VkPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/vkpost/VkPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/adapters/input/api/vk/VkApiAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/adapters/input/rest/openfeign/SupplierFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/outboundservices/alc/ExternalSupplierFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/adapters/output/kafka/KafkaProducerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/adapters/eventhandlers/kafka/KafkaProducerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/adapters/output/postgresql/VKPostPersistenceAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/adapters/output/postgresql/entity/VkPostEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/adapters/output/postgresql/repository/VkPostRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/config/CommonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/config/CommonConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/config/KafkaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/config/ModelMapperConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/config/ModelMapperConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/config/VkApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/config/VkApiConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkservice/infrastructure/config/properties/VkApiProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/config/properties/VkApiProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/test/java/by/zemich/vkservice/VkServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/test/java/by/zemich/vkms/VkApplicationServiceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,13 +105,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jrt://C:/Users/comps/.jdks/corretto-17.0.6!/java.base/java/lang/Integer.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/3.2.3/spring-data-commons-3.2.3.jar!/org/springframework/data/repository/CrudRepository.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -35,7 +123,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2cmIYKgyouAwQsqNCnzIK33UYF4" />
+  <component name="ProjectId" id="2eqAgIsGHmvZx1w2FoBhPXoqoEB" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -49,8 +137,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/JAVA projects/sadovod/vk-service/src/main/java/by/zemich/vkservice/core&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/JAVA projects/sadovod&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -58,34 +146,23 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;06f47184f6110c6393cf9c13220e0c12&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;138082271332f0d4a6464cde1d9a6821&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="ReactorSettings">
-    <option name="notificationShown" value="true" />
-  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="by.zemich.vkservice.service.impl" />
-      <recent name="by.zemich.gatewayservice.service.impl" />
-      <recent name="by.zemich.supplierservice.core.exception" />
-      <recent name="by.zemich.supplierservice.service.impl" />
-      <recent name="by.zemich.userservice.service.impl" />
+      <recent name="by.zemich.vkms.infrastructure.adapters.brokers.kafka" />
+      <recent name="by.zemich.vkms.domain.model.commands" />
+      <recent name="by.zemich.vkms.domain.model.entities" />
+      <recent name="by.zemich.vkms.domain.model.aggregates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\JAVA projects\sadovod\vk-service\src\main\java\by\zemich\vkservice\core" />
-      <recent name="E:\JAVA projects\sadovod\authorization-server\src\main\java\by\zemich\authorizationserver" />
-      <recent name="E:\JAVA projects\sadovod\authorization-server\src\main\java\by\zemich\authorizationserver\core" />
-      <recent name="E:\JAVA projects\sadovod\gateway-service\src\main\java\by\zemich\gatewayservice\config" />
+      <recent name="E:\JAVA projects\sadovod" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="by.zemich.supplierservice.application.ports.input" />
-      <recent name="by.zemich.vkservice.application.dto" />
-      <recent name="by.zemich.vkservice.dao.entity" />
-      <recent name="by.zemich.vkservice.config.properties" />
-      <recent name="by.zemich.vkservice.config" />
+      <recent name="by.zemich.vkms.application.outboundservices.alc" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -94,19 +171,8 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="excludedTypes">
-      <set>
-        <option value="HttpClient.HttpRequestRunConfigurationType" />
-      </set>
-    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.GatewayServiceApplication">
-    <configuration name="GatewayServiceApplication | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/GatewayServiceApplication.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="UserServiceApplication | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/UserServiceApplication.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="eureka-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.Eureka.server.EurekaServerApplication" />
@@ -115,6 +181,8 @@
       </method>
     </configuration>
     <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="gateway-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.gatewayservice.GatewayServiceApplication" />
       <method v="2">
@@ -165,111 +233,37 @@
     </configuration>
     <configuration name="VkServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="vk-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.vkservice.VkServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.vkms.VkServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="HTTP Request.GatewayServiceApplication | #1" />
-      <item itemvalue="HTTP Request.UserServiceApplication | #1" />
-      <item itemvalue="Spring Boot.GatewayServiceApplication" />
-      <item itemvalue="Spring Boot.ParserServiceApplication" />
-      <item itemvalue="Spring Boot.EurekaServerApplication" />
-      <item itemvalue="Spring Boot.ServerConfigApplication" />
-      <item itemvalue="Spring Boot.SupplierServiceApplication" />
-      <item itemvalue="Spring Boot.TelegramServiceApplication" />
-      <item itemvalue="Spring Boot.UserServiceApplication" />
-      <item itemvalue="Spring Boot.ViberServiceApplication" />
-      <item itemvalue="Spring Boot.VkServiceApplication" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="HTTP Request.GatewayServiceApplication | #1" />
-        <item itemvalue="HTTP Request.UserServiceApplication | #1" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="86291b75-3256-443f-b698-e6125749b7fe" name="Changes" comment="" />
-      <created>1708710375352</created>
+      <changelist id="0e389683-0101-48ea-9bad-2d2898598800" name="Changes" comment="" />
+      <created>1712621845202</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1708710375352</updated>
-      <workItem from="1708710377192" duration="6595000" />
-      <workItem from="1708722611738" duration="373000" />
-      <workItem from="1708753940226" duration="7752000" />
-      <workItem from="1708804553927" duration="3189000" />
-      <workItem from="1708949352991" duration="12534000" />
-      <workItem from="1708965760244" duration="5381000" />
-      <workItem from="1708975740558" duration="911000" />
-      <workItem from="1708977300438" duration="9102000" />
-      <workItem from="1709020759722" duration="1271000" />
-      <workItem from="1709023635880" duration="611000" />
-      <workItem from="1709034498106" duration="5637000" />
-      <workItem from="1709045727775" duration="3950000" />
-      <workItem from="1709051825330" duration="11353000" />
-      <workItem from="1709223004161" duration="1806000" />
-      <workItem from="1709282397733" duration="36373000" />
-      <workItem from="1709835159426" duration="821000" />
-      <workItem from="1710101033346" duration="17000" />
-      <workItem from="1710525880064" duration="1931000" />
-      <workItem from="1710528125908" duration="6413000" />
-      <workItem from="1710575524461" duration="1104000" />
-      <workItem from="1710860036697" duration="22000" />
-      <workItem from="1710860068335" duration="2118000" />
-      <workItem from="1710862199847" duration="179000" />
-      <workItem from="1710862422598" duration="300000" />
-      <workItem from="1710869965612" duration="130000" />
-      <workItem from="1710878734856" duration="808000" />
-      <workItem from="1710879583371" duration="21000" />
-      <workItem from="1711392783539" duration="1986000" />
-      <workItem from="1712363515840" duration="739000" />
-      <workItem from="1712411349494" duration="28115000" />
-      <workItem from="1712469543828" duration="715000" />
-      <workItem from="1712470443482" duration="6701000" />
-      <workItem from="1712502405933" duration="10060000" />
-      <workItem from="1712515452271" duration="18369000" />
-      <workItem from="1712555404974" duration="1553000" />
+      <updated>1712621845202</updated>
+      <workItem from="1712621846664" duration="45000" />
+      <workItem from="1712621913133" duration="118000" />
+      <workItem from="1712939110854" duration="7839000" />
+      <workItem from="1713188995723" duration="11000" />
+      <workItem from="1713362843563" duration="23052000" />
+      <workItem from="1713641652593" duration="599000" />
+      <workItem from="1713903831734" duration="36000" />
+      <workItem from="1713974241625" duration="14545000" />
+      <workItem from="1714135221071" duration="4541000" />
+      <workItem from="1714170439852" duration="921000" />
+      <workItem from="1714223366585" duration="17000" />
+      <workItem from="1714228073848" duration="1687000" />
+      <workItem from="1714229773289" duration="5421000" />
     </task>
-    <task id="LOCAL-00001" summary="something">
-      <created>1709055815548</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1709055815548</updated>
-    </task>
-    <task id="LOCAL-00002" summary="something">
-      <created>1709064278248</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1709064278248</updated>
-    </task>
-    <task id="LOCAL-00003" summary="something">
-      <created>1710879502437</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1710879502437</updated>
-    </task>
-    <task id="LOCAL-00004" summary="global refactor">
-      <created>1712442683912</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1712442683912</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add security">
-      <created>1712537851708</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1712537851708</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,31 +291,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="something" />
-    <MESSAGE value="global refactor" />
-    <MESSAGE value="add security" />
-    <option name="LAST_COMMIT_MESSAGE" value="add security" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/service/impl/AuthWebServiceImpl.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authorization-server/src/main/java/by/zemich/authorizationserver/service/impl/RemoteUserDetailsManager.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

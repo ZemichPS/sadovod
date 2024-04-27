@@ -8,8 +8,8 @@
 		<version>3.2.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>by.zemich</groupId>
-	<artifactId>supplier-service</artifactId>
+	<groupId>by.zemich.sadovod</groupId>
+	<artifactId>suppliersms</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>supplier-service</name>
 	<description>sipplier micro service</description>

@@ -33,9 +33,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.
                 authorizeHttpRequests(
-                        request -> request.requestMatchers(HttpMethod.GET, "/supplier/**").hasAuthority("view_suppliers")
-                                .requestMatchers(HttpMethod.POST, "/supplier/**").hasAuthority("add_supplier")
-                                .anyRequest().authenticated()
+                       authorized-> authorized.anyRequest().authenticated()
                 )
                 // some comment
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()))

@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/user-service/user-service.iml" filepath="$PROJECT_DIR$/user-service/user-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/viber-service/viber-service.iml" filepath="$PROJECT_DIR$/viber-service/viber-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/vk-service/vk-service.iml" filepath="$PROJECT_DIR$/vk-service/vk-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vk-service-new.iml" filepath="$PROJECT_DIR$/vk-service-new.iml" />
     </modules>
   </component>
 </project>

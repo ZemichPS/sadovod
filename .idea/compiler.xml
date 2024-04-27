@@ -7,19 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="supplier-service" />
         <module name="vk-service" />
+        <module name="supplier-service" />
         <module name="config-server" />
         <module name="telegram-service" />
-        <module name="gateway-service" />
         <module name="parser-service" />
+        <module name="gateway-service" />
         <module name="user-service" />
-        <module name="viber-service" />
         <module name="eureka-server" />
+        <module name="viber-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="authorization-server" target="17" />
       <module name="config-server" target="17" />
       <module name="eureka-server" target="17" />
       <module name="gateway-service" target="19" />
@@ -29,11 +28,11 @@
       <module name="user-service" target="17" />
       <module name="viber-service" target="17" />
       <module name="vk-service" target="17" />
+      <module name="vk-service-new" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="authorization-server" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="gateway-service" options="-parameters" />
