@@ -4,6 +4,6 @@ import org.springframework.cloud.stream.annotation.Output;
 import org.springframework.messaging.MessageChannel;
 
 public interface VkServiceEventSource {
-    @Output("vkPostChannel")
+    @Output("vkPostMainChannel")
     MessageChannel sadovodVkService();
 }
