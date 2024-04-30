@@ -1,17 +1,6 @@
-package by.zemich.shareddomain.events;
+package by.zemich.vkms.infrastructure.adapters.brokers.kafka;
 
-public class VkPostCreatedEvent {
-    private VkPostCreatedEventData vkPostCreatedEventData;
+import by.zemich.shareddomain.events.VkPostCreatedEventData;
+import by.zemich.vkms.domain.model.aggregates.VkPost;
 
-    public VkPostCreatedEvent(VkPostCreatedEventData vkPostCreatedEventData) {
-        this.vkPostCreatedEventData = vkPostCreatedEventData;
-    }
-
-    public VkPostCreatedEventData getVkPostCreatedEventData() {
-        return vkPostCreatedEventData;
-    }
-
-    public void setVkPostCreatedEventData(VkPostCreatedEventData vkPostCreatedEventData) {
-        this.vkPostCreatedEventData = vkPostCreatedEventData;
-    }
-}
+public record VkPostSavedEvent(VkPostUuid uuid, VkPostId vkPostId, VkPostData vkPostData){};
