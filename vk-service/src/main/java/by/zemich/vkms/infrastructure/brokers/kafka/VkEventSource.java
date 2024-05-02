@@ -1,9 +1,9 @@
-package by.zemich.vkms.infrastructure.adapters.brokers.kafka;
+package by.zemich.vkms.infrastructure.brokers.kafka;
 
 import org.springframework.cloud.stream.annotation.Output;
 import org.springframework.messaging.MessageChannel;
 
-public interface VkServiceEventSource {
+public interface VkEventSource {
     @Output("vkPostChannel")
-    MessageChannel sadovodVkService();
+    MessageChannel output();
 }

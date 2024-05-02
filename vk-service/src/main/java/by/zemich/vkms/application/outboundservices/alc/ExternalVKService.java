@@ -8,7 +8,10 @@ import com.vk.api.sdk.exceptions.ClientException;
 import com.vk.api.sdk.objects.wall.GetFilter;
 import com.vk.api.sdk.objects.wall.responses.GetResponse;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
 @Slf4j
+@Service
 public class ExternalVKService {
     private final VkApiClient vkApiClient;
     private final com.vk.api.sdk.client.actors.UserActor userActor;
@@ -32,7 +35,7 @@ public class ExternalVKService {
     private GetResponse getVkPostResponse(VKPostQuery query) throws ClientException, ApiException {
 
         return vkApiClient.wall().get(userActor)
-                .domain(query.getSupplier().getVkId())
+                .domain(query.getSupplierVkId())
                 .count(query.getCount())
                 .offset(query.getOffset())
                 .filter(GetFilter.valueOf("OWNER"))

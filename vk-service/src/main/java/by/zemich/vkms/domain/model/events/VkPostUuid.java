@@ -1,4 +1,4 @@
-package by.zemich.vkms.infrastructure.adapters.brokers.kafka;
+package by.zemich.vkms.domain.model.events;
 
 import java.util.UUID;
 

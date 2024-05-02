@@ -1,21 +1,21 @@
 package by.zemich.vkms.application.outboundservices.alc.model;
 
-import by.zemich.vkms.domain.model.entities.Supplier;
-
 public class VKPostQuery {
     private Integer interval;
     private Integer count;
     private Integer offset;
-    private Supplier supplier;
+    private String supplierVkId;
 
-    public VKPostQuery(Integer interval, Integer count, Integer offset, Supplier supplier) {
+
+
+    public VKPostQuery() {
+    }
+
+    public VKPostQuery(Integer interval, Integer count, Integer offset, String supplierVkId) {
         this.interval = interval;
         this.count = count;
         this.offset = offset;
-        this.supplier = supplier;
-    }
-
-    public VKPostQuery() {
+        this.supplierVkId = supplierVkId;
     }
 
     public Integer getInterval() {
@@ -45,12 +45,13 @@ public class VKPostQuery {
         return this;
     }
 
-    public Supplier getSupplier() {
-        return supplier;
+    public String getSupplierVkId() {
+        return supplierVkId;
+
     }
 
-    public VKPostQuery setSupplier(Supplier supplier) {
-        this.supplier = supplier;
+    public VKPostQuery setSupplierVkId(String supplierVkId) {
+        this.supplierVkId = supplierVkId;
         return this;
     }
 }

@@ -18,7 +18,6 @@ public class SupplierService implements SupplierServicePort {
 
     private final SupplierPersistencePort supplierPersistencePort;
 
-
     public SupplierService(SupplierPersistencePort supplierPersistencePort) {
         this.supplierPersistencePort = supplierPersistencePort;
     }

@@ -1,4 +1,4 @@
-package by.zemich.vkms.infrastructure.adapters.repositories;
+package by.zemich.vkms.infrastructure.repositories.jpa;
 
 import by.zemich.vkms.domain.model.aggregates.VkPost;
 import org.springframework.data.repository.CrudRepository;
@@ -13,6 +13,5 @@ public interface VkPostRepository extends CrudRepository<VkPost, UUID> {
     List<VkPost> findAll();
     Optional<VkPost> findByVkPostId(Integer postId);
     boolean existsByVkPostId(Integer postId);
-
 
 }

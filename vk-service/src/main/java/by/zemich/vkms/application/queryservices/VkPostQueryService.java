@@ -1,11 +1,9 @@
 package by.zemich.vkms.application.queryservices;
 
-import by.zemich.vkms.application.outboundservices.alc.ExternalSupplierFeignClient;
 import by.zemich.vkms.domain.model.aggregates.VkPost;
 import by.zemich.vkms.domain.model.aggregates.VkPostId;
-import by.zemich.vkms.domain.model.entities.Supplier;
 import by.zemich.vkms.domain.model.exception.VkPostNotFountException;
-import by.zemich.vkms.infrastructure.adapters.repositories.VkPostRepository;
+import by.zemich.vkms.infrastructure.repositories.jpa.VkPostRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,10 +12,8 @@ import java.util.UUID;
 @Service
 public class VkPostQueryService {
     private final VkPostRepository repository;
-    private final ExternalSupplierFeignClient supplierFeignClient;
-    public VkPostQueryService(VkPostRepository repository, ExternalSupplierFeignClient supplierFeignClient) {
+    public VkPostQueryService(VkPostRepository repository) {
         this.repository = repository;
-        this.supplierFeignClient = supplierFeignClient;
     }
 
     public List<VkPost> findAll() {
@@ -34,7 +30,7 @@ public class VkPostQueryService {
         return repository.findById(uuid).orElseThrow(VkPostNotFountException::new);
     }
 
-    public VkPost findByPosTId(Integer postId) {
+    public VkPost findByPostId(Integer postId) {
         return repository.findByVkPostId(postId).orElseThrow(VkPostNotFountException::new);
     }
 
@@ -42,7 +38,5 @@ public class VkPostQueryService {
         return repository.existsByVkPostId(postId);
     }
 
-    public List<Supplier> getSuppliers(){
-        return supplierFeignClient.getAll();
-    }
+
 }

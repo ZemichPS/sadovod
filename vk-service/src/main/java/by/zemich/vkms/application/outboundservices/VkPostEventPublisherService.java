@@ -1,31 +1,29 @@
 package by.zemich.vkms.application.outboundservices;
 
-import by.zemich.vkms.domain.model.vkpost.VkPost;
-import by.zemich.vkms.infrastructure.adapters.brokers.kafka.VkPostSavedEvent;
-import by.zemich.vkms.infrastructure.adapters.brokers.kafka.VkServiceEventSource;
+import by.zemich.vkms.domain.model.events.VkPostCreatedEvent;
+import by.zemich.vkms.infrastructure.brokers.kafka.VkEventSource;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.event.EventListener;
+import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
-import org.springframework.cloud.stream.annotation.*;
 import org.springframework.transaction.event.TransactionalEventListener;
 
 
 @Service
-@EnableBinding(VkPost.class)
 @Slf4j
+@EnableBinding(VkEventSource.class)
 public class VkPostEventPublisherService {
-    private final VkServiceEventSource vkServiceEventSource;
+    private final VkEventSource vkEventSource;
 
-    public VkPostEventPublisherService(VkServiceEventSource vkServiceEventSource) {
-        this.vkServiceEventSource = vkServiceEventSource;
+    public VkPostEventPublisherService(VkEventSource vkEventSource) {
+        this.vkEventSource = vkEventSource;
     }
 
     @TransactionalEventListener
-    public void handleVkPostSavedEvent(VkPostSavedEvent vkPostSavedEvent) {
+    public void handleVkPostSavedEvent(VkPostCreatedEvent vkPostCreatedEvent) {
         try {
-            vkServiceEventSource.sadovodVkService().send(
-                    MessageBuilder.withPayload(vkPostSavedEvent).build());
+            vkEventSource.output().send(
+                    MessageBuilder.withPayload(vkPostCreatedEvent).build());
         } catch (Exception exception) {
             log.error(exception.getMessage());
         }

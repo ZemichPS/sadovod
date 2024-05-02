@@ -7,7 +7,7 @@ import java.util.Objects;
 @Embeddable
 public class VkPostId {
     @Column(name = "vk_post_id")
-    private Integer id;
+    private Integer vkPostId;
 
     @Column(name = "owner_id")
     private Integer ownerId;
@@ -15,17 +15,17 @@ public class VkPostId {
     public VkPostId() {
     }
 
-    public VkPostId(Integer id, Integer ownerId) {
-        this.id = id;
+    public VkPostId(Integer vkPostId, Integer ownerId) {
+        this.vkPostId = vkPostId;
         this.ownerId = ownerId;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getVkPostId() {
+        return vkPostId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setVkPostId(Integer vkPostId) {
+        this.vkPostId = vkPostId;
     }
 
     public Integer getOwnerId() {
@@ -41,11 +41,11 @@ public class VkPostId {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         VkPostId vkPostId = (VkPostId) o;
-        return Objects.equals(id, vkPostId.id) && Objects.equals(ownerId, vkPostId.ownerId);
+        return Objects.equals(vkPostId, vkPostId.vkPostId) && Objects.equals(ownerId, vkPostId.ownerId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, ownerId);
+        return Objects.hash(vkPostId, ownerId);
     }
 }

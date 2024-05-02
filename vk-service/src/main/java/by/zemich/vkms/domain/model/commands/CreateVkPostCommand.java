@@ -1,44 +1,40 @@
 package by.zemich.vkms.domain.model.commands;
 
-import by.zemich.vkms.domain.model.entities.Supplier;
+import by.zemich.vkms.domain.model.entities.UUid;
 
 import java.net.URI;
-import java.net.URL;
 import java.time.LocalDateTime;
 import java.util.List;
 
 
 public class CreateVkPostCommand {
-    private Supplier supplier;
+    private UUid supplierUuid;
     private Integer postId;
     private Integer ownerId;
     private List<URI> imagesLinkList;
     private String postText;
-    private URL postLink;
-
     private LocalDateTime publishedAt;
 
 
-    public CreateVkPostCommand(Supplier supplier,
+    public CreateVkPostCommand(UUid supplierUuid,
                                Integer postId,
                                Integer ownerId,
                                List<URI> imagesLinkList,
                                String postText,
-                               URL postLink, LocalDateTime publishDate) {
-        this.supplier = supplier;
+                               LocalDateTime publishDate) {
+        this.supplierUuid = supplierUuid;
         this.postId = postId;
         this.ownerId = ownerId;
         this.imagesLinkList = imagesLinkList;
         this.postText = postText;
-        this.postLink = postLink;
         this.publishedAt = publishDate;
     }
 
     public CreateVkPostCommand() {
     }
 
-    public Supplier getSupplier() {
-        return supplier;
+    public UUid getSupplier() {
+        return supplierUuid;
     }
 
     public Integer getPostId() {
@@ -57,12 +53,8 @@ public class CreateVkPostCommand {
         return postText;
     }
 
-    public URL getPostLink() {
-        return postLink;
-    }
-
-    public CreateVkPostCommand setSupplier(Supplier supplier) {
-        this.supplier = supplier;
+    public CreateVkPostCommand setSupplierUuid(UUid supplierUuid) {
+        this.supplierUuid = supplierUuid;
         return this;
     }
 
@@ -83,11 +75,6 @@ public class CreateVkPostCommand {
 
     public CreateVkPostCommand setPostText(String postText) {
         this.postText = postText;
-        return this;
-    }
-
-    public CreateVkPostCommand setPostLink(URL postLink) {
-        this.postLink = postLink;
         return this;
     }
 

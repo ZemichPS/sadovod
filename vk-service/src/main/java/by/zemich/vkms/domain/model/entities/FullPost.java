@@ -4,28 +4,28 @@ import jakarta.persistence.CollectionTable;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
-import lombok.Data;
 
 import java.net.URI;
-import java.net.URL;
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Embeddable
 public class FullPost {
+//    @CollectionTable(name = "full_post_links",
+//            joinColumns = @JoinColumn(name = "url_id"))
+    @ElementCollection
     private List<URI> imagesLinkList;
-    private LocalDateTime date;
+    private LocalDateTime publishedAt;
     private String text;
-    private URL link;
+
 
     public FullPost() {
     }
 
-    public FullPost(List<URI> imagesLinkList, LocalDateTime date, String text, URL link) {
+    public FullPost(List<URI> imagesLinkList, LocalDateTime publishedAt, String text) {
         this.imagesLinkList = imagesLinkList;
-        this.date = date;
+        this.publishedAt = publishedAt;
         this.text = text;
-        this.link = link;
     }
 
     public FullPost setImagesLinkList(List<URI> imagesLinkList) {
@@ -33,8 +33,8 @@ public class FullPost {
         return this;
     }
 
-    public FullPost setDate(LocalDateTime date) {
-        this.date = date;
+    public FullPost setPublishedAt(LocalDateTime date) {
+        this.publishedAt = date;
         return this;
     }
 
@@ -43,27 +43,18 @@ public class FullPost {
         return this;
     }
 
-    public FullPost setLink(URL link) {
-        this.link = link;
-        return this;
-    }
 
-    @ElementCollection
-    @CollectionTable(name = "full_post_links",
-            joinColumns = @JoinColumn(name = "url_id"))
     public List<URI> getImagesLinkList() {
         return imagesLinkList;
     }
 
-    public LocalDateTime getDate() {
-        return date;
+    public LocalDateTime getPublishedAt() {
+        return publishedAt;
     }
 
     public String getText() {
         return text;
     }
 
-    public URL getLink() {
-        return link;
-    }
+
 }
