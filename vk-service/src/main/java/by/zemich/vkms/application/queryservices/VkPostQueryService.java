@@ -1,7 +1,7 @@
 package by.zemich.vkms.application.queryservices;
 
 import by.zemich.vkms.domain.model.aggregates.VkPost;
-import by.zemich.vkms.domain.model.aggregates.VkPostId;
+import by.zemich.vkms.domain.model.aggregates.VkPostIdBKey;
 import by.zemich.vkms.domain.model.exception.VkPostNotFountException;
 import by.zemich.vkms.infrastructure.repositories.jpa.VkPostRepository;
 import org.springframework.stereotype.Service;
@@ -20,9 +20,9 @@ public class VkPostQueryService {
         return repository.findAll();
     }
 
-    public List<VkPostId> getAllPostIds() {
+    public List<VkPostIdBKey> getAllPostIds() {
         return repository.findAll().stream()
-                .map(VkPost::getVkPostId)
+                .map(VkPost::getVkPostBKey)
                 .toList();
     }
 
@@ -30,13 +30,18 @@ public class VkPostQueryService {
         return repository.findById(uuid).orElseThrow(VkPostNotFountException::new);
     }
 
-    public VkPost findByPostId(Integer postId) {
-        return repository.findByVkPostId(postId).orElseThrow(VkPostNotFountException::new);
+    public VkPost findByPostBKey(VkPostIdBKey key) {
+        return repository.findByVkPostBKey(key).orElseThrow(VkPostNotFountException::new);
+    }
+    public boolean existsByBKey(VkPostIdBKey key) {
+        return repository.existsByVkPostBKey(key);
     }
 
-    public boolean existsById(Integer postId) {
-        return repository.existsByVkPostId(postId);
+    public VkPost findByUuid(UUID uuid) {
+        return repository.findById(uuid).orElseThrow(VkPostNotFountException::new);
     }
+
+
 
 
 }

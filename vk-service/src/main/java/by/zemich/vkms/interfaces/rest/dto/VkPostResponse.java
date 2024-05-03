@@ -1,7 +1,5 @@
 package by.zemich.vkms.interfaces.rest.dto;
 
-import by.zemich.vkms.domain.model.entities.UUid;
-
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;

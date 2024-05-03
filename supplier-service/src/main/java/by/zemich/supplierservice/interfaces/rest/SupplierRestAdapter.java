@@ -10,7 +10,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 import java.util.UUID;
 
@@ -37,10 +39,16 @@ public class SupplierRestAdapter {
     }
 
     @PostMapping("/v1/api")
-    public ResponseEntity<SupplierResponse> create(@Valid @RequestBody SupplierCreateRequest createRequest) {
+    public ResponseEntity<String> create(@Valid @RequestBody SupplierCreateRequest createRequest, UriComponentsBuilder ucb) {
         Supplier newSupplier = mapper.map(createRequest, Supplier.class);
-        supplierServicePort.save(newSupplier);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+        final Supplier savedSupplier = supplierServicePort.save(newSupplier);
+
+        URI locationNewSupplier = ucb
+                .path("supplier/v1/api/{id}")
+                .buildAndExpand(savedSupplier.getUuid())
+                .toUri();
+
+        return ResponseEntity.created(locationNewSupplier).build();
     }
 
     public ResponseEntity<SupplierResponse> update(@PathVariable UUID uuid, @Valid @RequestBody SupplierCreateRequest request) {

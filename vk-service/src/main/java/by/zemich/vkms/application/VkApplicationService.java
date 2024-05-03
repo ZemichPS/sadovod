@@ -5,8 +5,8 @@ import by.zemich.vkms.application.outboundservices.alc.ExternalSupplierFeignClie
 import by.zemich.vkms.application.outboundservices.alc.ExternalVKService;
 import by.zemich.vkms.application.outboundservices.alc.model.VKPostQuery;
 import by.zemich.vkms.application.queryservices.VkPostQueryService;
+import by.zemich.vkms.domain.model.aggregates.VkPostIdBKey;
 import by.zemich.vkms.domain.model.commands.CreateVkPostCommand;
-import by.zemich.vkms.domain.model.entities.UUid;
 import com.vk.api.sdk.objects.photos.Photo;
 import com.vk.api.sdk.objects.photos.PhotoSizes;
 import com.vk.api.sdk.objects.wall.WallpostAttachment;
@@ -16,10 +16,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.net.URI;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
+import java.time.*;
 import java.util.*;
 import java.util.function.Predicate;
 
@@ -36,10 +33,7 @@ public class VkApplicationService {
 
     private final Predicate<WallpostFull> outOfTimePredicate = wallpostFull -> {
         LocalDateTime published = LocalDateTime.ofInstant(Instant.ofEpochSecond(wallpostFull.getDate()), ZoneId.of("Europe/Moscow"));
-        if (LocalDate.now().until(published.toLocalDate()).getDays() > actualPeriodOfDay) {
-            return true;
-        }
-        return false;
+        return Period.between(LocalDate.now(), published.toLocalDate()).getDays() <= actualPeriodOfDay;
     };
 
     public VkApplicationService(VkPostCommandService vkPostCommandService, ExternalVKService externalVKService, VkPostQueryService vkPostQueryService, ExternalSupplierFeignClient externalSupplierFeignClient) {
@@ -50,19 +44,21 @@ public class VkApplicationService {
     }
 
 
-    @Scheduled(cron ="* * * * 30 *")
+    @Scheduled(cron = "*/15 * * * * *")
     public void checkNewPosts() {
-
+        System.out.println("start debuging");
         externalSupplierFeignClient.getAll().forEach(
                 supplier -> {
-                    final VKPostQuery query = creteQuery(supplier.getVkId());
+                    VKPostQuery query = creteQuery(supplier.getVkId());
 
                     externalVKService.doPostRequest(query).getItems().stream()
                             .filter(outOfTimePredicate)
                             .filter(wallpostFull -> Objects.nonNull(wallpostFull.getAttachments()))
                             .filter(wallpostFull -> Objects.nonNull(wallpostFull.getText()))
-                            .filter(wallpostFull -> vkPostQueryService.existsById(wallpostFull.getId()))
-                            .map(wallpostFull -> this.buildCreateVkPostCommand(wallpostFull, UUid.of(supplier.getUuid())))
+                            .filter(wallpostFull -> Objects.nonNull(wallpostFull.getId()))
+                            .filter(wallpostFull -> Objects.nonNull(wallpostFull.getDate()))
+                            .filter(wallpostFull -> !vkPostQueryService.existsByBKey(new VkPostIdBKey(wallpostFull.getId(), wallpostFull.getOwnerId())))
+                            .map(wallpostFull -> this.buildCreateVkPostCommand(wallpostFull, supplier.getUuid()))
                             .forEach(vkPostCommandService::createPost);
                 }
         );
@@ -70,26 +66,38 @@ public class VkApplicationService {
 
     private VKPostQuery creteQuery(String supplierVkId) {
         return new VKPostQuery()
-                .setCount(5)
+                .setCount(30)
                 .setInterval(15)
                 .setOffset(0)
                 .setSupplierVkId(supplierVkId);
     }
 
-    private CreateVkPostCommand buildCreateVkPostCommand(WallpostFull wallpostFull, UUid supplierUuid){
-        List<URI> uriList = wallpostFull.getAttachments().stream()
+    private CreateVkPostCommand buildCreateVkPostCommand(WallpostFull wallpostFull, java.util.UUID supplierUuid) {
+//        List<URI> uriList = wallpostFull.getAttachments().stream()
+//                .map(WallpostAttachment::getPhoto)
+//                .filter(Objects::nonNull)
+//                .map(Photo::getSizes)
+//                .filter(Objects::nonNull)
+//                .flatMap(photoSizes -> photoSizes.stream())
+//                .max(Comparator.comparingInt(PhotoSizes::getWidth))
+//                .map(PhotoSizes::getUrl)
+//                .stream().toList();
+
+        final List<URI> uriList = wallpostFull.getAttachments().stream()
                 .map(WallpostAttachment::getPhoto)
+                .filter(Objects::nonNull)
                 .map(Photo::getSizes)
+                .map(lists -> lists.stream().filter(Objects::nonNull).max(Comparator.comparingInt(PhotoSizes::getWidth)).stream().toList())
                 .flatMap(photoSizes -> photoSizes.stream())
-                .max(Comparator.comparingInt(PhotoSizes::getWidth))
                 .map(PhotoSizes::getUrl)
-                .stream().toList();
+                .toList();
 
 
         return new CreateVkPostCommand().setSupplierUuid(supplierUuid)
-                .setPostId(wallpostFull.getPostId())
+                .setPostId(wallpostFull.getId())
                 .setOwnerId(wallpostFull.getOwnerId())
                 .setPostText(wallpostFull.getText())
+                .setPublishedAt(LocalDateTime.ofInstant(Instant.ofEpochSecond(wallpostFull.getDate()), ZoneId.of("Europe/Moscow")))
                 .setImagesLinkList(uriList);
     }
 

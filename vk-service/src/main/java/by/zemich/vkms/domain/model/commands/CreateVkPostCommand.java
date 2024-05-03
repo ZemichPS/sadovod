@@ -1,14 +1,13 @@
 package by.zemich.vkms.domain.model.commands;
 
-import by.zemich.vkms.domain.model.entities.UUid;
-
 import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
 
 
 public class CreateVkPostCommand {
-    private UUid supplierUuid;
+    private UUID supplierUuid;
     private Integer postId;
     private Integer ownerId;
     private List<URI> imagesLinkList;
@@ -16,7 +15,7 @@ public class CreateVkPostCommand {
     private LocalDateTime publishedAt;
 
 
-    public CreateVkPostCommand(UUid supplierUuid,
+    public CreateVkPostCommand(java.util.UUID supplierUuid,
                                Integer postId,
                                Integer ownerId,
                                List<URI> imagesLinkList,
@@ -33,7 +32,7 @@ public class CreateVkPostCommand {
     public CreateVkPostCommand() {
     }
 
-    public UUid getSupplier() {
+    public java.util.UUID getSupplierUuid() {
         return supplierUuid;
     }
 
@@ -53,7 +52,7 @@ public class CreateVkPostCommand {
         return postText;
     }
 
-    public CreateVkPostCommand setSupplierUuid(UUid supplierUuid) {
+    public CreateVkPostCommand setSupplierUuid(java.util.UUID supplierUuid) {
         this.supplierUuid = supplierUuid;
         return this;
     }
@@ -85,5 +84,17 @@ public class CreateVkPostCommand {
     public CreateVkPostCommand setPublishedAt(LocalDateTime publishedAt) {
         this.publishedAt = publishedAt;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "CreateVkPostCommand{" +
+                "supplierUuid=" + supplierUuid +
+                ", postId=" + postId +
+                ", ownerId=" + ownerId +
+                ", imagesLinkList=" + imagesLinkList +
+                ", postText='" + postText + '\'' +
+                ", publishedAt=" + publishedAt +
+                '}';
     }
 }

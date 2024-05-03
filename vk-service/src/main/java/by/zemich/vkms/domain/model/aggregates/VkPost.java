@@ -1,53 +1,61 @@
 package by.zemich.vkms.domain.model.aggregates;
 
+import by.zemich.vkms.domain.model.entities.Picture;
+import by.zemich.vkms.domain.model.entities.SupplierId;
 import by.zemich.vkms.domain.model.events.ActionEnum;
 import by.zemich.vkms.domain.model.events.VkPostData;
 import by.zemich.vkms.domain.model.events.VkPostUuid;
 import by.zemich.vkms.domain.model.commands.CreateVkPostCommand;
 import by.zemich.vkms.domain.model.events.VkPostCreatedEvent;
 import by.zemich.vkms.domain.model.entities.FullPost;
-import by.zemich.vkms.domain.model.entities.UUid;
 import jakarta.persistence.*;
 import org.apache.http.client.utils.URIBuilder;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.SourceType;
 import org.springframework.data.domain.AbstractAggregateRoot;
 
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.sql.Timestamp;
 import java.time.*;
-import java.util.UUID;
 
-@Entity(name = "posts")
+@Entity
+@Table(name = "posts", schema = "app")
 public class VkPost extends AbstractAggregateRoot<VkPost> {
     @Id
-    private UUID uuid;
+    private java.util.UUID uuid;
     @Embedded
-    private VkPostId vkPostId;
+    private VkPostIdBKey vkPostBKey;
+
+    @CreationTimestamp(source = SourceType.VM)
+    private Timestamp createdAt;
 
     @Embedded
     private FullPost fullPost;
 
-    @ManyToOne
-    private UUid supplierUuid;
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "supplier_uuid", referencedColumnName = "uuid")
+    private SupplierId supplierId;
 
     public VkPost() {
     }
 
     public VkPost(CreateVkPostCommand command) {
-        this.uuid = UUID.randomUUID();
-        this.vkPostId = new VkPostId(command.getPostId(), command.getOwnerId());
-        this.supplierUuid = command.getSupplier();
+        this.uuid = java.util.UUID.randomUUID();
+        this.vkPostBKey = new VkPostIdBKey(command.getPostId(), command.getOwnerId());
+        this.supplierId = new SupplierId(command.getSupplierUuid());
         this.fullPost = new FullPost()
                 .setPublishedAt(command.getPublishedAt())
-                .setImagesLinkList(command.getImagesLinkList())
+                .setImagesLinkList(command.getImagesLinkList().stream().map(uri -> new Picture(java.util.UUID.randomUUID(), uri.toString())).toList())
                 .setText(command.getPostText());
 
         addDomainEvent(
                 new VkPostCreatedEvent(
                         ActionEnum.CREATED,
                         new VkPostUuid(this.uuid),
-                        new by.zemich.vkms.domain.model.events.VkPostId(this.vkPostId.getVkPostId(), this.vkPostId.getOwnerId()),
-                        new VkPostData(this.fullPost.getImagesLinkList(), this.fullPost.getPublishedAt(), this.fullPost.getText()),
+                        new by.zemich.vkms.domain.model.events.VkPostId(this.vkPostBKey.getOriginalPostId(), this.vkPostBKey.getOwnerId()),
+                        new VkPostData(this.fullPost.getImagesLinkList().stream().map(Picture::getUri).toList(), this.fullPost.getPublishedAt(), this.fullPost.getText()),
                         getLinkToPost()
                 )
         );
@@ -58,20 +66,20 @@ public class VkPost extends AbstractAggregateRoot<VkPost> {
         super.registerEvent(event);
     }
 
-    public UUID getUuid() {
+    public java.util.UUID getUuid() {
         return uuid;
     }
 
-    public VkPostId getVkPostId() {
-        return vkPostId;
+    public VkPostIdBKey getVkPostBKey() {
+        return vkPostBKey;
     }
 
     public FullPost getFullPost() {
         return fullPost;
     }
 
-    public UUid getSupplier() {
-        return supplierUuid;
+    public SupplierId getSupplier() {
+        return supplierId;
     }
 
     public URL getLinkToPost() {
@@ -81,8 +89,8 @@ public class VkPost extends AbstractAggregateRoot<VkPost> {
         try {
             return new URIBuilder().setScheme(scheme)
                     .setHost(host)
-                    .setPath("/" + this.vkPostId.getVkPostId())
-                    .addParameter("w", "wall" + this.vkPostId.getOwnerId() + "_" + this.vkPostId.getVkPostId())
+                    .setPath("/" + this.vkPostBKey.getOriginalPostId())
+                    .addParameter("w", "wall" + this.vkPostBKey.getOwnerId() + "_" + this.vkPostBKey.getOriginalPostId())
                     .build().toURL();
         } catch (MalformedURLException | URISyntaxException e) {
             throw new RuntimeException(e);
@@ -95,4 +103,18 @@ public class VkPost extends AbstractAggregateRoot<VkPost> {
     }
 
 
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    @Override
+    public String toString() {
+        return "VkPost{" +
+                "uuid=" + uuid +
+                ", vkPostBKey=" + vkPostBKey +
+                ", createdAt=" + createdAt +
+                ", fullPost=" + fullPost +
+                ", supplierId=" + supplierId +
+                '}';
+    }
 }

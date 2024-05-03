@@ -9,7 +9,6 @@ import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.net.URI;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -47,12 +46,12 @@ public class ModelMapperConfiguration {
                 if(Objects.isNull(vkPost)) return null;
                 return new VkPostResponse()
                         .setUuid(vkPost.getUuid())
-                        .setVkPostId(vkPost.getVkPostId().getVkPostId())
-                        .setOwnerId(vkPost.getVkPostId().getOwnerId())
+                        .setVkPostId(vkPost.getVkPostBKey().getOriginalPostId())
+                        .setOwnerId(vkPost.getVkPostBKey().getOwnerId())
                         .setText(vkPost.getFullPost().getText())
                         .setSupplierUuid(vkPost.getSupplier().getUuid())
                         .setPublishedAt(vkPost.getFullPost().getPublishedAt())
-                        .setImages(vkPost.getFullPost().getImagesLinkList().stream().map(URI::toString).toList());
+                        .setImages(vkPost.getFullPost().getImagesLinkList().stream().map(picture -> picture.getUri().toString()).toList());
             }
         };
 

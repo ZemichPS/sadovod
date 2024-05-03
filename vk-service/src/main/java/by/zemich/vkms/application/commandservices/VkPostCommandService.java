@@ -1,7 +1,7 @@
 package by.zemich.vkms.application.commandservices;
 
 import by.zemich.vkms.domain.model.aggregates.VkPost;
-import by.zemich.vkms.domain.model.aggregates.VkPostId;
+import by.zemich.vkms.domain.model.aggregates.VkPostIdBKey;
 import by.zemich.vkms.domain.model.commands.CreateVkPostCommand;
 import by.zemich.vkms.infrastructure.repositories.jpa.VkPostRepository;
 import org.springframework.stereotype.Service;
@@ -16,9 +16,11 @@ public class VkPostCommandService {
         this.repository = repository;
     }
 
-    public VkPostId createPost(CreateVkPostCommand command) {
+    public VkPostIdBKey createPost(CreateVkPostCommand command) {
         VkPost newVkPost = repository.save(new VkPost(command));
-        return newVkPost.getVkPostId();
+        System.out.println("command = " + command);
+        System.out.println("post = " + newVkPost);
+        return newVkPost.getVkPostBKey();
     }
 
 

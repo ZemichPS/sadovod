@@ -5,27 +5,27 @@ import jakarta.persistence.Embeddable;
 import java.util.Objects;
 
 @Embeddable
-public class VkPostId {
-    @Column(name = "vk_post_id")
-    private Integer vkPostId;
+public class VkPostIdBKey {
+    @Column(name = "original_post_id")
+    private Integer originalPostId;
 
     @Column(name = "owner_id")
     private Integer ownerId;
 
-    public VkPostId() {
+    public VkPostIdBKey() {
     }
 
-    public VkPostId(Integer vkPostId, Integer ownerId) {
-        this.vkPostId = vkPostId;
+    public VkPostIdBKey(Integer originalPostId, Integer ownerId) {
+        this.originalPostId = originalPostId;
         this.ownerId = ownerId;
     }
 
-    public Integer getVkPostId() {
-        return vkPostId;
+    public Integer getOriginalPostId() {
+        return originalPostId;
     }
 
-    public void setVkPostId(Integer vkPostId) {
-        this.vkPostId = vkPostId;
+    public void setOriginalPostId(Integer vkPostId) {
+        this.originalPostId = vkPostId;
     }
 
     public Integer getOwnerId() {
@@ -40,12 +40,12 @@ public class VkPostId {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        VkPostId vkPostId = (VkPostId) o;
-        return Objects.equals(vkPostId, vkPostId.vkPostId) && Objects.equals(ownerId, vkPostId.ownerId);
+        VkPostIdBKey that = (VkPostIdBKey) o;
+        return Objects.equals(originalPostId, that.originalPostId) && Objects.equals(ownerId, that.ownerId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(vkPostId, ownerId);
+        return Objects.hash(originalPostId, ownerId);
     }
 }

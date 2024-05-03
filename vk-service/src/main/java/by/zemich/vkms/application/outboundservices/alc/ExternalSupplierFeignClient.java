@@ -9,11 +9,11 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
-@FeignClient("supplier-service")
+@FeignClient("SUPPLIER-SERVICE")
 public interface ExternalSupplierFeignClient  {
-    @RequestMapping(method = RequestMethod.GET, value = "/all")
+    @RequestMapping(method = RequestMethod.GET, value = "/supplier/v1/api")
     List<Supplier> getAll();
-    @RequestMapping(method = RequestMethod.GET, value = "/uuid")
+    @RequestMapping(method = RequestMethod.GET, value = "/supplier/v1/api/{uuid}")
     Supplier getByUuid(UUID supplierUuid);
 
 

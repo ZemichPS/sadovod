@@ -1,9 +1,6 @@
 package by.zemich.vkms.domain.model.entities;
 
-import jakarta.persistence.CollectionTable;
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.JoinColumn;
+import jakarta.persistence.*;
 
 import java.net.URI;
 import java.time.LocalDateTime;
@@ -11,10 +8,10 @@ import java.util.List;
 
 @Embeddable
 public class FullPost {
-//    @CollectionTable(name = "full_post_links",
-//            joinColumns = @JoinColumn(name = "url_id"))
-    @ElementCollection
-    private List<URI> imagesLinkList;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "post_uuid")
+    private List<Picture> imagesLinkList;
     private LocalDateTime publishedAt;
     private String text;
 
@@ -22,13 +19,13 @@ public class FullPost {
     public FullPost() {
     }
 
-    public FullPost(List<URI> imagesLinkList, LocalDateTime publishedAt, String text) {
+    public FullPost(List<Picture> imagesLinkList, LocalDateTime publishedAt, String text) {
         this.imagesLinkList = imagesLinkList;
         this.publishedAt = publishedAt;
         this.text = text;
     }
 
-    public FullPost setImagesLinkList(List<URI> imagesLinkList) {
+    public FullPost setImagesLinkList(List<Picture> imagesLinkList) {
         this.imagesLinkList = imagesLinkList;
         return this;
     }
@@ -43,8 +40,7 @@ public class FullPost {
         return this;
     }
 
-
-    public List<URI> getImagesLinkList() {
+    public List<Picture> getImagesLinkList() {
         return imagesLinkList;
     }
 
@@ -56,5 +52,12 @@ public class FullPost {
         return text;
     }
 
-
+    @Override
+    public String toString() {
+        return "FullPost{" +
+                "imagesLinkList=" + imagesLinkList +
+                ", publishedAt=" + publishedAt +
+                ", text='" + text + '\'' +
+                '}';
+    }
 }
