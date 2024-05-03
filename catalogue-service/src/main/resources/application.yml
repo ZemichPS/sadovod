@@ -1,1 +1,29 @@
-spring.application.name=catalogue-service
+spring:
+  application:
+    name: catalogue-service
+
+  config:
+    import: optional:configserver:http://localhost:8888
+
+  jpa:
+    database: POSTGRESQL
+    properties:
+      hibernate.default_schema: app
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+
+  datasource:
+    hikari:
+      username: postgres
+      password: postgres
+      driver-class-name: org.postgresql.Driver
+      auto-commit: true
+    url: jdbc:postgresql://localhost:5432/catalogue-service
+
+
+
+
+
+server:
+  port: 0
