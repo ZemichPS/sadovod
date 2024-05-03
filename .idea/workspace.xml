@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e389683-0101-48ea-9bad-2d2898598800" name="Changes" comment="add futures">
-      <change afterPath="$PROJECT_DIR$/catalogue-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/entities/Picture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/entities/SupplierId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/interfaces/rest/SupplierRestAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/interfaces/rest/SupplierRestAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/VkApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/VkApplicationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/commandservices/VkPostCommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/commandservices/VkPostCommandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/outboundservices/alc/ExternalSupplierFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/outboundservices/alc/ExternalSupplierFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/queryservices/VkPostQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/queryservices/VkPostQueryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/aggregates/VkPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/aggregates/VkPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/aggregates/VkPostId.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/aggregates/VkPostIdBKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/commands/CreateVkPostCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/commands/CreateVkPostCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/entities/FullPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/entities/FullPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/entities/UUid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/events/VkPostData.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/events/VkPostData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/config/ModelMapperConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/config/ModelMapperConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/repositories/jpa/VkPostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/repositories/jpa/VkPostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/interfaces/rest/VkPostsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/interfaces/rest/VkPostsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/interfaces/rest/dto/VkPostResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/interfaces/rest/dto/VkPostResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="0e389683-0101-48ea-9bad-2d2898598800" name="Changes" comment="add catalogue-ms" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +53,6 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-21",
     "last_opened_file_path": "E:/JAVA projects/sadovod",
@@ -218,7 +196,7 @@
       <workItem from="1714646457391" duration="11548000" />
       <workItem from="1714675983155" duration="13168000" />
       <workItem from="1714724702791" duration="5709000" />
-      <workItem from="1714730767612" duration="23849000" />
+      <workItem from="1714730767612" duration="24481000" />
     </task>
     <task id="LOCAL-00001" summary="add futures">
       <created>1714254518328</created>
@@ -248,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714683279601</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add catalogue-ms">
+      <created>1714768754612</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714768754612</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +264,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add futures" />
-    <option name="LAST_COMMIT_MESSAGE" value="add futures" />
+    <MESSAGE value="add catalogue-ms" />
+    <option name="LAST_COMMIT_MESSAGE" value="add catalogue-ms" />
   </component>
 </project>
