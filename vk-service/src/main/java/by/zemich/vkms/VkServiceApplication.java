@@ -1,6 +1,5 @@
 package by.zemich.vkms;
 
-import by.zemich.vkms.infrastructure.brokers.kafka.VkEventSource;
 import by.zemich.vkms.infrastructure.config.properties.VkApiProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

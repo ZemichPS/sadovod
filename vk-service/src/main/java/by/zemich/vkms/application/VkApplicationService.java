@@ -1,10 +1,10 @@
 package by.zemich.vkms.application;
 
-import by.zemich.vkms.application.commandservices.VkPostCommandService;
-import by.zemich.vkms.application.outboundservices.alc.ExternalSupplierFeignClient;
-import by.zemich.vkms.application.outboundservices.alc.ExternalVKService;
-import by.zemich.vkms.application.outboundservices.alc.model.VKPostQuery;
-import by.zemich.vkms.application.queryservices.VkPostQueryService;
+import by.zemich.vkms.application.internal.commandservices.VkPostCommandService;
+import by.zemich.vkms.application.internal.outboundservices.alc.ExternalSupplierFeignClient;
+import by.zemich.vkms.application.internal.outboundservices.alc.ExternalVKService;
+import by.zemich.vkms.application.internal.outboundservices.alc.model.VKPostQuery;
+import by.zemich.vkms.application.internal.queryservices.VkPostQueryService;
 import by.zemich.vkms.domain.model.aggregates.VkPostIdBKey;
 import by.zemich.vkms.domain.model.commands.CreateVkPostCommand;
 import com.vk.api.sdk.objects.photos.Photo;
@@ -12,6 +12,7 @@ import com.vk.api.sdk.objects.photos.PhotoSizes;
 import com.vk.api.sdk.objects.wall.WallpostAttachment;
 import com.vk.api.sdk.objects.wall.WallpostFull;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +23,7 @@ import java.util.function.Predicate;
 
 @Service
 @Slf4j
+//@EnableScheduling
 public class VkApplicationService {
 
     private final VkPostCommandService vkPostCommandService;
@@ -73,15 +75,6 @@ public class VkApplicationService {
     }
 
     private CreateVkPostCommand buildCreateVkPostCommand(WallpostFull wallpostFull, java.util.UUID supplierUuid) {
-//        List<URI> uriList = wallpostFull.getAttachments().stream()
-//                .map(WallpostAttachment::getPhoto)
-//                .filter(Objects::nonNull)
-//                .map(Photo::getSizes)
-//                .filter(Objects::nonNull)
-//                .flatMap(photoSizes -> photoSizes.stream())
-//                .max(Comparator.comparingInt(PhotoSizes::getWidth))
-//                .map(PhotoSizes::getUrl)
-//                .stream().toList();
 
         final List<URI> uriList = wallpostFull.getAttachments().stream()
                 .map(WallpostAttachment::getPhoto)

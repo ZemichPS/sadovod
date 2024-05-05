@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: test-service
+
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: catalogue-service.productCardCreated
+          group: catalogue-service-group
+          binder: kafka
+        output:
+          destination: test-service.testEvent
+          binder: kafka
+      kafka:
+        binder:
+          brokers: localhost:9092
+          auto-create-topics: true
+
+
+server:
+  port: 7452

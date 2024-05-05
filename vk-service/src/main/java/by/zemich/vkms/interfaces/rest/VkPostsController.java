@@ -1,7 +1,7 @@
 package by.zemich.vkms.interfaces.rest;
 
 import by.zemich.vkms.application.VkApplicationService;
-import by.zemich.vkms.application.queryservices.VkPostQueryService;
+import by.zemich.vkms.application.internal.queryservices.VkPostQueryService;
 import by.zemich.vkms.domain.model.aggregates.VkPost;
 import by.zemich.vkms.domain.model.aggregates.VkPostIdBKey;
 import by.zemich.vkms.interfaces.rest.dto.VkPostResponse;
@@ -9,7 +9,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Objects;

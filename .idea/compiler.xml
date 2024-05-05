@@ -10,13 +10,15 @@
         <module name="supplier-service" />
         <module name="vk-service" />
         <module name="config-server" />
-        <module name="telegram-service" />
         <module name="catalogue-service" />
+        <module name="telegram-service" />
         <module name="parser-service" />
         <module name="gateway-service" />
+        <module name="test-service" />
         <module name="user-service" />
-        <module name="eureka-server" />
         <module name="viber-service" />
+        <module name="eureka-server" />
+        <module name="suppliersms" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,7 +28,9 @@
       <module name="gateway-service" target="19" />
       <module name="parser-service" target="17" />
       <module name="supplier-service" target="17" />
+      <module name="suppliersms" target="17" />
       <module name="telegram-service" target="17" />
+      <module name="test-service" target="19" />
       <module name="user-service" target="17" />
       <module name="viber-service" target="17" />
       <module name="vk-service" target="17" />
@@ -41,7 +45,9 @@
       <module name="gateway-service" options="-parameters" />
       <module name="parser-service" options="-parameters" />
       <module name="supplier-service" options="-parameters" />
+      <module name="suppliersms" options="-parameters" />
       <module name="telegram-service" options="-parameters" />
+      <module name="test-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
       <module name="viber-service" options="-parameters" />
       <module name="vk-service" options="-parameters" />

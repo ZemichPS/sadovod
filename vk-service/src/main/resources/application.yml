@@ -37,7 +37,7 @@ spring:
           brokers: localhost:9092
           auto-create-topics: true
 
-  # eureka config
+# eureka config
 eureka:
   client:
     healthcheck:
