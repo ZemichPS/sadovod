@@ -52,7 +52,6 @@ public class VkPost extends AbstractAggregateRoot<VkPost> {
 
         addDomainEvent(
                 new VkPostCreatedEvent(
-                        ActionEnum.CREATED,
                         new VkPostUuid(this.uuid),
                         new by.zemich.vkms.domain.model.events.VkPostId(this.vkPostBKey.getOriginalPostId(), this.vkPostBKey.getOwnerId()),
                         new VkPostData(this.fullPost.getImagesLinkList().stream().map(Picture::getUri).toList(), this.fullPost.getPublishedAt(), this.fullPost.getText()),

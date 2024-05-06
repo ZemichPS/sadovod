@@ -1,0 +1,59 @@
+server:
+  port: 8096
+spring:
+  application:
+    name: ai-service
+  config:
+    import: optional:configserver:http://localhost:8888
+
+  jpa:
+    database: POSTGRESQL
+    properties:
+      hibernate.default_schema: app
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+
+  datasource:
+    hikari:
+      username: postgres
+      password: postgres
+      driver-class-name: org.postgresql.Driver
+      auto-commit: true
+    url: jdbc:postgresql://localhost:5432/ai-service
+
+  # cloud config
+  cloud:
+    discovery:
+      enabled: true
+  ai:
+    mistralai:
+      api-key: 9PkC2c0r7Dh5SI3q9ZBCbKhT14dVvGt5
+      chat:
+        options:
+          temperature: 0.4
+          max-tokens: 300
+          model: open-mistral-7b
+
+# eureka config
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      register-with-eureka: true
+      fetch-registry: true
+
+
+# management config
+management:
+  endpoints:
+    web:
+      exposure:
+        include: heath, prometheus, info, metric
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true

@@ -17,6 +17,8 @@
         <option value="$PROJECT_DIR$/telegram-service/pom.xml" />
         <option value="$PROJECT_DIR$/catalogue-service/pom.xml" />
         <option value="$PROJECT_DIR$/test-service/pom.xml" />
+        <option value="$PROJECT_DIR$/text-processor-micro-service/pom.xml" />
+        <option value="$PROJECT_DIR$/ai-service/pom.xml" />
       </list>
     </option>
   </component>

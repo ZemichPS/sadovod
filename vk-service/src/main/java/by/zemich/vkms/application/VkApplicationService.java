@@ -23,7 +23,7 @@ import java.util.function.Predicate;
 
 @Service
 @Slf4j
-//@EnableScheduling
+@EnableScheduling
 public class VkApplicationService {
 
     private final VkPostCommandService vkPostCommandService;
@@ -48,7 +48,6 @@ public class VkApplicationService {
 
     @Scheduled(cron = "*/15 * * * * *")
     public void checkNewPosts() {
-        System.out.println("start debuging");
         externalSupplierFeignClient.getAll().forEach(
                 supplier -> {
                     VKPostQuery query = creteQuery(supplier.getVkId());

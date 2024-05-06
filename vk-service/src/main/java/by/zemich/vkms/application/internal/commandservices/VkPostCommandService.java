@@ -18,8 +18,6 @@ public class VkPostCommandService {
 
     public VkPostIdBKey createPost(CreateVkPostCommand command) {
         VkPost newVkPost = repository.save(new VkPost(command));
-        System.out.println("command = " + command);
-        System.out.println("post = " + newVkPost);
         return newVkPost.getVkPostBKey();
     }
 

@@ -4,10 +4,7 @@ import by.zemich.cataloguems.catalogueservice.domain.model.entities.Category;
 import by.zemich.cataloguems.catalogueservice.domain.model.entities.Description;
 import by.zemich.cataloguems.catalogueservice.domain.model.entities.Price;
 import by.zemich.cataloguems.catalogueservice.domain.model.entities.Supplier;
-import jakarta.persistence.Embedded;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import org.hibernate.annotations.ManyToAny;
 
 import java.util.UUID;
@@ -17,9 +14,10 @@ import java.util.UUID;
 public class ProductCard {
     @Id
     private UUID uuid;
-    @ManyToAny
+    @ManyToOne
     private Supplier supplier;
-    @ManyToAny
+
+    @ManyToOne
     private Category category;
     @Embedded
     private Description description;

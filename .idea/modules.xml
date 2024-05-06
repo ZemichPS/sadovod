@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ai-service/ai-micro-service.iml" filepath="$PROJECT_DIR$/ai-service/ai-micro-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/catalogue-service/catalogue-service.iml" filepath="$PROJECT_DIR$/catalogue-service/catalogue-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />

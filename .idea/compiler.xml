@@ -8,20 +8,23 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="supplier-service" />
+        <module name="telegram-service" />
+        <module name="test-service" />
+        <module name="user-service" />
+        <module name="eureka-server" />
         <module name="vk-service" />
         <module name="config-server" />
         <module name="catalogue-service" />
-        <module name="telegram-service" />
         <module name="parser-service" />
         <module name="gateway-service" />
-        <module name="test-service" />
-        <module name="user-service" />
+        <module name="ai-micro-service" />
         <module name="viber-service" />
-        <module name="eureka-server" />
         <module name="suppliersms" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ai-micro-service" target="19" />
+      <module name="ai-service" target="19" />
       <module name="catalogue-service" target="19" />
       <module name="config-server" target="17" />
       <module name="eureka-server" target="17" />
@@ -39,6 +42,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ai-micro-service" options="-parameters" />
+      <module name="ai-service" options="-parameters" />
       <module name="catalogue-service" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />

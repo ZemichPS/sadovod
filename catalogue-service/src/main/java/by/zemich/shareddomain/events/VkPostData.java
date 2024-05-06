@@ -1,4 +1,4 @@
-package by.zemich.cataloguems.catalogueservice.interfaces.eventhandlers.kafka.events;
+package by.zemich.shareddomain.events;
 
 import java.time.LocalDateTime;
 import java.util.List;

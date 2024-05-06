@@ -19,9 +19,7 @@ public class VkPostEventPublisherService {
     @TransactionalEventListener
     public void handleVkPostSavedEvent(VkPostCreatedEvent vkPostCreatedEvent) {
         try {
-            queueBrokerPort.publish(
-                    MessageBuilder.withPayload(vkPostCreatedEvent).build()
-            );
+            queueBrokerPort.publish(vkPostCreatedEvent);
 
         } catch (Exception exception) {
             log.error(exception.getMessage());

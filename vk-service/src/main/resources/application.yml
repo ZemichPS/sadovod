@@ -20,22 +20,13 @@ spring:
       password: postgres
       driver-class-name: org.postgresql.Driver
       auto-commit: true
-    url: jdbc:postgresql://localhost:5432/vk-service
+    url: jdbc:postgresql://localhost:5432/vk-service1
 
 
   # cloud config
   cloud:
     discovery:
       enabled: true
-    stream:
-      bindings:
-        vkPostChannel:
-          destination: postCreated
-          binder: kafka
-      kafka:
-        binder:
-          brokers: localhost:9092
-          auto-create-topics: true
 
 # eureka config
 eureka:
