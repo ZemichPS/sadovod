@@ -26,15 +26,6 @@ spring:
   cloud:
     discovery:
       enabled: true
-  ai:
-    mistralai:
-      api-key: 9PkC2c0r7Dh5SI3q9ZBCbKhT14dVvGt5
-      chat:
-        options:
-          temperature: 0.4
-          max-tokens: 300
-          model: open-mistral-7b
-
 # eureka config
 eureka:
   client:
@@ -57,3 +48,7 @@ management:
       show-details: always
     shutdown:
       enabled: true
+
+mistral:
+  api-key: 9PkC2c0r7Dh5SI3q9ZBCbKhT14dVvGt5
+
