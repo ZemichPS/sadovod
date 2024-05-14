@@ -1,12 +1,12 @@
 package by.zemich.vkms.domain.model.aggregates;
 
+import by.zemich.vkms.domain.events.VkPostId;
 import by.zemich.vkms.domain.model.entities.Picture;
 import by.zemich.vkms.domain.model.entities.SupplierId;
-import by.zemich.vkms.domain.model.events.ActionEnum;
-import by.zemich.vkms.domain.model.events.VkPostData;
-import by.zemich.vkms.domain.model.events.VkPostUuid;
-import by.zemich.vkms.domain.model.commands.CreateVkPostCommand;
-import by.zemich.vkms.domain.model.events.VkPostCreatedEvent;
+import by.zemich.vkms.domain.events.VkPostData;
+import by.zemich.vkms.domain.events.VkPostUuid;
+import by.zemich.vkms.domain.commands.CreateVkPostCommand;
+import by.zemich.vkms.domain.events.VkPostCreatedEvent;
 import by.zemich.vkms.domain.model.entities.FullPost;
 import jakarta.persistence.*;
 import org.apache.http.client.utils.URIBuilder;
@@ -19,12 +19,13 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.sql.Timestamp;
 import java.time.*;
+import java.util.UUID;
 
 @Entity
 @Table(name = "posts", schema = "app")
 public class VkPost extends AbstractAggregateRoot<VkPost> {
     @Id
-    private java.util.UUID uuid;
+    private UUID uuid;
     @Embedded
     private VkPostIdBKey vkPostBKey;
 
@@ -53,7 +54,8 @@ public class VkPost extends AbstractAggregateRoot<VkPost> {
         addDomainEvent(
                 new VkPostCreatedEvent(
                         new VkPostUuid(this.uuid),
-                        new by.zemich.vkms.domain.model.events.VkPostId(this.vkPostBKey.getOriginalPostId(), this.vkPostBKey.getOwnerId()),
+                        new VkPostId(this.vkPostBKey.getOriginalPostId(), this.vkPostBKey.getOwnerId()),
+                        this.supplierId.getUuid(),
                         new VkPostData(this.fullPost.getImagesLinkList().stream().map(Picture::getUri).toList(), this.fullPost.getPublishedAt(), this.fullPost.getText()),
                         getLinkToPost()
                 )

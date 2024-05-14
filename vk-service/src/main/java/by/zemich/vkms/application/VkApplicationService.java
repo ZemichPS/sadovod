@@ -6,7 +6,7 @@ import by.zemich.vkms.application.internal.outboundservices.alc.ExternalVKServic
 import by.zemich.vkms.application.internal.outboundservices.alc.model.VKPostQuery;
 import by.zemich.vkms.application.internal.queryservices.VkPostQueryService;
 import by.zemich.vkms.domain.model.aggregates.VkPostIdBKey;
-import by.zemich.vkms.domain.model.commands.CreateVkPostCommand;
+import by.zemich.vkms.domain.commands.CreateVkPostCommand;
 import com.vk.api.sdk.objects.photos.Photo;
 import com.vk.api.sdk.objects.photos.PhotoSizes;
 import com.vk.api.sdk.objects.wall.WallpostAttachment;

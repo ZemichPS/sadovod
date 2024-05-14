@@ -1,9 +1,7 @@
 package by.zemich.vkms.infrastructure.brokers.kafka;
 
 import by.zemich.vkms.application.internal.outboundservices.QueueBrokerPort;
-import by.zemich.vkms.domain.model.events.VkPostCreatedEvent;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import by.zemich.vkms.domain.events.VkPostCreatedEvent;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.KafkaHeaders;
@@ -12,7 +10,6 @@ import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
 
-import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;

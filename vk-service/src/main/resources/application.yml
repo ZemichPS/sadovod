@@ -20,7 +20,7 @@ spring:
       password: postgres
       driver-class-name: org.postgresql.Driver
       auto-commit: true
-    url: jdbc:postgresql://localhost:5432/vk-service1
+    url: jdbc:postgresql://localhost:5432/vk-service
 
 
   # cloud config

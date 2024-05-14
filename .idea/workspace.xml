@@ -5,57 +5,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e389683-0101-48ea-9bad-2d2898598800" name="Changes" comment="add catalogue-ms">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vdurmont_emoji_java_4_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20170516.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_3_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/application/internal/commandservices/AiPostCommandService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/application/internal/commandservices/PostParseCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/application/internal/outboundservices/alc/ExternalAiMistralService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/domain/model/ColorInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/domain/model/Material.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/domain/model/Prices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/domain/model/ProductInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/domain/model/SizeInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/infrastracture/config/properties/MistralProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/interfaces/rest/PostTextController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/interfaces/rest/request/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_victools_jsonschema_generator_4_35_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_victools_jsonschema_module_jackson_4_35_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_victools_jsonschema_module_swagger_2_4_35_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_25_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_knuddels_jtokkit_1_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_109_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_109_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_109_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_109_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_109_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_109_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_109_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_109_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_109_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_annotations_2_2_20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_jodah_typetools_0_6_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_4_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_12_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20231013.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_ai_spring_ai_core_1_0_0_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_ai_spring_ai_mistral_ai_1_0_0_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_ai_spring_ai_mistral_ai_spring_boot_starter_1_0_0_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_ai_spring_ai_retry_1_0_0_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_ai_spring_ai_spring_boot_autoconfigure_1_0_0_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_function_context_4_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_function_core_4_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_6_1_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_5_0_2.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_3_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/getproductdescription/GetProductDescriptionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/getproductdescription/GetProductDescriptionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/getproductdescription/GetProductDescriptionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/getproductdescription/GetProductDescriptionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/application/internal/commandservices/ProductCardCommandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/application/internal/outboundservices/alc/ExternalAiService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/commands/CreateProductCardCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/entities/ColorData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/entities/Photo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/entities/SizeData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/entities/SupplierUuid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/entities/VkPost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/response/ProductDescription.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/infrastrucrure/repositories/jpa/ProductCardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_uuid_java_uuid_generator_5_0_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/AiServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/AiServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/infrastracture/config/MistralConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/infrastracture/config/MistralConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/interfaces/rest/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/interfaces/rest/request/ItemTemplate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/interfaces/rest/request/Material.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/interfaces/rest/request/Prices.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/AiServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/AiServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/application/internal/commandservices/AiPostCommandService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/application/internal/commandservices/PostParseCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/application/internal/outboundservices/alc/ExternalAiMistralService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/domain/model/ColorInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/response/ColorInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/domain/model/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/response/Material.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/domain/model/Prices.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/response/Prices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/domain/model/ProductInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/domain/model/SizeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/response/SizeInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/infrastracture/config/CommonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/config/CommonConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/infrastracture/config/MistralConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/config/MistralConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/infrastracture/config/ModelMapperConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/config/ModelMapperConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/infrastracture/config/properties/MistralProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/config/properties/MistralProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/interfaces/rest/PostTextController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/textprocessormicroservice/interfaces/rest/request/Request.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/test/java/by/zemich/textprocessormicroservice/AiServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/src/test/java/by/zemich/aims/AiServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/CatalogueServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/CatalogueServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/aggregates/ProductCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/aggregates/ProductCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/entities/Description.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/entities/Description.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/entities/Price.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/entities/Price.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/entities/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/entities/Material.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/infrastrucrure/config/ModelMapperConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/infrastrucrure/config/ModelMapperConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/interfaces/eventhandlers/kafka/KafkaEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/interfaces/eventhandlers/kafka/KafkaEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/shareddomain/events/VkPostCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/shareddomain/events/VkPostCreatedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/VkApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/VkApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/commandservices/VkPostCommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/commandservices/VkPostCommandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/outboundservices/QueueBrokerPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/outboundservices/QueueBrokerPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/outboundservices/VkPostEventPublisherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/outboundservices/VkPostEventPublisherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/queryservices/VkPostQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/queryservices/VkPostQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/aggregates/VkPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/aggregates/VkPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/commands/CreateVkPostCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/commands/CreateVkPostCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/events/VkPostCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/events/VkPostCreatedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/events/VkPostData.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/events/VkPostData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/events/VkPostId.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/events/VkPostId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/events/VkPostUuid.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/events/VkPostUuid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/exception/VkPostNotFountException.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/exception/VkPostNotFountException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/brokers/kafka/KafkaBrokerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/brokers/kafka/KafkaBrokerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/brokers/kafka/serializer/PayloadSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/brokers/kafka/serializer/PayloadSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/config/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/config/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +77,8 @@
       <list>
         <option value="Record" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -111,7 +121,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/JAVA projects/sadovod/text-processor-micro-service/src/main/java/by/zemich/textprocessormicroservice/infrastracture/config&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/JAVA projects/sadovod/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/response&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -129,20 +139,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="by.zemich.cataloguems.catalogueservice.domain.model.commands" />
+      <recent name="by.zemich.cataloguems.catalogueservice.domain.model.entities" />
       <recent name="by.zemich.textprocessormicroservice.application.internal.commandservices" />
       <recent name="by.zemich.textprocessormicroservice.interfaces.rest.request" />
       <recent name="by.zemich.testservice.interfaces.eventhandlers.event" />
-      <recent name="by.zemich.cataloguems.catalogueservice.domain.model.entities" />
-      <recent name="by.zemich.vkms.domain.model.entities" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\JAVA projects\sadovod\catalogue-service\src\main\java\by\zemich\cataloguems\catalogueservice\domain\response" />
       <recent name="E:\JAVA projects\sadovod\text-processor-micro-service\src\main\java\by\zemich\textprocessormicroservice\infrastracture\config" />
       <recent name="E:\JAVA projects\sadovod\catalogue-service\src\main\java\by\zemich\shareddomain" />
       <recent name="E:\JAVA projects\sadovod\catalogue-service\src\main\java\by\zemich\cataloguems\catalogueservice\domain\model" />
       <recent name="E:\JAVA projects\sadovod\catalogue-service\src\main\java\by\zemich" />
-      <recent name="E:\JAVA projects\sadovod\test-service\src\main\java\by\zemich\testservice\infrastracture" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="by.zemich.cataloguems.catalogueservice.application.internal.outboundservices.alc.response" />
       <recent name="by.zemich.cataloguems.catalogueservice.infrastrucrure.config" />
       <recent name="by.zemich.testservice.application.internal" />
       <recent name="by.zemich.vkms.application.outboundservices.alc" />
@@ -171,7 +182,7 @@
     </configuration>
     <configuration name="AiServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="ai-micro-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.textprocessormicroservice.AiServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.aims.AiServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -269,6 +280,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.CatalogueServiceApplication" />
+      <item itemvalue="Spring Boot.AiServiceApplication" />
+      <item itemvalue="Spring Boot.CatalogueServiceApplication" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.ParserServiceApplication" />
+      <item itemvalue="Spring Boot.ServerConfigApplication" />
+      <item itemvalue="Spring Boot.SupplierServiceApplication" />
+      <item itemvalue="Spring Boot.SupplierServiceApplication (1)" />
+      <item itemvalue="Spring Boot.TelegramServiceApplication" />
+      <item itemvalue="Spring Boot.TestServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+      <item itemvalue="Spring Boot.ViberServiceApplication" />
+      <item itemvalue="Spring Boot.VkServiceApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.CatalogueServiceApplication" />
@@ -322,6 +349,13 @@
       <workItem from="1714952917765" duration="4988000" />
       <workItem from="1714992318470" duration="10516000" />
       <workItem from="1715003963445" duration="16642000" />
+      <workItem from="1715034382145" duration="680000" />
+      <workItem from="1715159022930" duration="29083000" />
+      <workItem from="1715252355543" duration="1289000" />
+      <workItem from="1715692422200" duration="2621000" />
+      <workItem from="1715695514915" duration="2018000" />
+      <workItem from="1715697549423" duration="967000" />
+      <workItem from="1715698693043" duration="28527000" />
     </task>
     <task id="LOCAL-00001" summary="add futures">
       <created>1714254518328</created>

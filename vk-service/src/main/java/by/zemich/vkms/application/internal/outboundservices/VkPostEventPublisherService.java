@@ -1,8 +1,7 @@
 package by.zemich.vkms.application.internal.outboundservices;
 
-import by.zemich.vkms.domain.model.events.VkPostCreatedEvent;
+import by.zemich.vkms.domain.events.VkPostCreatedEvent;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.event.TransactionalEventListener;
 
