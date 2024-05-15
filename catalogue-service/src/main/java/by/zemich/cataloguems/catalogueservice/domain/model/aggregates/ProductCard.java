@@ -4,8 +4,11 @@ import by.zemich.cataloguems.catalogueservice.domain.commands.CreateProductCardC
 import by.zemich.cataloguems.catalogueservice.domain.model.entities.*;
 import by.zemich.cataloguems.catalogueservice.domain.response.ProductDescription;
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.math.BigDecimal;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.*;
 
 @Entity
@@ -13,6 +16,14 @@ import java.util.*;
 public class ProductCard {
     @Id
     private UUID uuid;
+
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    private LocalDateTime createdAt;
+
+    @Version
+    @Temporal(TemporalType.TIMESTAMP)
+    private LocalDateTime updatedAt;
     private String productName;
     @Embedded
     private VkPost vkPost;
@@ -22,13 +33,11 @@ public class ProductCard {
     private Description description;
     @Embedded
     private Price price;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "product_uuid")
     private List<Photo> photoList;
-
     private Integer quantityInSet;
-
     private boolean sale;
-
     public ProductCard() {
     }
 
@@ -41,7 +50,7 @@ public class ProductCard {
                 command.getPostUri());
         this.supplierUuid = new SupplierUuid(command.getPostUuid());
         this.photoList = command.getImagesLinkList().stream()
-                .map(link -> new Photo(UUID.randomUUID(), link))
+                .map(link -> new Photo(UUID.randomUUID(), this.uuid, link))
                 .toList();
     }
 
@@ -68,10 +77,8 @@ public class ProductCard {
 
         ColorData colorData = new ColorData(new ArrayList<>());
         SizeData sizeData = new SizeData(new ArrayList<>());
-        Material material = new Material();
 
         if (Objects.nonNull(productDescription.getColorInfo())) {
-
             List<String> colorList = productDescription.getColorInfo().getColorlist() != null ? productDescription.getColorInfo().getColorlist() : new ArrayList<String>();
             colorData.setColorList(colorList);
             colorData.setColorChoice(productDescription.getColorInfo().isPossibleToChooseColor());
@@ -81,7 +88,7 @@ public class ProductCard {
         if (Objects.nonNull(productDescription.getMaterial())) {
             // TODO заменить
             if (Objects.nonNull(productDescription.getMaterial().getType()))
-                description.setMaterial(new Material(UUID.randomUUID(), productDescription.getMaterial().getType()));
+                description.setMaterialName(productDescription.getMaterial().getType());
 
             if (Objects.nonNull(productDescription.getMaterial().getQuality()))
                 description.setQuality(productDescription.getMaterial().getQuality());
@@ -96,7 +103,6 @@ public class ProductCard {
         }
 
         description.setColorData(colorData);
-        description.setMaterial(material);
         description.setSizeData(sizeData);
 
         this.description = description;
@@ -115,5 +121,21 @@ public class ProductCard {
                 ", quantityInSet=" + quantityInSet +
                 ", sale=" + sale +
                 '}';
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

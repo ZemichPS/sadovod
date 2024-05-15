@@ -1,20 +1,20 @@
 package by.zemich.cataloguems.catalogueservice.domain.model.entities;
 
 
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.Embedded;
+import jakarta.persistence.*;
 
 import java.util.List;
 
 @Embeddable
 public class SizeData {
     private String sizeRange;
-    @ElementCollection
-    private List<Integer> sizeList;
+    @ElementCollection(targetClass = String.class)
+    @CollectionTable(name = "product_sizes", joinColumns = @JoinColumn(name = "product_uuid"))
+    @Column(name = "size")
+    private List<String> sizeList;
     boolean inSize;
 
-    public SizeData(String sizeRange, List<Integer> sizeList, boolean inSize) {
+    public SizeData(String sizeRange, List<String> sizeList, boolean inSize) {
         this.sizeRange = sizeRange;
         this.sizeList = sizeList;
         this.inSize = inSize;
@@ -23,7 +23,7 @@ public class SizeData {
     public SizeData() {
     }
 
-    public SizeData(List<Integer> sizeList) {
+    public SizeData(List<String> sizeList) {
         this.sizeList = sizeList;
     }
 
@@ -35,11 +35,11 @@ public class SizeData {
         this.sizeRange = sizeRange;
     }
 
-    public List<Integer> getSizeList() {
+    public List<String> getSizeList() {
         return sizeList;
     }
 
-    public void setSizeList(List<Integer> sizeList) {
+    public void setSizeList(List<String> sizeList) {
         this.sizeList = sizeList;
     }
 

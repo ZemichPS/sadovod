@@ -1,18 +1,21 @@
 package by.zemich.cataloguems.catalogueservice.domain.model.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.UUID;
 
 @Entity
+@Table(name = "photos")
 public class Photo {
     @Id
     private UUID uuid;
-    String link;
+    @Column(name = "product_uuid")
+    private UUID productUuid;
+    private String link;
 
-    public Photo(UUID uuid, String link) {
+    public Photo(UUID uuid, UUID productUuid, String link) {
         this.uuid = uuid;
+        this.productUuid = productUuid;
         this.link = link;
     }
 
@@ -33,5 +36,13 @@ public class Photo {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+    public UUID getProductUuid() {
+        return productUuid;
+    }
+
+    public void setProductUuid(UUID productUuid) {
+        this.productUuid = productUuid;
     }
 }

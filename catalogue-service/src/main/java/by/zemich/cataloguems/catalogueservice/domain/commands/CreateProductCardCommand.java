@@ -18,19 +18,10 @@ import java.util.UUID;
 @Builder
 public class CreateProductCardCommand {
 
-    @NotNull(message = "PostUuid must not be null.")
     private UUID postUuid;
-    @NotNull(message = "SupplierUuid must not be null.")
     private UUID supplierUuid;
-    @NotNull(message = "Published date must not be null.")
     private LocalDateTime publishedAt;
-    @NotNull(message = "Post text must not be null.")
-    @NotBlank(message = "Post text must not be empty")
     private String postText;
-    @NotNull(message = "Image list must not be null")
-    @NotEmpty(message = "Image list must not be empty")
     private List<String> imagesLinkList;
-    @NotNull(message = "Post uri must not be null.")
-    @NotBlank(message = "Post uri must not be empty")
     private URL postUri;
 }

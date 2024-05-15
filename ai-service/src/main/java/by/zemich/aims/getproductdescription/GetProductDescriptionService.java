@@ -23,11 +23,20 @@ class GetProductDescriptionService {
     public GetProductDescriptionResponse createJsonProductDescription(GetProductDescriptionRequest request) {
         List<Message> messages = new MessageListBuilder()
                 .system("""
-                        Product description to JSON: %s. Response - only JSON, values in russian 
+                        You are a bot that converts product information from post to JSON.
+                        The response must contain only JSON.
+                        The response must be in strict accordance with the JSON template without any information.
+                        Translate the value of the json fields into English and then into Russian.
+                        JSON template: %s 
                         """.formatted(request.getJsonDestination()))
-                .user(request.getSource())
+                .user("""
+                        Source text: %s.
+                        """.formatted(request.getSource())
+
+                )
                 .build();
 
+log.info(request.getJsonDestination());
 
         ChatCompletionRequest chatCompletionRequest = ChatCompletionRequest.builder()
                 .model("open-mistral-7b")
@@ -39,6 +48,7 @@ class GetProductDescriptionService {
 
         ChatCompletionResponse response = client.createChatCompletion(chatCompletionRequest);
         String content = response.getChoices().get(0).getMessage().getContent();
+
         log.info("Promt tokens token count {}: ", String.valueOf(response.getUsage().getPromptTokens()));
         log.info("Completion token count {}", String.valueOf(response.getUsage().getCompletionTokens()));
         log.info("Amount token count: {}", String.valueOf(response.getUsage().getTotalTokens()));

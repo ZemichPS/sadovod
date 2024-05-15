@@ -19,13 +19,7 @@ class GetProductDescriptionController {
     @PostMapping("/v1/api/")
     public ResponseEntity<?> getProductDescriptionFromText(@RequestBody GetProductDescriptionRequest request) {
 
-        log.info(request.getSource());
-        log.info(request.getJsonDestination());
-
         GetProductDescriptionResponse jsonProductDescription = service.createJsonProductDescription(request);
-
-        log.info(jsonProductDescription.getJsonDescription());
-
         return ResponseEntity.ok(jsonProductDescription);
     }
 

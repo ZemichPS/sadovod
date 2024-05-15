@@ -1,16 +1,16 @@
 package by.zemich.cataloguems.catalogueservice.domain.model.entities;
 
 
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.Embedded;
+import jakarta.persistence.*;
 
 import java.util.List;
 
 @Embeddable
 public class ColorData {
-    @ElementCollection
-    List<String> colorList;
+    @ElementCollection(targetClass = String.class)
+    @CollectionTable(name = "product_card_colors", joinColumns = @JoinColumn(name = "product_card_uuid"))
+    @Column(name = "color")
+    private List<String> colorList;
     boolean colorChoice;
     boolean pictureChoice;
 

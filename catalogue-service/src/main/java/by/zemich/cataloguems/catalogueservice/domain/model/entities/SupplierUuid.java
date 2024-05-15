@@ -6,20 +6,20 @@ import java.util.UUID;
 
 @Embeddable
 public class SupplierUuid {
-    private UUID id;
+    private UUID supplierUuid;
 
-    public SupplierUuid(UUID id) {
-        this.id = id;
+    public SupplierUuid(UUID supplierUuid) {
+        this.supplierUuid = supplierUuid;
     }
 
     public SupplierUuid() {
     }
 
-    public UUID getId() {
-        return id;
+    public UUID getSupplierUuid() {
+        return supplierUuid;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
+    public void setSupplierUuid(UUID supplierUuid) {
+        this.supplierUuid = supplierUuid;
     }
 }

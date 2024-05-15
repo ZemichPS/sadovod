@@ -21,16 +21,6 @@ spring:
       auto-commit: true
     url: jdbc:postgresql://localhost:5432/catalogue-service
 
-  cloud:
-    stream:
-      bindings:
-        input:
-          destination: postCreated
-          binder: kafka
-
-      kafka:
-        binder:
-          brokers: localhost:9092
 
 # eureka config
 eureka:
@@ -41,8 +31,5 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
       register-with-eureka: true
       fetch-registry: true
-
-
-
 server:
   port: 0

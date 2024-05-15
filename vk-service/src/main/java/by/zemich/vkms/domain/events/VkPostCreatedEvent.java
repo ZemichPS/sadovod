@@ -4,10 +4,9 @@ package by.zemich.vkms.domain.events;
 import java.net.URL;
 import java.util.UUID;
 
-public class VkPostCreatedEvent{
+public class VkPostCreatedEvent implements Event{
     private VkPostUuid uuid;
     private UUID supplierUuid;
-    private VkPostId vkPostId;
     private VkPostData vkPostData;
     private URL uri;
 
@@ -17,21 +16,12 @@ public class VkPostCreatedEvent{
                               VkPostData vkPostData,
                               URL uri) {
         this.uuid = uuid;
-        this.vkPostId = vkPostId;
         this.supplierUuid = supplierUuid;
         this.vkPostData = vkPostData;
         this.uri = uri;
     }
 
     public VkPostCreatedEvent() {
-    }
-
-    public VkPostId getVkPostId() {
-        return vkPostId;
-    }
-
-    public void setVkPostId(VkPostId vkPostId) {
-        this.vkPostId = vkPostId;
     }
 
     public VkPostData getVkPostData() {
@@ -69,7 +59,6 @@ public class VkPostCreatedEvent{
     @Override
     public String toString() {
         return "VkPostCreatedEvent{" +
-                "vkPostId=" + vkPostId +
                 ", supplierUuid=" + supplierUuid +
                 ", vkPostData=" + vkPostData +
                 ", uri=" + uri +

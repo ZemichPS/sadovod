@@ -14,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 public class SizeInfo {
     private String sizeRange;
-    private List<Integer> sizeList;
+    private List<String> sizeList;
     private boolean isInSize;
 
 }

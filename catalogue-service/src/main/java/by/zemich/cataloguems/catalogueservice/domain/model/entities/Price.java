@@ -1,12 +1,15 @@
 package by.zemich.cataloguems.catalogueservice.domain.model.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import java.math.BigDecimal;
 
 @Embeddable
 public class Price {
     private Integer currencyCode;
+    @Column(name = "price_for_piece")
     private BigDecimal forPiece;
+    @Column(name = "price_for_set")
     private BigDecimal forSet;
 
     public Price(Integer currencyCode, BigDecimal forPiece, BigDecimal forSet) {

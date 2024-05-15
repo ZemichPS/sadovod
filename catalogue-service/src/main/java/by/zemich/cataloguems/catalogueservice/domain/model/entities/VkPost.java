@@ -9,13 +9,13 @@ import java.util.UUID;
 @Embeddable
 public class VkPost {
     private UUID postUuid;
-    private String text;
+    private String originalText;
     private LocalDateTime postPublishedAt;
     private URL url;
 
-    public VkPost(UUID postUuid, String text, LocalDateTime postPublishedAt, URL url) {
+    public VkPost(UUID postUuid, String originalText, LocalDateTime postPublishedAt, URL url) {
         this.postUuid = postUuid;
-        this.text = text;
+        this.originalText = originalText;
         this.postPublishedAt = postPublishedAt;
         this.url = url;
     }
@@ -31,12 +31,12 @@ public class VkPost {
         this.postUuid = uuid;
     }
 
-    public String getText() {
-        return text;
+    public String getOriginalText() {
+        return originalText;
     }
 
-    public void setText(String sourceDescription) {
-        this.text = sourceDescription;
+    public void setOriginalText(String sourceDescription) {
+        this.originalText = sourceDescription;
     }
 
     public LocalDateTime getPostPublishedAt() {
