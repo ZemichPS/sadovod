@@ -26,6 +26,20 @@ spring:
   cloud:
     discovery:
       enabled: true
+  ai:
+    openai:
+      api-key: sk-proj-u5fH42rsO6Sm14kyQeZyT3BlbkFJibQThHbZkfEyNHoGyewW
+    vertex:
+      ai:
+        gemini:
+          project-id: sadovod-423711
+          location: us-central
+          chat:
+            options:
+              model: gemini-1.0-pro
+              temperature: 0.5
+
+
 # eureka config
 eureka:
   client:
@@ -48,6 +62,9 @@ management:
       show-details: always
     shutdown:
       enabled: true
+
+
+
 
 mistral:
   api-key: 9PkC2c0r7Dh5SI3q9ZBCbKhT14dVvGt5

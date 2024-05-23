@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 class GetProductDescriptionController {
 
-    private final GetProductDescriptionService service;
+    private final GetProductDescriptionServiceApi service;
 
-    public GetProductDescriptionController(GetProductDescriptionService service) {
+    GetProductDescriptionController(GetProductDescriptionServiceApi service) {
         this.service = service;
     }
 

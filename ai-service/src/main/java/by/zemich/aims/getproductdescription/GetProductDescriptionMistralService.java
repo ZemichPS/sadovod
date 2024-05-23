@@ -6,28 +6,27 @@ import nl.dannyj.mistral.builders.MessageListBuilder;
 import nl.dannyj.mistral.models.completion.ChatCompletionRequest;
 import nl.dannyj.mistral.models.completion.ChatCompletionResponse;
 import nl.dannyj.mistral.models.completion.Message;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 @Log4j2
-class GetProductDescriptionService {
+class GetProductDescriptionMistralService implements GetProductDescriptionServiceApi{
 
     private final MistralClient client;
 
-    GetProductDescriptionService(MistralClient client) {
+    GetProductDescriptionMistralService(MistralClient client) {
         this.client = client;
     }
 
     public GetProductDescriptionResponse createJsonProductDescription(GetProductDescriptionRequest request) {
         List<Message> messages = new MessageListBuilder()
                 .system("""
-                        You are a bot that converts product information from post to JSON.
+                        You are a bot that converts product information from post to JSON according to POJO: %s
                         The response must contain only JSON.
-                        The response must be in strict accordance with the JSON template without any information.
-                        Translate the value of the json fields into English and then into Russian.
-                        JSON template: %s 
+                        Values to russian;
                         """.formatted(request.getJsonDestination()))
                 .user("""
                         Source text: %s.
@@ -39,8 +38,8 @@ class GetProductDescriptionService {
 log.info(request.getJsonDestination());
 
         ChatCompletionRequest chatCompletionRequest = ChatCompletionRequest.builder()
-                .model("open-mistral-7b")
-                .temperature(0.1)
+                .model("mistral-small-2402")
+                .temperature(0.9)
                 .messages(messages)
                 .safePrompt(false)
                 .maxTokens(800)

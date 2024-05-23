@@ -39,10 +39,9 @@ public class ProductCardCommandService {
 
     @Transactional(isolation = Isolation.SERIALIZABLE)
     public UUID create(CreateProductCardCommand command) {
-        String jsonTemplate = getJsonStringTemplate(ProductDescription.getEmptyProductInfo());
         ProductCard productCard = new ProductCard(command);
         String preparedText = prepareText(command.getPostText());
-        ProductDescription productDescription = externalAiService.getProductDescription(jsonTemplate, preparedText);
+        ProductDescription productDescription = externalAiService.getProductDescription(preparedText);
         productCard.addDescription(productDescription);
         repository.save(productCard);
         log.info(productCard.toString());
@@ -71,6 +70,8 @@ public class ProductCardCommandService {
                 .filter(line -> !line.contains("место"))
                 .collect(Collectors.joining("\n "));
     }
+
+
 
 
 }

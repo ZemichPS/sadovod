@@ -18,7 +18,6 @@ public class ProductDescription {
     private Prices prices;
     private Integer quantityInSetOrBox;
     private Boolean sale;
-
     public static ProductDescription getEmptyProductInfo() {
         return ProductDescription.builder()
                 .withProductName("")
