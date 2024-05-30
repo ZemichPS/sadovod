@@ -1,6 +1,6 @@
 package by.zemich.vkms.infrastructure.brokers.kafka.serializer;
 
-import by.zemich.vkms.domain.events.VkPostCreatedEvent;
+import by.zemich.vkms.domain.model.events.VkPostCreatedEvent;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

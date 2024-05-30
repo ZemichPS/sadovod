@@ -1,4 +1,4 @@
-package by.zemich.vkms.domain.exception;
+package by.zemich.vkms.domain.model.exception;
 
 public class VkPostNotFountException extends RuntimeException{
 

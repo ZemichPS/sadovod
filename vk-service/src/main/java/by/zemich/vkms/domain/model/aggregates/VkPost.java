@@ -1,12 +1,12 @@
 package by.zemich.vkms.domain.model.aggregates;
 
-import by.zemich.vkms.domain.events.VkPostId;
+import by.zemich.vkms.domain.model.entities.Supplier;
+import by.zemich.vkms.domain.model.events.VkPostId;
 import by.zemich.vkms.domain.model.entities.Picture;
-import by.zemich.vkms.domain.model.entities.SupplierId;
-import by.zemich.vkms.domain.events.VkPostData;
-import by.zemich.vkms.domain.events.VkPostUuid;
-import by.zemich.vkms.domain.commands.CreateVkPostCommand;
-import by.zemich.vkms.domain.events.VkPostCreatedEvent;
+import by.zemich.vkms.domain.model.events.VkPostData;
+import by.zemich.vkms.domain.model.events.VkPostUuid;
+import by.zemich.vkms.domain.model.commands.CreateVkPostCommand;
+import by.zemich.vkms.domain.model.events.VkPostCreatedEvent;
 import by.zemich.vkms.domain.model.entities.FullPost;
 import jakarta.persistence.*;
 import org.apache.http.client.utils.URIBuilder;
@@ -26,6 +26,8 @@ import java.util.UUID;
 public class VkPost extends AbstractAggregateRoot<VkPost> {
     @Id
     private UUID uuid;
+
+
     @Embedded
     private VkPostIdBKey vkPostBKey;
 
@@ -37,7 +39,7 @@ public class VkPost extends AbstractAggregateRoot<VkPost> {
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "supplier_uuid", referencedColumnName = "uuid")
-    private SupplierId supplierId;
+    private Supplier supplierId;
 
     public VkPost() {
     }
@@ -45,7 +47,12 @@ public class VkPost extends AbstractAggregateRoot<VkPost> {
     public VkPost(CreateVkPostCommand command) {
         this.uuid = java.util.UUID.randomUUID();
         this.vkPostBKey = new VkPostIdBKey(command.getPostId(), command.getOwnerId());
-        this.supplierId = new SupplierId(command.getSupplierUuid());
+        this.supplierId = new Supplier(
+                command.getSupplierUuid(),
+                command.getSupplierVkId(),
+                command.getSupplierName()
+
+        );
         this.fullPost = new FullPost()
                 .setPublishedAt(command.getPublishedAt())
                 .setImagesLinkList(command.getImagesLinkList().stream().map(uri -> new Picture(java.util.UUID.randomUUID(), uri.toString())).toList())
@@ -79,7 +86,7 @@ public class VkPost extends AbstractAggregateRoot<VkPost> {
         return fullPost;
     }
 
-    public SupplierId getSupplier() {
+    public Supplier getSupplier() {
         return supplierId;
     }
 

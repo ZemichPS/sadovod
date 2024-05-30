@@ -5,109 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e389683-0101-48ea-9bad-2d2898598800" name="Changes" comment="add catalogue-ms">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_victools_jsonschema_generator_4_31_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_victools_jsonschema_module_jackson_4_31_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_victools_jsonschema_module_swagger_2_4_33_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_android_annotations_4_1_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_api_common_2_23_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_api_common_2_25_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_gax_2_40_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_gax_2_42_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_gax_grpc_2_40_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_gax_grpc_2_42_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_gax_httpjson_2_42_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_grpc_google_common_protos_2_31_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_grpc_google_common_protos_2_33_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_grpc_google_iam_v1_1_26_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_grpc_google_iam_v1_1_28_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_cloud_aiplatform_v1_3_35_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_cloud_aiplatform_v1beta1_0_51_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_cloud_vertexai_v1_0_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_common_protos_2_31_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_common_protos_2_33_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_iam_v1_1_26_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_iam_v1_1_28_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_auth_google_auth_library_credentials_1_22_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_auth_google_auth_library_oauth2_http_1_22_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_auto_value_auto_value_annotations_1_10_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_cloud_google_cloud_aiplatform_3_35_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_cloud_google_cloud_vertexai_0_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_24_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_32_1_3_jre.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_http_client_google_http_client_1_43_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_http_client_google_http_client_gson_1_43_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_25_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_util_3_25_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_re2j_re2j_1_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_knuddels_jtokkit_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_alts_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_api_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_auth_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_context_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_core_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_googleapis_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_grpclb_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_inprocess_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_netty_shaded_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_protobuf_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_protobuf_lite_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_services_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_stub_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_util_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_xds_1_61_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_109_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_109_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_109_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_109_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_109_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_109_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_109_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_109_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_109_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opencensus_opencensus_api_0_31_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opencensus_opencensus_contrib_http_util_0_31_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opencensus_opencensus_proto_0_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_perfmark_perfmark_api_0_27_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_rest_assured_json_path_5_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_rest_assured_rest_assured_common_5_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_annotations_2_2_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_jodah_typetools_0_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_4_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_12_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_4_0_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_groovy_groovy_json_4_0_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_conscrypt_conscrypt_openjdk_uber_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_ai_spring_ai_core_0_8_1_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_ai_spring_ai_openai_0_8_1_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_ai_spring_ai_openai_spring_boot_starter_0_8_1_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_ai_spring_ai_retry_0_8_1_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_ai_spring_ai_spring_boot_autoconfigure_0_8_1_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_ai_spring_ai_vertex_ai_gemini_0_8_1_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_ai_spring_ai_vertex_ai_gemini_spring_boot_starter_0_8_1_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_function_context_4_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_function_core_4_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_6_1_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_threeten_threetenbp_1_6_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_5_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/config/OpenAIConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/config/VertexAiConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/config/properties/GeminiConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/getproductdescription/GetProductDescriptionOpenAiService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/getproductdescription/GetProductDescriptionServiceApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/getproductdescription/GetProductDescriptionTextBisonAIService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/getproductdescription/GetProductDescriptionVertexAiService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/ports/input/ScheduledServiceInputPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/ports/output/SupplierClientOutputPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/ports/output/VkClientOutputPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/usecases/ScheduledServiceUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/queries/FetchVKPostQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/valueobjects/SupplierId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/config/BeanConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/externalapi/supplier/ExternalSupplierFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/externalapi/supplier/model/Supplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/externalapi/vk/VKClientOutputPortAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/interfaces/scheduled/ScheduledAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/getproductdescription/GetProductDescriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/getproductdescription/GetProductDescriptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/getproductdescription/GetProductDescriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/getproductdescription/GetProductDescriptionMistralService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/getproductdescription/GetProductDescriptionTextBisonAIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/src/main/java/by/zemich/aims/getproductdescription/GetProductDescriptionTextBisonAIService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/application/internal/commandservices/ProductCardCommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/application/internal/commandservices/ProductCardCommandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/application/internal/outboundservices/alc/ExternalAiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/application/internal/outboundservices/alc/ExternalAiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/response/ProductDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/response/ProductDescription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/VkApplicationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/commandservices/VkPostCommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/commandservices/VkPostCommandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/outboundservices/QueueBrokerPort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/outboundservices/VkPostEventPublisherService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/outboundservices/alc/ExternalSupplierFeignClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/outboundservices/alc/ExternalVKService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/outboundservices/alc/model/VKPostQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/queryservices/VkPostQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/application/internal/queryservices/VkPostQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/commands/CreateVkPostCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/commands/CreateVkPostCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/events/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/events/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/events/VkPostCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/events/VkPostCreatedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/events/VkPostData.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/events/VkPostData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/events/VkPostId.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/events/VkPostId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/events/VkPostUuid.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/events/VkPostUuid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/exception/VkPostNotFountException.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/exception/VkPostNotFountException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/aggregates/VkPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/aggregates/VkPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/entities/FullPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/entities/FullPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/entities/Supplier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/entities/SupplierId.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/entities/SupplierId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/brokers/kafka/KafkaBrokerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/brokers/kafka/KafkaBrokerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/brokers/kafka/serializer/PayloadSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/brokers/kafka/serializer/PayloadSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/interfaces/rest/VkPostsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/interfaces/rest/VkPostsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,11 +130,11 @@
       <recent name="E:\JAVA projects\sadovod\catalogue-service\src\main\java\by\zemich" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="by.zemich.vkms.infrastructure.api.supplier" />
       <recent name="by.zemich.aims.getproductdescription" />
       <recent name="by.zemich.vkms.domain.events" />
       <recent name="by.zemich.cataloguems.catalogueservice.application.internal.outboundservices.alc.response" />
       <recent name="by.zemich.cataloguems.catalogueservice.infrastrucrure.config" />
-      <recent name="by.zemich.testservice.application.internal" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -416,6 +349,17 @@
       <workItem from="1716228061617" duration="873000" />
       <workItem from="1716229119825" duration="8234000" />
       <workItem from="1716314872518" duration="2267000" />
+      <workItem from="1716500922266" duration="2361000" />
+      <workItem from="1716582592453" duration="997000" />
+      <workItem from="1716584021880" duration="632000" />
+      <workItem from="1716586706440" duration="1608000" />
+      <workItem from="1716816517130" duration="766000" />
+      <workItem from="1717065247003" duration="9466000" />
+      <workItem from="1717077519636" duration="1775000" />
+      <workItem from="1717079345171" duration="1195000" />
+      <workItem from="1717081899040" duration="179000" />
+      <workItem from="1717082317201" duration="495000" />
+      <workItem from="1717087149539" duration="1309000" />
     </task>
     <task id="LOCAL-00001" summary="add futures">
       <created>1714254518328</created>

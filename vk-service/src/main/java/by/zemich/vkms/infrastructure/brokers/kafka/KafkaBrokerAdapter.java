@@ -1,7 +1,7 @@
 package by.zemich.vkms.infrastructure.brokers.kafka;
 
 import by.zemich.vkms.application.internal.outboundservices.QueueBrokerPort;
-import by.zemich.vkms.domain.events.VkPostCreatedEvent;
+import by.zemich.vkms.domain.model.events.VkPostCreatedEvent;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.KafkaHeaders;

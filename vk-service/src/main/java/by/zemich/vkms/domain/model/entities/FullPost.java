@@ -15,7 +15,6 @@ public class FullPost {
     private LocalDateTime publishedAt;
     private String text;
 
-
     public FullPost() {
     }
 

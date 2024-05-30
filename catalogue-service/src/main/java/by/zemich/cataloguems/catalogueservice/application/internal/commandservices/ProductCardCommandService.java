@@ -37,7 +37,7 @@ public class ProductCardCommandService {
         this.externalAiService = externalAiService;
     }
 
-    @Transactional(isolation = Isolation.SERIALIZABLE)
+    @Transactional(isolation = Isolation.REPEATABLE_READ)
     public UUID create(CreateProductCardCommand command) {
         ProductCard productCard = new ProductCard(command);
         String preparedText = prepareText(command.getPostText());

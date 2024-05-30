@@ -2,13 +2,11 @@ package by.zemich.vkms.application.internal.commandservices;
 
 import by.zemich.vkms.domain.model.aggregates.VkPost;
 import by.zemich.vkms.domain.model.aggregates.VkPostIdBKey;
-import by.zemich.vkms.domain.commands.CreateVkPostCommand;
+import by.zemich.vkms.domain.model.commands.CreateVkPostCommand;
 import by.zemich.vkms.infrastructure.repositories.jpa.VkPostRepository;
-import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service
-@Transactional
 public class VkPostCommandService {
     private final VkPostRepository repository;
 
@@ -16,6 +14,7 @@ public class VkPostCommandService {
         this.repository = repository;
     }
 
+    @Transactional(isolation = Isolation.REPEATABLE_READ)
     public VkPostIdBKey createPost(CreateVkPostCommand command) {
         VkPost newVkPost = repository.save(new VkPost(command));
         return newVkPost.getVkPostBKey();

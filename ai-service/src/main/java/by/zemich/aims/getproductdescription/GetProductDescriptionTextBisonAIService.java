@@ -35,11 +35,10 @@ public class GetProductDescriptionTextBisonAIService implements GetProductDescri
     @Override
     public GetProductDescriptionResponse createJsonProductDescription(GetProductDescriptionRequest request) {
 
-
         String prompt = """
                 Make JSON response for POJO:
                 %s
-                Important! If it is not specified that the product has no color selection, then there is an option to choose a color.
+                Important! If Is not specified that the product has no color selection, then there is an option to choose a color.
                 Product description: %s
                 """.formatted(request.getJsonDestination(), request.getSource());
 
@@ -77,13 +76,6 @@ public class GetProductDescriptionTextBisonAIService implements GetProductDescri
 
             PredictResponse predictResponse =
                     predictionServiceClient.predict(endpointName, instances, parameterValue);
-
-//            String result = predictResponse
-//                    .getPredictionsList()
-//                    .getFirst()
-//                    .getStructValue()
-//                    .getFieldsMap().get("content")
-//                    .getStringValue();
 
 
             String result = predictResponse

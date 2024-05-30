@@ -1,4 +1,4 @@
-package by.zemich.vkms.domain.events;
+package by.zemich.vkms.domain.model.events;
 
 public record VkPostId(Integer id, Integer ownerId) {
 
