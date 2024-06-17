@@ -1,37 +1,37 @@
 package by.zemich.vkms.infrastructure.config;
 
-import by.zemich.vkms.application.internal.commandservices.VkPostCommandService;
-import by.zemich.vkms.application.internal.ports.input.ScheduledServiceInputPort;
-import by.zemich.vkms.application.internal.ports.output.SupplierClientOutputPort;
-import by.zemich.vkms.application.internal.ports.output.VkClientOutputPort;
-import by.zemich.vkms.application.internal.queryservices.VkPostQueryService;
-import by.zemich.vkms.infrastructure.repositories.jpa.VkPostRepository;
+import by.zemich.vkms.application.internal.ports.input.VkPostManagementInputPort;
+import by.zemich.vkms.application.internal.ports.output.FetchSuppliersOutputPort;
+import by.zemich.vkms.application.internal.ports.output.FetchVkPostsOutputPort;
+import by.zemich.vkms.application.internal.ports.output.PublishEventOutputPort;
+import by.zemich.vkms.application.internal.ports.output.VkPostManagementRepositoryOutputPort;
+import by.zemich.vkms.application.internal.usecases.VkPostManagementUseCase;
+import by.zemich.vkms.infrastructure.output.brokers.kafka.KafkaBrokerAdapter;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.List;
-
 @Configuration
 public class BeanConfiguration {
-    @Bean
-    VkPostQueryService VkPostQueryService(VkPostRepository repository) {
-        return new VkPostQueryService(repository);
-    }
 
     @Bean
-    VkPostCommandService vkPostCommandService(VkPostRepository repository) {
-        return new VkPostCommandService(repository);
+    public KafkaBrokerAdapter kafkaBrokerAdapter(KafkaTemplate<String, byte[]> kafkaTemplate){
+        return new KafkaBrokerAdapter(kafkaTemplate);
     }
 
+
     @Bean
-    ScheduledServiceInputPort scheduledServiceInputPort(SupplierClientOutputPort supplierClientOutputPort,
-                                                        VkClientOutputPort vkClientOutputPort,
-                                                        VkPostCommandService vkPostCommandService
+    public VkPostManagementUseCase vkPostManagementUseCase(
+            FetchSuppliersOutputPort fetchSuppliersOutputPort,
+            FetchVkPostsOutputPort fetchVkPostsOutputPort,
+            PublishEventOutputPort publishEventOutputPort,
+            VkPostManagementRepositoryOutputPort vkPostManagementRepositoryOutputPort
     ) {
-        return new ScheduledServiceInputPort(
-                supplierClientOutputPort,
-                vkClientOutputPort,
-                vkPostCommandService
+        return new VkPostManagementInputPort(
+                 fetchSuppliersOutputPort,
+                 fetchVkPostsOutputPort,
+                 publishEventOutputPort,
+                 vkPostManagementRepositoryOutputPort
         );
     }
 

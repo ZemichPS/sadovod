@@ -4,7 +4,8 @@ package by.zemich.vkms.domain.model.events;
 import java.net.URL;
 import java.util.UUID;
 
-public class VkPostCreatedEvent implements Event{
+public class VkPostCreatedEvent   {
+
     private VkPostUuid uuid;
     private UUID supplierUuid;
     private VkPostData vkPostData;
@@ -65,4 +66,6 @@ public class VkPostCreatedEvent implements Event{
                 ", uuid=" + uuid +
                 '}';
     }
+
+
 };

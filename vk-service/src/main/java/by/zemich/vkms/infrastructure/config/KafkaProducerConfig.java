@@ -1,6 +1,6 @@
 package by.zemich.vkms.infrastructure.config;
 
-import by.zemich.vkms.infrastructure.brokers.kafka.serializer.PayloadSerializer;
+import by.zemich.vkms.infrastructure.output.brokers.kafka.serializer.PayloadSerializer;
 import org.apache.kafka.clients.admin.AdminClientConfig;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.producer.ProducerConfig;
