@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("/ai-service/product_description")
+@RequestMapping("api/v1/get_product_description")
 @Slf4j
 class GetProductDescriptionController {
 
@@ -16,7 +16,7 @@ class GetProductDescriptionController {
         this.service = service;
     }
 
-    @PostMapping("/v1/api/")
+    @PostMapping
     public ResponseEntity<?> getProductDescriptionFromText(@RequestBody GetProductDescriptionRequest request) {
 
         GetProductDescriptionResponse jsonProductDescription = service.createJsonProductDescription(request);

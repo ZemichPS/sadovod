@@ -15,5 +15,23 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="supplier-service@localhost" uuid="3eddd803-25d3-4912-b1d4-37665a526a65">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <user-name>postgres</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="ai-service@localhost" uuid="552578f6-0f5a-41c0-81b6-546ff70043dc">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="user-service@localhost" uuid="f278d9b8-8c9e-469c-830c-96f98c314d40">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <user-name>postgres</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="catalogue-service@localhost" uuid="88db8b87-f7dc-4083-bd4e-b376481496e4">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <schema-mapping />
+    </data-source>
   </component>
 </project>
