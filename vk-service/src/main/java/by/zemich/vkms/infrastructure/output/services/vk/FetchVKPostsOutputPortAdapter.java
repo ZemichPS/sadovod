@@ -1,7 +1,7 @@
 package by.zemich.vkms.infrastructure.output.services.vk;
 
-import by.zemich.vkms.application.internal.ports.output.FetchVkPostsOutputPort;
-import by.zemich.vkms.application.internal.usecases.VkPostManagementUseCase;
+import by.zemich.vkms.application.ports.output.FetchVkPostsOutputPort;
+import by.zemich.vkms.application.usecases.VkPostManagementUseCase;
 import by.zemich.vkms.domain.model.aggregates.VkPost;
 import by.zemich.vkms.domain.model.entities.Supplier;
 import by.zemich.vkms.domain.model.exceptions.GenericSpecificationException;
@@ -16,7 +16,6 @@ import com.vk.api.sdk.objects.wall.GetFilter;
 import com.vk.api.sdk.objects.wall.WallpostAttachment;
 import com.vk.api.sdk.objects.wall.WallpostFull;
 import com.vk.api.sdk.objects.wall.responses.GetResponse;
-import lombok.extern.log4j.Log4j2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

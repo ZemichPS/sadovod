@@ -21,8 +21,4 @@ public class ProductCardDto {
     private List<String> sizeList;
     private boolean inSize;
     private String quality;
-
-
-
-
 }

@@ -1,6 +1,6 @@
 package by.zemich.cataloguems.catalogueservice.infrastrucrure.config;
 
-import by.zemich.cataloguems.catalogueservice.application.internal.usecases.ProductManagementUseCase;
+import by.zemich.cataloguems.catalogueservice.application.usecases.ProductManagementUseCase;
 import by.zemich.cataloguems.catalogueservice.application.ports.input.ProductManagementInputPort;
 import by.zemich.cataloguems.catalogueservice.application.ports.output.ProductManagementAIOutputPort;
 import by.zemich.cataloguems.catalogueservice.application.ports.output.ProductManagementFindCategoryOutputPort;

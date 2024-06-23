@@ -1,9 +1,13 @@
 package by.zemich.vkms.infrastructure.output.repositories.jpa;
 
 import by.zemich.vkms.infrastructure.output.repositories.jpa.entities.SupplierEntity;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.Optional;
 import java.util.UUID;
 
-public interface SupplierRepository extends CrudRepository<SupplierEntity, UUID> {
+public interface SupplierRepository extends JpaRepository<SupplierEntity, UUID> {
+    default Optional<SupplierEntity> getProxyById(UUID uuid){
+        return Optional.of(this.getReferenceById(uuid));
+    }
 }

@@ -1,20 +1,20 @@
-package by.zemich.vkms.interfaces.rest;
-
-import by.zemich.vkms.domain.model.aggregates.VkPost;
-import by.zemich.vkms.domain.model.valueobjects.VkPostId;
-import by.zemich.vkms.interfaces.rest.dto.VkPostResponse;
-import org.modelmapper.ModelMapper;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Objects;
-import java.util.UUID;
-
-@RestController
-@RequestMapping("/vk")
-public class VkPostsController {
+//package by.zemich.vkms.interfaces.rest;
+//
+//import by.zemich.vkms.domain.model.aggregates.VkPost;
+//import by.zemich.vkms.domain.model.valueobjects.VkPostId;
+//import by.zemich.vkms.interfaces.rest.dto.VkPostResponse;
+//import org.modelmapper.ModelMapper;
+//import org.springframework.http.ResponseEntity;
+//import org.springframework.web.bind.annotation.PathVariable;
+//import org.springframework.web.bind.annotation.RequestMapping;
+//import org.springframework.web.bind.annotation.RestController;
+//
+//import java.util.Objects;
+//import java.util.UUID;
+//
+//@RestController
+//@RequestMapping("/vk")
+//public class VkPostsController {
 //    private final VkPostQueryService queryService;
 //    private final ModelMapper modelMapper;
 //
@@ -37,6 +37,6 @@ public class VkPostsController {
 //        if (Objects.isNull(vkPost)) return ResponseEntity.notFound().build();
 //        return ResponseEntity.ok(modelMapper.map(vkPost, VkPostResponse.class));
 //    }
-
-
-}
+//
+//
+//}

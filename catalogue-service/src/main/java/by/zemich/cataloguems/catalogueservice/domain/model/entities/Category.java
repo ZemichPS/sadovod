@@ -2,6 +2,7 @@ package by.zemich.cataloguems.catalogueservice.domain.model.entities;
 
 
 import by.zemich.cataloguems.catalogueservice.domain.model.valueobjects.CategoryID;
+import by.zemich.cataloguems.catalogueservice.domain.model.valueobjects.CategoryName;
 import by.zemich.cataloguems.catalogueservice.domain.model.valueobjects.CategoryType;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +20,7 @@ public class Category {
 
     @Getter
     @Setter
-    private CategoryType type;
+    private CategoryName categoryName;
 
     @Getter
     @Setter
@@ -32,8 +33,8 @@ public class Category {
     @Getter
     private List<Category> subcategories;
 
-    public static Predicate<Category> getCategoryByType(CategoryType categoryType){
-        return category -> category.getType().equals(categoryType);
+    public static Predicate<Category> getCategoryByType(CategoryName categoryName){
+        return category -> category.getCategoryName().equals(categoryName);
     }
 
     public void addProduct(Product newProduct){

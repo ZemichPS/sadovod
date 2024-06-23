@@ -1,6 +1,6 @@
 package by.zemich.cataloguems.catalogueservice.interfaces.eventhandlers.kafka;
 
-import by.zemich.cataloguems.catalogueservice.application.internal.usecases.ProductManagementUseCase;
+import by.zemich.cataloguems.catalogueservice.application.usecases.ProductManagementUseCase;
 import by.zemich.cataloguems.catalogueservice.domain.model.valueobjects.*;
 import by.zemich.shareddomain.events.Event;
 import by.zemich.shareddomain.events.VkPostCreatedEvent;
@@ -35,7 +35,8 @@ public class KafkaEventHandlerInputAdapter {
         validate(event);
 
         ProductId productId = new ProductId(UUID.randomUUID());
-        SupplierId supplierId = new SupplierId(event.getSupplierUuid());
+        // TODO исправить! Редактировать event и добавить информацию о поставщике для поля "title"
+        Supplier supplierId = new Supplier(event.getSupplierUuid(), event.getSupplierUuid().toString());
         List<Photo> photoList = event.getVkPostData().imagesLinkList()
                 .stream()
                 .map(strLink -> new Photo(UUID.randomUUID(), productId.uuid(), strLink))

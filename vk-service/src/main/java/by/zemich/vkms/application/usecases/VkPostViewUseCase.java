@@ -1,4 +1,4 @@
-package by.zemich.vkms.application.internal.usecases;
+package by.zemich.vkms.application.usecases;
 
 import by.zemich.vkms.domain.model.aggregates.VkPost;
 

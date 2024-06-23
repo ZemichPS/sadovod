@@ -1,4 +1,4 @@
-package by.zemich.vkms.application.internal.ports.output;
+package by.zemich.vkms.application.ports.output;
 
 import by.zemich.vkms.domain.model.entities.Supplier;
 

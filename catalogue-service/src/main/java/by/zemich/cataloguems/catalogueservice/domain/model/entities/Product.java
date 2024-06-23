@@ -12,7 +12,7 @@ public class Product {
 
     @Getter
     @Setter
-    private SupplierId supplierId;
+    private Supplier supplier;
 
     @Getter
     @Setter
@@ -30,8 +30,8 @@ public class Product {
 
     private Link linkOnProduct;
 
-    public static Predicate<Product> getProductBySupplierIdPredicate(SupplierId supplierId){
-        return product -> product.getSupplierId().equals(supplierId);
+    public static Predicate<Product> getProductBySupplierIdPredicate(Supplier supplier){
+        return product -> product.getSupplier().equals(supplier);
     }
 
     public static Predicate<Product> getProductByProductNamePredicate(ProductName productName){
@@ -42,9 +42,9 @@ public class Product {
         this.id = id;
     }
 
-    public void addSupplierId(SupplierId supplierId){
+    public void addSupplierId(Supplier supplierId){
         // TODO add specification
-        this.supplierId = supplierId;
+        this.supplier = supplierId;
     }
 
     public void addProductName(ProductName productName){

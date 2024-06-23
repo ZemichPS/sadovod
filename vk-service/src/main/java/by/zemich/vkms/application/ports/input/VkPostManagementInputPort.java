@@ -1,10 +1,10 @@
-package by.zemich.vkms.application.internal.ports.input;
+package by.zemich.vkms.application.ports.input;
 
-import by.zemich.vkms.application.internal.ports.output.FetchSuppliersOutputPort;
-import by.zemich.vkms.application.internal.ports.output.FetchVkPostsOutputPort;
-import by.zemich.vkms.application.internal.ports.output.PublishEventOutputPort;
-import by.zemich.vkms.application.internal.ports.output.VkPostManagementRepositoryOutputPort;
-import by.zemich.vkms.application.internal.usecases.VkPostManagementUseCase;
+import by.zemich.vkms.application.ports.output.FetchSuppliersOutputPort;
+import by.zemich.vkms.application.ports.output.FetchVkPostsOutputPort;
+import by.zemich.vkms.application.ports.output.PublishEventOutputPort;
+import by.zemich.vkms.application.ports.output.VkPostManagementRepositoryOutputPort;
+import by.zemich.vkms.application.usecases.VkPostManagementUseCase;
 import by.zemich.vkms.domain.model.events.VkPostCreatedEvent;
 import by.zemich.vkms.domain.model.services.EventManagerService;
 import java.util.Collection;

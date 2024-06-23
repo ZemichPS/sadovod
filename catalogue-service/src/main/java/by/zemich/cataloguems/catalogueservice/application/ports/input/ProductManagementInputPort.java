@@ -1,6 +1,6 @@
 package by.zemich.cataloguems.catalogueservice.application.ports.input;
 
-import by.zemich.cataloguems.catalogueservice.application.internal.usecases.ProductManagementUseCase;
+import by.zemich.cataloguems.catalogueservice.application.usecases.ProductManagementUseCase;
 import by.zemich.cataloguems.catalogueservice.application.ports.output.ProductManagementAIOutputPort;
 import by.zemich.cataloguems.catalogueservice.application.ports.output.ProductManagementFindCategoryOutputPort;
 import by.zemich.cataloguems.catalogueservice.application.ports.output.ProductManagementRepositoryOutputPort;
@@ -27,7 +27,7 @@ public class ProductManagementInputPort implements ProductManagementUseCase {
 
     @Override
     public Product create(ProductId productId,
-                          SupplierId supplierId,
+                          Supplier supplier,
                           Photos photos,
                           Link link,
                           String sourceText
@@ -44,12 +44,13 @@ public class ProductManagementInputPort implements ProductManagementUseCase {
         Price price = ProductService.getPriceOf(productDto);
 
         Product newProduct = new Product(productId);
-        newProduct.addSupplierId(supplierId);
+        newProduct.addSupplierId(supplier);
         newProduct.addProductName(productName);
         newProduct.addDescription(description);
         newProduct.addPhotos(photos);
         newProduct.addPrice(price);
         newProduct.addLink(link);
+
         //TODO нужно заменить
         newProduct.addCategory(subCategory);
 

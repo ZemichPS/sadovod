@@ -1,6 +1,6 @@
 package by.zemich.vkms.infrastructure.output.repositories;
 
-import by.zemich.vkms.application.internal.ports.output.VkPostManagementRepositoryOutputPort;
+import by.zemich.vkms.application.ports.output.VkPostManagementRepositoryOutputPort;
 import by.zemich.vkms.domain.model.aggregates.VkPost;
 import by.zemich.vkms.domain.model.entities.Supplier;
 import by.zemich.vkms.infrastructure.output.repositories.jpa.SupplierRepository;
@@ -30,7 +30,7 @@ public class RepositoryAdapter implements VkPostManagementRepositoryOutputPort {
         Supplier supplier = newVkPost.getSupplier();
         UUID supplierUuid = supplier.getUuid();
 
-        supplierRepository.findById(supplierUuid).ifPresentOrElse(supplierEntity1 -> vkPostForSave.setSupplier(supplierEntity1),
+        supplierRepository.getProxyById(supplierUuid).ifPresentOrElse(vkPostForSave::setSupplier,
                 () -> {
                     SupplierEntity newSupplier = SupplierEntity.createNewSupplier(supplier);
                     supplierRepository.save(newSupplier);

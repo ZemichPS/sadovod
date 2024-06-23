@@ -1,6 +1,6 @@
 package by.zemich.vkms.infrastructure.output.services.supplier;
 
-import by.zemich.vkms.application.internal.ports.output.FetchSuppliersOutputPort;
+import by.zemich.vkms.application.ports.output.FetchSuppliersOutputPort;
 import by.zemich.vkms.infrastructure.output.services.supplier.model.Supplier;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;

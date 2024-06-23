@@ -1,6 +1,6 @@
 package by.zemich.vkms.infrastructure.output.brokers.kafka;
 
-import by.zemich.vkms.application.internal.ports.output.PublishEventOutputPort;
+import by.zemich.vkms.application.ports.output.PublishEventOutputPort;
 import by.zemich.vkms.domain.model.events.VkPostCreatedEvent;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -8,7 +8,6 @@ import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
-import org.springframework.stereotype.Component;
 import org.springframework.transaction.event.TransactionalEventListener;
 
 import java.time.Instant;

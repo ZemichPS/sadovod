@@ -1,11 +1,11 @@
 package by.zemich.vkms.infrastructure.config;
 
-import by.zemich.vkms.application.internal.ports.input.VkPostManagementInputPort;
-import by.zemich.vkms.application.internal.ports.output.FetchSuppliersOutputPort;
-import by.zemich.vkms.application.internal.ports.output.FetchVkPostsOutputPort;
-import by.zemich.vkms.application.internal.ports.output.PublishEventOutputPort;
-import by.zemich.vkms.application.internal.ports.output.VkPostManagementRepositoryOutputPort;
-import by.zemich.vkms.application.internal.usecases.VkPostManagementUseCase;
+import by.zemich.vkms.application.ports.input.VkPostManagementInputPort;
+import by.zemich.vkms.application.ports.output.FetchSuppliersOutputPort;
+import by.zemich.vkms.application.ports.output.FetchVkPostsOutputPort;
+import by.zemich.vkms.application.ports.output.PublishEventOutputPort;
+import by.zemich.vkms.application.ports.output.VkPostManagementRepositoryOutputPort;
+import by.zemich.vkms.application.usecases.VkPostManagementUseCase;
 import by.zemich.vkms.infrastructure.output.brokers.kafka.KafkaBrokerAdapter;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.context.annotation.Bean;
