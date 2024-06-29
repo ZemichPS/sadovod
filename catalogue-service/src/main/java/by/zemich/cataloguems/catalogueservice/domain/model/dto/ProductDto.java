@@ -33,7 +33,7 @@ public class ProductDto {
 
     private BigDecimal priceForSet;
 
-    private BigDecimal pricePiece;
+    private BigDecimal priceForPiece;
 
     public ProductDto() {
     }
@@ -48,7 +48,7 @@ public class ProductDto {
                       String parentCategory,
                       String subCategory,
                       BigDecimal priceForSet,
-                      BigDecimal pricePiece) {
+                      BigDecimal priceForPiece) {
         this.productName = productName;
         this.availableColors = availableColors;
         this.abilityToSelectColor = abilityToSelectColor;
@@ -59,7 +59,7 @@ public class ProductDto {
         this.parentCategory = parentCategory;
         this.subCategory = subCategory;
         this.priceForSet = priceForSet;
-        this.pricePiece = pricePiece;
+        this.priceForPiece = priceForPiece;
     }
 
 

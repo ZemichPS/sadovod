@@ -19,7 +19,6 @@ public class BeanConfiguration {
         return new KafkaBrokerAdapter(kafkaTemplate);
     }
 
-
     @Bean
     public VkPostManagementUseCase vkPostManagementUseCase(
             FetchSuppliersOutputPort fetchSuppliersOutputPort,

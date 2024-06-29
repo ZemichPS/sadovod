@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 import java.util.UUID;
 
-@FeignClient("SUPPLIER-SERVICE")
+@FeignClient(name = "supplier-service")
 public interface ExternalFetchSuppliers extends FetchSuppliersOutputPort {
     default List<by.zemich.vkms.domain.model.entities.Supplier> fetchSuppliers() {
         return getAll().stream()
@@ -21,10 +21,10 @@ public interface ExternalFetchSuppliers extends FetchSuppliersOutputPort {
                 .toList();
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/supplier/v1/api")
+    @RequestMapping(method = RequestMethod.GET, value = "/api/v1/suppliers")
     List<Supplier> getAll();
 
-    @RequestMapping(method = RequestMethod.GET, value = "/supplier/v1/api/{uuid}")
+    @RequestMapping(method = RequestMethod.GET, value = "/api/v1/suppliers/{uuid}")
     Supplier getByUuid(UUID supplierUuid);
 
 }

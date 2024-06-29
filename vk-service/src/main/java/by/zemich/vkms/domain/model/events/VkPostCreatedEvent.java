@@ -12,13 +12,15 @@ import java.util.UUID;
 @Getter
 @Setter
 public class VkPostCreatedEvent {
-    private UUID SupplierUuid;
-    private String SupplierName;
+    private UUID supplierUuid;
+    private String supplierName;
     private List<Photo> photos;
     private String linkToVkPost;
     private String postText;
+
+    public record Photo(String link) {
+    }
 }
 
-record Photo(String link) {
-}
+
 

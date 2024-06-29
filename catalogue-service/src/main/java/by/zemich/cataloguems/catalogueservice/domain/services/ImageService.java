@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class ImageService {
+
     public static String getFromDtoStructure(ProductDto dto){
         String fields = Arrays.stream(ProductDto.class.getDeclaredFields())
                 .map(field -> {

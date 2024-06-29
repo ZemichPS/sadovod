@@ -2,31 +2,27 @@ package by.zemich.vkms.domain.model.services;
 
 import by.zemich.vkms.domain.model.aggregates.VkPost;
 import by.zemich.vkms.domain.model.entities.Photo;
+import by.zemich.vkms.domain.model.entities.Supplier;
 import by.zemich.vkms.domain.model.events.VkPostCreatedEvent;
-import by.zemich.vkms.domain.model.events.VkPostData;
 
-import java.net.URI;
 import java.util.List;
 
 public class EventManagerService {
     public VkPostCreatedEvent createdEvent(VkPost vkPost) {
 
+        Supplier supplier = vkPost.getSupplier();
 
-        List<String> postPhotoLinks = vkPost.getPhotos().getPhotos().stream()
+        List<VkPostCreatedEvent.Photo> postPhotoLinks = vkPost.getPhotos().getPhotos().stream()
                 .map(Photo::getUri)
+                .map(VkPostCreatedEvent.Photo::new)
                 .toList();
 
-        VkPostData vkPostData = new VkPostData(
-                postPhotoLinks,
-                vkPost.getDateInfo().getPublishedAt(),
-                vkPost.getText().getText()
-        );
-
-        VkPostCreatedEvent vkPostCreatedEvent = new VkPostCreatedEvent();
-        vkPostCreatedEvent.setSupplierUuid(vkPost.getSupplier().getUuid());
-        vkPostCreatedEvent.setUri(vkPost.getLinkToPost());
-        vkPostCreatedEvent.setVkPostData(vkPostData);
-
-        return vkPostCreatedEvent;
+        return VkPostCreatedEvent.builder()
+                .supplierUuid(supplier.getUuid())
+                .supplierName(supplier.getName())
+                .photos(postPhotoLinks)
+                .linkToVkPost(vkPost.getLinkToPost().toString())
+                .postText(vkPost.getText().getText())
+                .build();
     }
 }

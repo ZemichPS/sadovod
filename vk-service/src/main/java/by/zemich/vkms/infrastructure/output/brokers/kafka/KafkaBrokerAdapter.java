@@ -48,12 +48,12 @@ public class KafkaBrokerAdapter implements PublishEventOutputPort {
 
     // TODO написать нормальный обработчик успешной отправки
     private void handleSuccess(Message<VkPostCreatedEvent> message) {
-        log.info("event successfully has been sent. Id:{}", message.getPayload().getUuid());
+        log.info("event successfully has been sent. Id:{}", message.getPayload().getSupplierName());
     }
 
     // TODO написать нормальный обработчик неудачной отправки
     private void handleFailure(Message<VkPostCreatedEvent> message, Throwable exception) {
-        log.error("event failed in sending. Id:{}. Exception: {}", message.getPayload().getUri(),
+        log.error("event failed in sending. Id:{}. Exception: {}", message.getPayload().getSupplierName(),
                 exception.getMessage());
     }
 

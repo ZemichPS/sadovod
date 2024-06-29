@@ -1,7 +1,6 @@
 package by.zemich.cataloguems.catalogueservice.domain.services;
 
 import by.zemich.cataloguems.catalogueservice.domain.model.dto.ProductDto;
-import by.zemich.cataloguems.catalogueservice.domain.model.entities.Category;
 import by.zemich.cataloguems.catalogueservice.domain.model.entities.Product;
 import by.zemich.cataloguems.catalogueservice.domain.model.valueobjects.*;
 
@@ -46,7 +45,7 @@ public class ProductService {
     public static Price getPriceOf(ProductDto productDto) {
         return new Price(
                 643,
-                productDto.getPricePiece(),
+                productDto.getPriceForPiece(),
                 productDto.getPriceForSet()
         );
     }

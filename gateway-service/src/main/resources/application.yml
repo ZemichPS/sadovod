@@ -2,32 +2,17 @@ server:
   port: 8081
 
 spring:
-  security:
-    oauth2:
-      client:
-        registration:
-          keycloak:
-            client-id: sadovod-app
-            client-secret: nnRJEscrfGgHfMcPAuPQ0We9MQs4OZlD
-            scope:
-              - openid
-              - view_suppliers
-              - add_supplier
-              - update_supplier
-              - microprofile-jwt
-            authorization-grant-type: authorization_code
-
-        provider:
-          keycloak:
-            issuer-uri: "http://localhost:8282/realms/sadovod"
-            user-name-attribute: preferred_username
-  application.name: gateway-service
+  application:
+    name: gateway
 
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
+      metrics:
+        enabled: true
+
   config:
     import: optional:configserver:http://localhost:8888
 
@@ -40,5 +25,12 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
 
-
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: gateway
 

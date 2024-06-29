@@ -17,13 +17,13 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/supplier")
+@RequestMapping("api/v1/suppliers")
 @RequiredArgsConstructor
 public class SupplierRestAdapter {
     private final SupplierServicePort supplierServicePort;
     private final ModelMapper mapper;
 
-    @GetMapping("/v1/api")
+    @GetMapping
     public ResponseEntity<List<SupplierResponse>> getAll() {
         List<SupplierResponse> supplierResponseList = supplierServicePort.getAll().stream()
                 .map(supplier -> mapper.map(supplier, SupplierResponse.class))
@@ -32,13 +32,13 @@ public class SupplierRestAdapter {
         return ResponseEntity.ok(supplierResponseList);
     }
 
-    @GetMapping("/v1/api/{uuid}")
+    @GetMapping("/{uuid}")
     public ResponseEntity<SupplierResponse> getByUuid(@PathVariable(name = "uuid") UUID uuid) {
         Supplier supplier = supplierServicePort.getByUuid(uuid);
         return ResponseEntity.ok(mapper.map(supplier, SupplierResponse.class));
     }
 
-    @PostMapping("/v1/api")
+    @PostMapping
     public ResponseEntity<String> create(@Valid @RequestBody SupplierCreateRequest createRequest, UriComponentsBuilder ucb) {
         Supplier newSupplier = mapper.map(createRequest, Supplier.class);
         final Supplier savedSupplier = supplierServicePort.save(newSupplier);
@@ -57,7 +57,7 @@ public class SupplierRestAdapter {
         return ResponseEntity.ok(mapper.map(updatedSupplier, SupplierResponse.class));
     }
 
-    @DeleteMapping("/v1/api/{uuid}")
+    @DeleteMapping("/{uuid}")
     public ResponseEntity<Void> deleteByUuid(@PathVariable(name = "uuid") UUID uuid) {
         supplierServicePort.deleteByUuid(uuid);
         return ResponseEntity.noContent().build();

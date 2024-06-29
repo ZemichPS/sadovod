@@ -17,10 +17,10 @@ import java.util.UUID;
 @Setter
 public class VkPostCreatedEvent {
     @NotNull
-    private UUID SupplierUuid;
+    private UUID supplierUuid;
 
     @NotEmpty
-    private String SupplierName;
+    private String supplierName;
 
     @NotNull
     @Size(min = 1) // Ensure there's at least one photo
@@ -31,8 +31,10 @@ public class VkPostCreatedEvent {
 
     @NotEmpty
     private String postText;
+
+    record Photo(@NotEmpty String link) {
+    }
 }
 
-record Photo(@NotEmpty String link) {
-}
+
 
