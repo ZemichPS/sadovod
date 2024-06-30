@@ -22,7 +22,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8082/realms/sadovod
+          issuer-uri: http://localhost:8082/realms/developer
   jackson:
     property-naming-strategy: SNAKE_CASE
     default-property-inclusion: non_null

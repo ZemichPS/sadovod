@@ -2,21 +2,36 @@ spring:
   application:
     name: test-service
 
-  cloud:
-    stream:
-      bindings:
-        input:
-          destination: catalogue-service.productCardCreated
-          group: catalogue-service-group
-          binder: kafka
-        output:
-          destination: test-service.testEvent
-          binder: kafka
-      kafka:
-        binder:
-          brokers: localhost:9092
-          auto-create-topics: true
-
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: my-client
+            client-secret: my-secret
+            authorization-grant-type: client_credentials
+            scope: openid
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/auth/realms/myrealm
+            token-uri: http://localhost:8080/auth/realms/myrealm/protocol/openid-connect/token
 
 server:
   port: 7452
+
+  # cloud config
+  cloud:
+    discovery:
+      enabled: true
+
+# eureka config
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      register-with-eureka: true
+      fetch-registry: true
+
+

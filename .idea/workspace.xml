@@ -5,31 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e389683-0101-48ea-9bad-2d2898598800" name="Changes" comment="go on">
-      <change afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/config/security/AuthoritiesConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/config/security/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/contoller/SupplierController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/dto/Supplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/service/SupplierFeignService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/model/dto/ProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/services/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/services/ImageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/domain/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/cataloguems/catalogueservice/infrastrucrure/config/ModelMapperConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/shareddomain/events/VkPostCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/by/zemich/shareddomain/events/VkPostCreatedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/RouteConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/RouteConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/ClientBeans.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/ClientBeans.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/OAuthClientHttpRequestInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/OAuthClientHttpRequestInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/interfaces/rest/SupplierRestAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/interfaces/rest/SupplierRestAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supplier-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/events/VkPostCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/events/VkPostCreatedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/services/EventManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/domain/model/services/EventManagerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/config/BeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/config/BeanConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/output/brokers/kafka/KafkaBrokerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/output/brokers/kafka/KafkaBrokerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/output/services/supplier/ExternalFetchSuppliers.java" beforeDir="false" afterPath="$PROJECT_DIR$/vk-service/src/main/java/by/zemich/vkms/infrastructure/output/services/supplier/ExternalFetchSuppliers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/TestServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/TestServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/application/internal/ScheduledEventBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/application/internal/VkPostEventBrokerPublisherService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/domain/events/LenovoEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/infrastracture/brokers/kafka/TestServiceEventSource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/interfaces/eventhandlers/KafkaStreamEventListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/interfaces/eventhandlers/event/TestEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +58,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/ZemichPS/sadovod.git&quot;,
-    &quot;accountId&quot;: &quot;0b9bc5fc-c726-4380-8ff9-09eda5e98e0d&quot;
+    &quot;accountId&quot;: &quot;098b9118-76c6-4a6b-8749-042ba11cce80&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -92,47 +82,50 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.gateway-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.suppliersms [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.vk-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AiServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ServerConfigApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.SupplierServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.VkServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/JAVA projects/sadovod/vk-service/src/main/java/by/zemich/vkms/domain/model/events&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3264368&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;0b3206a8daeeb3dbda54152e1cb9fdc6&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.GatewayServiceApplication.executor": "Run",
+    "Maven.gateway-service [clean].executor": "Run",
+    "Maven.suppliersms [clean].executor": "Run",
+    "Maven.test-service [clean].executor": "Run",
+    "Maven.vk-service [clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AiServiceApplication.executor": "Run",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.GatewayServiceApplication.executor": "Run",
+    "Spring Boot.ServerConfigApplication.executor": "Run",
+    "Spring Boot.SupplierServiceApplication (1).executor": "Run",
+    "Spring Boot.SupplierServiceApplication.executor": "Run",
+    "Spring Boot.TestServiceApplication.executor": "Run",
+    "Spring Boot.VkServiceApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/JAVA projects/sadovod/test-service/src/main/java/by/zemich/testservice/service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3264368",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "spring.configuration.checksum": "0b3206a8daeeb3dbda54152e1cb9fdc6",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -145,11 +138,11 @@
       <recent name="by.zemich.textprocessormicroservice.interfaces.rest.request" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\JAVA projects\sadovod\test-service\src\main\java\by\zemich\testservice\service" />
       <recent name="E:\JAVA projects\sadovod\vk-service\src\main\java\by\zemich\vkms\domain\model\events" />
       <recent name="E:\JAVA projects\sadovod\catalogue-service\src\main\java\by\zemich\cataloguems\catalogueservice\domain\response" />
       <recent name="E:\JAVA projects\sadovod\text-processor-micro-service\src\main\java\by\zemich\textprocessormicroservice\infrastracture\config" />
       <recent name="E:\JAVA projects\sadovod\catalogue-service\src\main\java\by\zemich\shareddomain" />
-      <recent name="E:\JAVA projects\sadovod\catalogue-service\src\main\java\by\zemich\cataloguems\catalogueservice\domain\model" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="by.zemich.cataloguems.catalogueservice.infrastrucrure.services" />
@@ -168,7 +161,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SupplierServiceApplication">
+  <component name="RunManager" selected="Spring Boot.TestServiceApplication">
     <configuration name="CatalogueServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.zemich.cataloguems.catalogueservice.CatalogueServiceApplication" />
       <module name="catalogue-service" />
@@ -322,8 +315,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -420,6 +413,10 @@
       <workItem from="1719584176871" duration="7437000" />
       <workItem from="1719679953930" duration="8524000" />
       <workItem from="1719695919439" duration="1932000" />
+      <workItem from="1719727998741" duration="492000" />
+      <workItem from="1719763631779" duration="828000" />
+      <workItem from="1719764500335" duration="3621000" />
+      <workItem from="1719772540419" duration="2781000" />
     </task>
     <task id="LOCAL-00001" summary="add futures">
       <created>1714254518328</created>
