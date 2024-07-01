@@ -8,6 +8,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.jwt.JwtDecoder;
+import org.springframework.security.oauth2.jwt.JwtDecoders;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 import org.springframework.security.web.SecurityFilterChain;
 
@@ -22,12 +24,6 @@ public class Config {
                 sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
         http.authorizeHttpRequests((authorize) -> authorize.anyRequest().hasAnyRole("VKSERVICE", "ADMIN"));
-
-//        http.securityMatcher("/suppliers/**")
-//                .authorizeHttpRequests(authorize -> authorize.anyRequest()
-//                        //   .hasAuthority("SCOPE_secret.know"))
-//                        .hasRole("USER"));
-
         http.oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));
 
         http.oauth2ResourceServer(oauth2ResourceServer ->
@@ -36,15 +32,21 @@ public class Config {
                 )
         );
 
-
         return http.build();
     }
+
+    @Bean
+    public JwtDecoder jwtDecoder() {
+        return JwtDecoders.fromIssuerLocation("http://localhost:8082/realms/sadovod");
+    }
+
 
     private JwtAuthenticationConverter jwtAuthenticationConverter() {
         JwtAuthenticationConverter jwtConverter = new JwtAuthenticationConverter();
         jwtConverter.setJwtGrantedAuthoritiesConverter(new AuthoritiesConverter());
         return jwtConverter;
     }
+
 
 
 
