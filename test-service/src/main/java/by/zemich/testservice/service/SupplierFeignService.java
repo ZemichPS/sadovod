@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 import java.util.UUID;
 
-@FeignClient(name = "supplier-service")
+@FeignClient(name = "gateway")
 public interface SupplierFeignService {
 
     @RequestMapping(method = RequestMethod.GET, value = "/api/v1/suppliers")

@@ -6,8 +6,6 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.security.oauth2.jwt.JwtDecoders;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
@@ -23,7 +21,8 @@ public class Config {
         http.sessionManagement(sessionManagement ->
                 sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
-        http.authorizeHttpRequests((authorize) -> authorize.anyRequest().hasAnyRole("VKSERVICE", "ADMIN"));
+        //http.authorizeHttpRequests((authorize) -> authorize.anyRequest().hasAnyRole("MICROSERVICE"));
+        http.authorizeHttpRequests((authorize) -> authorize.anyRequest().hasAnyRole("VKMICROSERVICE"));
         http.oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));
 
         http.oauth2ResourceServer(oauth2ResourceServer ->
@@ -37,7 +36,7 @@ public class Config {
 
     @Bean
     public JwtDecoder jwtDecoder() {
-        return JwtDecoders.fromIssuerLocation("http://localhost:8082/realms/sadovod");
+        return JwtDecoders.fromIssuerLocation("http://localhost:8282/realms/sadovod");
     }
 
 

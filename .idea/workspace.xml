@@ -5,11 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e389683-0101-48ea-9bad-2d2898598800" name="Changes" comment="go on">
-      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/config/Security.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/OAuth2ClientManagerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/AccessToGatewayService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/OAuth2ClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/filters/OAuth2TokenRelayGatewayFilterFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/config/FeignClientConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/config/OAuth2ClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/RouteConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/RouteConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/ClientBeans.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/OAuthClientHttpRequestInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/config/security/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/config/security/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/config/Security.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/contoller/SupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/contoller/SupplierController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/service/SupplierFeignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/service/SupplierFeignService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +63,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/ZemichPS/sadovod.git&quot;,
-    &quot;accountId&quot;: &quot;098b9118-76c6-4a6b-8749-042ba11cce80&quot;
+    &quot;accountId&quot;: &quot;0b9bc5fc-c726-4380-8ff9-09eda5e98e0d&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -134,12 +149,15 @@
       <recent name="E:\JAVA projects\sadovod\text-processor-micro-service\src\main\java\by\zemich\textprocessormicroservice\infrastracture\config" />
       <recent name="E:\JAVA projects\sadovod\catalogue-service\src\main\java\by\zemich\shareddomain" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\JAVA projects\sadovod\gateway-service\src\main\java\by\zemich\gatewayservice\config\security\old" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="by.zemich.gatewayservice.config.security" />
       <recent name="by.zemich.cataloguems.catalogueservice.infrastrucrure.services" />
       <recent name="by.zemich.vkms.infrastructure.api.supplier" />
       <recent name="by.zemich.aims.getproductdescription" />
       <recent name="by.zemich.vkms.domain.events" />
-      <recent name="by.zemich.cataloguems.catalogueservice.application.internal.outboundservices.alc.response" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -229,13 +247,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SupplierServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="suppliersms" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.supplierservice.SupplierServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SupplierServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="suppliersms" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="by.zemich.supplierservice.SupplierServiceApplication" />
@@ -288,7 +299,6 @@
       <item itemvalue="Spring Boot.ParserServiceApplication" />
       <item itemvalue="Spring Boot.ServerConfigApplication" />
       <item itemvalue="Spring Boot.SupplierServiceApplication" />
-      <item itemvalue="Spring Boot.SupplierServiceApplication (1)" />
       <item itemvalue="Spring Boot.TelegramServiceApplication" />
       <item itemvalue="Spring Boot.TestServiceApplication" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
@@ -305,8 +315,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
       </set>
     </attachedChunks>
   </component>
@@ -408,6 +418,8 @@
       <workItem from="1719764500335" duration="3621000" />
       <workItem from="1719772540419" duration="2781000" />
       <workItem from="1719775907364" duration="5074000" />
+      <workItem from="1719839907149" duration="23723000" />
+      <workItem from="1719906105407" duration="4417000" />
     </task>
     <task id="LOCAL-00001" summary="add futures">
       <created>1714254518328</created>
