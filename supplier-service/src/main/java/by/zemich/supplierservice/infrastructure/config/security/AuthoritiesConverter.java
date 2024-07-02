@@ -5,13 +5,11 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.jwt.Jwt;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class AuthoritiesConverter implements Converter<Jwt, Collection<GrantedAuthority>> {
+
     @Override
     public Collection<GrantedAuthority> convert(Jwt source) {
         Map<String, Object> realmAccess = source.getClaimAsMap("realm_access");
@@ -25,4 +23,18 @@ public class AuthoritiesConverter implements Converter<Jwt, Collection<GrantedAu
         }
         return List.of();
     }
+
+
+    public Collection<SimpleGrantedAuthority> convert2(Jwt source) {
+        final List<SimpleGrantedAuthority> simpleGrantedAuthorityList = Optional.ofNullable(source.getClaimAsMap("realm_access"))
+                .map(roleMap -> roleMap.values().stream()
+                        .map(String::valueOf)
+                        //  .map(object -> (String) object )
+                        .map(roleName -> new SimpleGrantedAuthority("ROLE_" + roleName))
+                        .collect(Collectors.toList()))
+                .orElse(List.of());
+
+        return List.of();
+    }
+
 }

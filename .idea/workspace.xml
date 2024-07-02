@@ -5,26 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e389683-0101-48ea-9bad-2d2898598800" name="Changes" comment="go on">
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/OAuth2ClientManagerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/AccessToGatewayService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/OAuth2ClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/filters/OAuth2TokenRelayGatewayFilterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/config/FeignClientConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/config/OAuth2ClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/OAuth2ClientManagerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/OAuth2ClientManagerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/RouteConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/RouteConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/ClientBeans.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/OAuthClientHttpRequestInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/config/security/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/config/security/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/config/Security.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/contoller/SupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/contoller/SupplierController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/service/SupplierFeignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/by/zemich/testservice/service/SupplierFeignService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/OAuth2ClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/by/zemich/gatewayservice/config/security/OAuth2ClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/config/security/AuthoritiesConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/supplier-service/src/main/java/by/zemich/supplierservice/infrastructure/config/security/AuthoritiesConverter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -420,6 +408,9 @@
       <workItem from="1719775907364" duration="5074000" />
       <workItem from="1719839907149" duration="23723000" />
       <workItem from="1719906105407" duration="4417000" />
+      <workItem from="1719923305996" duration="8230000" />
+      <workItem from="1719953487537" duration="1261000" />
+      <workItem from="1719954771702" duration="20000" />
     </task>
     <task id="LOCAL-00001" summary="add futures">
       <created>1714254518328</created>

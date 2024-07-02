@@ -22,6 +22,11 @@
         <option value="$PROJECT_DIR$/ai-service/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/parser-service/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_22" project-jdk-name="openjdk-22" project-jdk-type="JavaSDK" />
 </project>

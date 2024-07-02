@@ -12,7 +12,7 @@ public class OAuth2ClientConfig {
     private final String VK_MICROSERVICE_CLIENT_NAME = "vk-microservice-client";
     private final String VK_MICROSERVICE_CLIENT_REGISTRATION_ID = "vkMicroserviceClient";
     private final String VK_MICROSERVICE_CLIENT_ID = "vk-msclient";
-    private final String VK_MICROSERVICE_CLIENT_SECRET = "";
+    private final String VK_MICROSERVICE_CLIENT_SECRET = "Y6EAYbPwJGVlIrDL83qm8dE0B9F9KI0F";
 
     private final String USER_CLIENT_NAME = "keycloak-identity-provider";
     private final String USER_CLIENT_CLIENT_REGISTRATION_ID = "keycloakService";
@@ -21,18 +21,18 @@ public class OAuth2ClientConfig {
 
     @Bean
     public InMemoryReactiveClientRegistrationRepository clientRegistrationRepository() {
-        return new InMemoryReactiveClientRegistrationRepository(this.keycloakClientRegistration());
+        return new InMemoryReactiveClientRegistrationRepository(this.vkmicroservicekeycloakClientRegistration());
     }
 
-    private ClientRegistration keycloakClientRegistration() {
-        return ClientRegistration.withRegistrationId("keycloakForTest")
-                .clientId("test-client")
-                .clientSecret("MmUjv4n9oufdAnXYv1rk8OwpU3vyv6vN")
+    private ClientRegistration vkmicroservicekeycloakClientRegistration() {
+        return ClientRegistration.withRegistrationId(VK_MICROSERVICE_CLIENT_REGISTRATION_ID)
+                .clientId(VK_MICROSERVICE_CLIENT_ID)
+                .clientSecret(VK_MICROSERVICE_CLIENT_SECRET)
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
                 .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
                 .tokenUri("http://localhost:8282/realms/sadovod/protocol/openid-connect/token")
                 .jwkSetUri("http://localhost:8282/realms/sadovod/protocol/openid-connect/certs")
-                .clientName("test-client-name")
+                .clientName(VK_MICROSERVICE_CLIENT_NAME)
                 .build();
     }
 

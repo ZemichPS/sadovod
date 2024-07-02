@@ -23,14 +23,14 @@ public class RouteConfig {
 
         return locatorBuilder.routes()
                 .route("suppliers", predicateSpec -> predicateSpec.path("/api/v1/suppliers/**")
-                        .filters(filter -> filter.filters(tokenRelayGatewayFilterFactory.apply(someMicroserviceConfig())))
+                        .filters(filter -> filter.filters(tokenRelayGatewayFilterFactory.apply(vkMsConfig())))
                         .uri("lb://SUPPLIER-SERVICE"))
                 .build();
     }
 
-    private OAuth2TokenRelayGatewayFilterFactory.Config someMicroserviceConfig() {
+    private OAuth2TokenRelayGatewayFilterFactory.Config vkMsConfig() {
         OAuth2TokenRelayGatewayFilterFactory.Config config = new OAuth2TokenRelayGatewayFilterFactory.Config();
-        config.setClientRegistrationId("keycloakForTest");
+        config.setClientRegistrationId("vkMicroserviceClient");
         return config;
     }
 
