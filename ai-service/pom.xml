@@ -136,12 +136,12 @@
     <repositories>
 
         <repository>
-            <id>jitpack.io</id>
+            <productId>jitpack.io</productId>
             <url>https://jitpack.io</url>
         </repository>
 
         <repository>
-            <id>spring-milestones</id>
+            <productId>spring-milestones</productId>
             <name>Spring Milestones</name>
             <url>https://repo.spring.io/milestone</url>
             <snapshots>
@@ -150,7 +150,7 @@
         </repository>
 
         <repository>
-            <id>spring-snapshots</id>
+            <productId>spring-snapshots</productId>
             <name>Spring Snapshots</name>
             <url>https://repo.spring.io/snapshot</url>
             <releases>

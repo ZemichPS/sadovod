@@ -1,8 +1,11 @@
 package by.zemich.aims.getproductdescription;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController
@@ -10,17 +13,14 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 class GetProductDescriptionController {
 
-    private final GetProductDescriptionServiceApi service;
+    @Autowired
+    private List<GetProductDescriptionServiceApi> aiServices;
 
-    GetProductDescriptionController(GetProductDescriptionServiceApi service) {
-        this.service = service;
-    }
 
-    @PostMapping
-    public ResponseEntity<?> getProductDescriptionFromText(@RequestBody GetProductDescriptionRequest request) {
-
-        GetProductDescriptionResponse jsonProductDescription = service.createJsonProductDescription(request);
-        return ResponseEntity.ok(jsonProductDescription);
+    @GetMapping
+    public ResponseEntity<String> getProductDescriptionFromText(@RequestParam String request) {
+        String response = aiServices.getFirst().getProductDescription(request);
+        return ResponseEntity.ok(response);
     }
 
 }

@@ -1,7 +1,5 @@
 package by.zemich.aims.getproductdescription.impl;
 
-import by.zemich.aims.getproductdescription.GetProductDescriptionRequest;
-import by.zemich.aims.getproductdescription.GetProductDescriptionResponse;
 import by.zemich.aims.getproductdescription.GetProductDescriptionServiceApi;
 import com.google.cloud.aiplatform.v1.EndpointName;
 import com.google.cloud.aiplatform.v1.PredictResponse;
@@ -11,6 +9,7 @@ import com.google.protobuf.Value;
 import com.google.protobuf.util.JsonFormat;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.context.annotation.Primary;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ import java.util.List;
 
 @Service
 @Log4j2
-@Primary
+@Order(1)
 public class GetProductDescriptionTextBisonAIService implements GetProductDescriptionServiceApi {
     private final String parameters =
             """
@@ -36,14 +35,9 @@ public class GetProductDescriptionTextBisonAIService implements GetProductDescri
     private final String model = "text-bison@002";
 
     @Override
-    public GetProductDescriptionResponse createJsonProductDescription(GetProductDescriptionRequest request) {
+    public String getProductDescription(String request) {
 
-        String prompt = """
-                Make JSON response for POJO:
-                %s
-                Important! If Is not specified that the product has no color selection, then there is an option to choose a color.
-                Product description: %s
-                """.formatted(request.getJsonDestination(), request.getSource());
+        String prompt = request;
 
         String instance = """
                 {
@@ -53,9 +47,6 @@ public class GetProductDescriptionTextBisonAIService implements GetProductDescri
 
         String endpoint = String.format("%s-aiplatform.googleapis.com:443", location);
 
-
-        // Initialize client that will be used to send requests. This client only needs to be created
-        // once, and can be reused for multiple requests.
         try (PredictionServiceClient predictionServiceClient =
                      PredictionServiceClient.create(PredictionServiceSettings.newBuilder()
                              .setEndpoint(endpoint)
@@ -64,15 +55,11 @@ public class GetProductDescriptionTextBisonAIService implements GetProductDescri
             final EndpointName endpointName =
                     EndpointName.ofProjectLocationPublisherModelName(project, location, publisher, model);
 
-            // Initialize client that will be used to send requests. This client only needs to be created
-            // once, and can be reused for multiple requests.
             Value.Builder instanceValue = Value.newBuilder();
             JsonFormat.parser().merge(instance, instanceValue);
             List<Value> instances = new ArrayList<>();
             instances.add(instanceValue.build());
 
-            // Use Value.Builder to convert instance to a dynamically typed value that can be
-            // processed by the service.
             Value.Builder parameterValueBuilder = Value.newBuilder();
             JsonFormat.parser().merge(parameters, parameterValueBuilder);
             Value parameterValue = parameterValueBuilder.build();
@@ -83,13 +70,13 @@ public class GetProductDescriptionTextBisonAIService implements GetProductDescri
 
             String result = predictResponse
                     .getPredictionsList()
-                    .get(0)
+                    .getFirst()
                     .getStructValue()
                     .getFieldsMap()
                     .get("content")
                     .getStringValue();
 
-            return new GetProductDescriptionResponse(result);
+            return request;
 
         } catch (Exception e) {
             log.info(e.getMessage());

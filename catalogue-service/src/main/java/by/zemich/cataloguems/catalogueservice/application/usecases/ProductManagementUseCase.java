@@ -1,19 +1,15 @@
 package by.zemich.cataloguems.catalogueservice.application.usecases;
 
-import by.zemich.cataloguems.catalogueservice.domain.model.entities.Product;
-import by.zemich.cataloguems.catalogueservice.domain.model.valueobjects.Link;
-import by.zemich.cataloguems.catalogueservice.domain.model.valueobjects.Photos;
-import by.zemich.cataloguems.catalogueservice.domain.model.valueobjects.ProductId;
-import by.zemich.cataloguems.catalogueservice.domain.model.valueobjects.Supplier;
+import by.zemich.cataloguems.catalogueservice.domain.model.entity.Product;
+
+import java.util.List;
+import java.util.UUID;
 
 public interface ProductManagementUseCase {
-    Product create(
-            ProductId productId,
-            Supplier supplier,
-            Photos photos,
-            Link link,
-            String sourceText
+    Product create(UUID supplierUuid,
+                   String supplierName,
+                   UUID postId,
+                   List<String> imageLinks,
+                   String postText
     );
-
-
 }

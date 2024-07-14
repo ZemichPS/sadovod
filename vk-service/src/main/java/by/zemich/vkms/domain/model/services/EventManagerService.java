@@ -12,15 +12,14 @@ public class EventManagerService {
 
         Supplier supplier = vkPost.getSupplier();
 
-        List<VkPostCreatedEvent.Photo> postPhotoLinks = vkPost.getPhotos().getPhotos().stream()
+        List<String> postPhotoLinks = vkPost.getPhotos().getPhotos().stream()
                 .map(Photo::getUri)
-                .map(VkPostCreatedEvent.Photo::new)
                 .toList();
 
         return VkPostCreatedEvent.builder()
                 .supplierUuid(supplier.getUuid())
                 .supplierName(supplier.getName())
-                .photos(postPhotoLinks)
+                .imageLinks(postPhotoLinks)
                 .linkToVkPost(vkPost.getLinkToPost().toString())
                 .postText(vkPost.getText().getText())
                 .build();

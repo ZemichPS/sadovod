@@ -1,61 +1,52 @@
 package by.zemich.cataloguems.catalogueservice.application.ports.input;
 
-import by.zemich.cataloguems.catalogueservice.application.usecases.ProductManagementUseCase;
 import by.zemich.cataloguems.catalogueservice.application.ports.output.ProductManagementAIOutputPort;
-import by.zemich.cataloguems.catalogueservice.application.ports.output.ProductManagementFindCategoryOutputPort;
 import by.zemich.cataloguems.catalogueservice.application.ports.output.ProductManagementRepositoryOutputPort;
-import by.zemich.cataloguems.catalogueservice.domain.model.dto.ProductDto;
-import by.zemich.cataloguems.catalogueservice.domain.model.entities.Category;
-import by.zemich.cataloguems.catalogueservice.domain.model.entities.Product;
-import by.zemich.cataloguems.catalogueservice.domain.model.valueobjects.*;
-import by.zemich.cataloguems.catalogueservice.domain.services.ImageService;
-import by.zemich.cataloguems.catalogueservice.domain.services.ProductService;
+import by.zemich.cataloguems.catalogueservice.application.usecases.ProductManagementUseCase;
+import by.zemich.cataloguems.catalogueservice.domain.model.entity.Product;
+import by.zemich.cataloguems.catalogueservice.domain.model.entity.factory.ProductFactory;
+import by.zemich.cataloguems.catalogueservice.domain.policy.parse.SimpleParsePolicy;
+import by.zemich.cataloguems.catalogueservice.domain.policy.parse.shared.ParsePolicy;
+import by.zemich.cataloguems.catalogueservice.domain.service.PostTextService;
 
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 public class ProductManagementInputPort implements ProductManagementUseCase {
-    private final ProductManagementAIOutputPort aiPort;
-    private final ProductManagementFindCategoryOutputPort findCategoryOutputPort;
+
+    private final ProductManagementAIOutputPort aiOutputPort;
     private final ProductManagementRepositoryOutputPort repositoryOutputPort;
 
-    public ProductManagementInputPort(ProductManagementAIOutputPort aiPort,
-                                      ProductManagementFindCategoryOutputPort findCategoryOutputPort,
+    public ProductManagementInputPort(ProductManagementAIOutputPort aiOutputPort,
                                       ProductManagementRepositoryOutputPort repositoryOutputPort) {
-        this.aiPort = aiPort;
-        this.findCategoryOutputPort = findCategoryOutputPort;
+        this.aiOutputPort = aiOutputPort;
         this.repositoryOutputPort = repositoryOutputPort;
     }
 
     @Override
-    public Product create(ProductId productId,
-                          Supplier supplier,
-                          Photos photos,
-                          Link link,
-                          String sourceText
-    ) {
-        ProductDto defaultProductDto = ProductDto.getDefault();
-        String image = ImageService.getFromDtoStructure(defaultProductDto);
-        ProductDto productDto = aiPort.recognize(image, sourceText);
+    public Product create(UUID supplierUuid,
+                          String supplierName,
+                          UUID postId,
+                          List<String> imageLinks,
+                          String postText) {
 
-        CategoryType categoryType = CategoryType.valueOf(productDto.getSubCategory().toUpperCase());
-        Category subCategory = findCategoryOutputPort.findOrGetDefaultCategory(categoryType);
 
-        ProductName productName = ProductService.getProductNameOf(productDto);
-        Description description = ProductService.getDescriptionOf(productDto);
-        Price price = ProductService.getPriceOf(productDto);
+        String textWithoutEmojis = PostTextService.removeEmojis(postText);
+        String aiResponse = aiOutputPort.proceed(textWithoutEmojis);
+        ParsePolicy parsePolicy = new SimpleParsePolicy();
+        Map<String, Object> parsedMap = parsePolicy.parse(aiResponse);
 
-        Product newProduct = new Product(productId);
-        newProduct.addSupplierId(supplier);
-        newProduct.addProductName(productName);
-        newProduct.addDescription(description);
-        newProduct.addPhotos(photos);
-        newProduct.addPrice(price);
-        newProduct.addLink(link);
+        Product product = ProductFactory.get(
+                supplierUuid,
+                supplierName,
+                postId,
+                imageLinks,
+                postText,
+                parsedMap
+        );
+        repositoryOutputPort.persist(product);
 
-        //TODO нужно заменить
-        newProduct.addCategory(subCategory);
-
-        return repositoryOutputPort.persist(newProduct);
+        return product;
     }
-
-
 }
