@@ -20,6 +20,8 @@ public class Product {
 
     private PostId postId;
 
+    private QuantityInSet quantityInSet;
+
     private Availability availability;
 
     private final List<Attribute> attributes = new ArrayList<>();
@@ -28,20 +30,10 @@ public class Product {
         this.productId = productId;
     }
 
-    public Product(ProductId productId,
-                   Supplier supplier,
-                   Type type,
-                   Name name,
-                   Price price,
-                   PostId postId, Availability availability
-    ) {
+    public Product(ProductId productId, Supplier supplier, PhotoAlbum photoAlbum, PostId postId) {
         this.productId = productId;
         this.supplier = supplier;
-        this.type = type;
-        this.name = name;
-        this.price = price;
-        this.availability = availability;
-        this.photoAlbum = new PhotoAlbum(new ArrayList<>());
+        this.photoAlbum = photoAlbum;
         this.postId = postId;
     }
 
@@ -50,16 +42,42 @@ public class Product {
         attributes.add(attribute);
     }
 
+    public void addName(Name name) {
+        //TODO add check
+        this.name = name;
+    }
+
+
+    public void addSupplier(Supplier supplier) {
+        //TODO add check
+        this.supplier = supplier;
+    }
+
+    public void addType(Type type) {
+        //TODO add check
+        this.type = type;
+    }
+
+    public void addQuantityInSet(QuantityInSet quantity) {
+        //TODO add check
+        this.quantityInSet = quantity;
+    }
+
     public boolean addImage(ProductImage productImage) {
         //TODO add check
         return photoAlbum.addImage(productImage);
+    }
+
+    public void addPrice(Price price) {
+        //TODO add check
+        this.price = price;
     }
 
     public List<ProductImage> getProductImageList() {
         return photoAlbum.getAllProductImages();
     }
 
-    public List<Attribute> getAttributes(){
+    public List<Attribute> getAttributes() {
         return List.copyOf(attributes);
     }
 
@@ -93,5 +111,9 @@ public class Product {
 
     public void setAvailability(Availability availability) {
         this.availability = availability;
+    }
+
+    public QuantityInSet getQuantityInSet() {
+        return quantityInSet;
     }
 }

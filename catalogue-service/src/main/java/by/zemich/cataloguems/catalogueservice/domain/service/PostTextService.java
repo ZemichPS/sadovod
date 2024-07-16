@@ -9,6 +9,7 @@ public class PostTextService {
         return firstLevel.replaceAll("[\\p{InEmoticons}\\p{InMiscellaneousSymbolsAndPictographs}\\p{InTransportAndMapSymbols}\\p{InSupplementalSymbolsAndPictographs}\\p{InMiscellaneousSymbols}\\p{InDingbats}\\p{InSymbolsAndPictographsExtendedA}]", "");
     }
 
+    //TODO добавить подгрузку листа с излишними сообшениями
     public static String removeLinesAccordingToBlackList(String originalText, String[] blackList) {
         return Arrays.stream(originalText.split("\n"))
                 .filter(line-> !containsAny(line, blackList))

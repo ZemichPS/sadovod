@@ -13,62 +13,20 @@ import java.util.UUID;
 public class ProductFactory {
     public static Product get(UUID supplierUuid,
                               String supplierName,
-                              UUID postId_,
-                              List<String> imageLinks,
-                              String postText,
-                              Map<String, Object> productMap) {
+                              UUID postId,
+                              List<String> imageLinks
+    ) {
 
         Supplier supplier = new Supplier();
         supplier.setId(new SupplierId(supplierUuid));
         supplier.setName(supplierName);
-
         ProductId productId = new ProductId(UUID.randomUUID());
-        Type type = new Type((String) productMap.remove("product type"));
-        Name name = new Name((String) productMap.remove("name"));
-        Price price = new Price((BigDecimal) productMap.remove("price"), 643);
-        PostId postId = new PostId(postId_);
+        PostId postIdVo = new PostId(postId);
 
-        Availability availability = getAvailability(productMap);
-
-        Product product = new Product(productId, supplier, type, name, price, postId, availability);
-        getAnotherAttributes(productMap).forEach(product::addAttribute);
-        return product;
+        PhotoAlbum photoAlbum = new PhotoAlbum();
+        imageLinks.stream()
+                .map(line -> new ProductImage(UUID.randomUUID(), new ImageLink(line), productId))
+                .forEach(photoAlbum::addImage);
+        return new Product(productId, supplier, photoAlbum, postIdVo);
     }
-
-    public static Product get(ProductId productId,
-                              Supplier supplier,
-                              Type type,
-                              Name name,
-                              Price price,
-                              List<ProductImage> images,
-                              PostId postIdm,
-                              Availability availability){
-
-        Product product = new Product(productId,
-                supplier,
-                type,
-                name,
-                price,
-                postIdm,
-                availability
-        );
-
-        images.forEach(product::addImage);
-        return product;
-    }
-
-    private static List<Attribute> getAnotherAttributes(Map<String, Object> keyValueMap) {
-        return  keyValueMap.entrySet().stream()
-                .map(entry -> {
-                    String key = entry.getKey();
-                    String value = (String) entry.getValue();
-                    return new Attribute(key, value);
-                }).toList();
-    }
-
-    //TODO сделать нормальный парсер
-    private static Availability getAvailability(Map<String, Object> productMap){
-        return new Availability(true, true, 4);
-    }
-
 }

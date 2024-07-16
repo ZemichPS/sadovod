@@ -7,7 +7,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-//@EnableFeignClients(clients = ExternalAIFeignClient.class)
 @EnableFeignClients
 public class CatalogueServiceApplication {
 

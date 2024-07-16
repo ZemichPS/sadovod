@@ -7,7 +7,5 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface SupplierRepository extends JpaRepository<SupplierEntity, UUID> {
-    default Optional<SupplierEntity> getProxyById(UUID uuid){
-        return Optional.of(this.getReferenceById(uuid));
-    }
+
 }

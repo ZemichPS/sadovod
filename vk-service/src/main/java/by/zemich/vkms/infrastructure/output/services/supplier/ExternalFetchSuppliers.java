@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 import java.util.UUID;
 
-@FeignClient(name = "supplier-service")
+@FeignClient(name = "gateway")
 public interface ExternalFetchSuppliers extends FetchSuppliersOutputPort {
     default List<by.zemich.vkms.domain.model.entities.Supplier> fetchSuppliers() {
         return getAll().stream()

@@ -5,9 +5,9 @@ import by.zemich.cataloguems.catalogueservice.application.ports.output.ProductMa
 import by.zemich.cataloguems.catalogueservice.application.usecases.ProductManagementUseCase;
 import by.zemich.cataloguems.catalogueservice.domain.model.entity.Product;
 import by.zemich.cataloguems.catalogueservice.domain.model.entity.factory.ProductFactory;
-import by.zemich.cataloguems.catalogueservice.domain.policy.parse.SimpleParsePolicy;
-import by.zemich.cataloguems.catalogueservice.domain.policy.parse.shared.ParsePolicy;
+import by.zemich.cataloguems.catalogueservice.domain.service.AiResponseToMapParserService;
 import by.zemich.cataloguems.catalogueservice.domain.service.PostTextService;
+import by.zemich.cataloguems.catalogueservice.domain.service.parser.ProductCharacteristicParserService;
 
 import java.util.List;
 import java.util.Map;
@@ -34,17 +34,17 @@ public class ProductManagementInputPort implements ProductManagementUseCase {
 
         String textWithoutEmojis = PostTextService.removeEmojis(postText);
         String aiResponse = aiOutputPort.proceed(textWithoutEmojis);
-        ParsePolicy parsePolicy = new SimpleParsePolicy();
+        AiResponseToMapParserService parsePolicy = new AiResponseToMapParserService();
         Map<String, Object> parsedMap = parsePolicy.parse(aiResponse);
 
         Product product = ProductFactory.get(
                 supplierUuid,
                 supplierName,
                 postId,
-                imageLinks,
-                postText,
-                parsedMap
+                imageLinks
         );
+        ProductCharacteristicParserService parserService = new ProductCharacteristicParserService();
+        parserService.parse(product, parsedMap);
         repositoryOutputPort.persist(product);
 
         return product;

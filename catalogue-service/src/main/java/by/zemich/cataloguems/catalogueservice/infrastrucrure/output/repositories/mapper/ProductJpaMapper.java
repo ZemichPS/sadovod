@@ -41,7 +41,7 @@ public class ProductJpaMapper {
                 .imageEntityList(imageEntities)
                 .availableInPieces(product.getAvailability().availableInPieces())
                 .availableInBulk(product.getAvailability().availableInBulk())
-                .quantityInPackage(product.getAvailability().quantityInPackage())
+                .quantityInPackage(product.getQuantityInSet().quantity())
                 .attributes(attributes)
                 .build();
     }

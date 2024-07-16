@@ -1,14 +1,13 @@
-package by.zemich.cataloguems.catalogueservice.domain.policy.parse;
+package by.zemich.cataloguems.catalogueservice.domain.service;
 
-
-import by.zemich.cataloguems.catalogueservice.domain.policy.parse.shared.ParsePolicy;
 
 import java.util.*;
 import java.util.function.Predicate;
 
-public class SimpleParsePolicy implements ParsePolicy {
+public class AiResponseToMapParserService {
 
     private final Map<String, Object> parseContent = new HashMap<>();
+
 
     Predicate<String> specified = s -> !s.contains("not specified");
     Predicate<String> unclear  = s -> !s.contains("unclear");
@@ -25,6 +24,8 @@ public class SimpleParsePolicy implements ParsePolicy {
                         String value = keyValue[1].trim();
                         parseContent.put(key, value);
                     }
+
+
                 });
         return parseContent;
     }

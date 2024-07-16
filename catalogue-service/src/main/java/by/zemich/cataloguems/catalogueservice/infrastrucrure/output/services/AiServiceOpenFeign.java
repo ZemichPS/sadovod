@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 
-@FeignClient("AI-SERVICE")
+@FeignClient("gateway")
 public interface AiServiceOpenFeign {
 
     @RequestMapping(method = RequestMethod.GET, value = "api/v1/get_product_description")

@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 public class KafkaEventHandlerInputAdapter {
     private final ProductManagementUseCase productManagementUseCase;
 
-
     public KafkaEventHandlerInputAdapter(ProductManagementUseCase productManagementUseCase) {
         this.productManagementUseCase = productManagementUseCase;
     }
@@ -29,7 +28,6 @@ public class KafkaEventHandlerInputAdapter {
                 event.getImageLinks(),
                 event.getPostText()
         );
-
     }
 
 

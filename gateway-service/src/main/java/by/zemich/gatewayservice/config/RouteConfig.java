@@ -25,6 +25,8 @@ public class RouteConfig {
                 .route("suppliers", predicateSpec -> predicateSpec.path("/api/v1/suppliers/**")
                         .filters(filter -> filter.filters(tokenRelayGatewayFilterFactory.apply(vkMsConfig())))
                         .uri("lb://SUPPLIER-SERVICE"))
+                .route("ai-service", predicateSpec -> predicateSpec.path("api/v1/get_product_description/**")
+                        .uri("lb://AI-SERVICE"))
                 .build();
     }
 

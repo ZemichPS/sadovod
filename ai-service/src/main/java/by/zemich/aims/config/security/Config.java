@@ -1,4 +1,4 @@
-package by.zemich.supplierservice.infrastructure.config.security;
+package by.zemich.aims.config.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,7 +20,7 @@ public class Config {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.sessionManagement(sessionManagement ->
                 sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-        http.authorizeHttpRequests((authorize) -> authorize.anyRequest().hasAnyRole("VKMICROSERVICE"));
+        http.authorizeHttpRequests((authorize) -> authorize.anyRequest().hasAnyRole("CATALOGUESERVICE"));
         http.oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));
 
         http.oauth2ResourceServer(oauth2ResourceServer ->
@@ -28,6 +28,7 @@ public class Config {
                         jwt.jwtAuthenticationConverter(jwtAuthenticationConverter())
                 )
         );
+
         return http.build();
     }
 
@@ -35,6 +36,7 @@ public class Config {
     public JwtDecoder jwtDecoder() {
         return JwtDecoders.fromIssuerLocation("http://localhost:8282/realms/sadovod");
     }
+
 
     private JwtAuthenticationConverter jwtAuthenticationConverter() {
         JwtAuthenticationConverter jwtConverter = new JwtAuthenticationConverter();

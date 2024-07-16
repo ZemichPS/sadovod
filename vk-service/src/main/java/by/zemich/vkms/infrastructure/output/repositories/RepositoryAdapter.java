@@ -30,14 +30,14 @@ public class RepositoryAdapter implements VkPostManagementRepositoryOutputPort {
         Supplier supplier = newVkPost.getSupplier();
         UUID supplierUuid = supplier.getUuid();
 
-        supplierRepository.getProxyById(supplierUuid).ifPresentOrElse(vkPostForSave::setSupplier,
-                () -> {
-                    SupplierEntity newSupplier = SupplierEntity.createNewSupplier(supplier);
-                    supplierRepository.save(newSupplier);
-                    vkPostForSave.setSupplier(newSupplier);
+        SupplierEntity supplierEntity = supplierRepository.getReferenceById(supplierUuid);
 
-                }
-        );
+        if (!existsById(supplierEntity)) {
+            supplierEntity = SupplierEntity.createNewSupplier(supplier);
+            supplierRepository.save(supplierEntity);
+        }
+        vkPostForSave.setSupplier(supplierEntity);
+
         vkPostRepository.save(vkPostForSave);
         return newVkPost;
     }
@@ -47,5 +47,14 @@ public class RepositoryAdapter implements VkPostManagementRepositoryOutputPort {
         return vkPostRepository.existsByHash(hash);
     }
 
+    private boolean existsById(SupplierEntity supplier) {
+        try {
+            supplier.getName();
+            return true;
+            //TODO узнать какой метод выбрасывает JPA
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
 }

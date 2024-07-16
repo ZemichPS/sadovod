@@ -9,10 +9,9 @@ import java.util.List;
 import static com.fasterxml.jackson.databind.type.LogicalType.Collection;
 
 public class PhotoAlbum {
-    private final List<ProductImage> images;
+    private final List<ProductImage> images = new ArrayList<>();
 
-    public PhotoAlbum(List<ProductImage> images) {
-        this.images = images;
+    public PhotoAlbum() {
     }
 
     public boolean addImage(ProductImage image) {
