@@ -12,9 +12,10 @@ public class AuthoritiesConverter implements Converter<Jwt, Collection<GrantedAu
 
     @Override
     public Collection<GrantedAuthority> convert(Jwt source) {
-        Map<String, Object> realmAccess = source.getClaimAsMap("realm_access");
-        if (Objects.nonNull(realmAccess)) {
-            List<String> roles = (List<String>) realmAccess.get("roles");
+        Map<String, Object> resource_access = source.getClaimAsMap("resource_access");
+        if (Objects.nonNull(resource_access)) {
+            Map<String, List<String>> map = (Map<String, List<String>>) resource_access.get("ai-msclient");
+            List<String> roles = map.get("roles");
             if (Objects.nonNull(roles)) {
                 return roles.stream()
                         .map(rn -> new SimpleGrantedAuthority("ROLE_" + rn))

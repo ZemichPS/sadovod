@@ -1,21 +1,26 @@
 package by.zemich.gatewayservice.config;
 
-import by.zemich.gatewayservice.config.security.filters.OAuth2TokenRelayGatewayFilterFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.web.server.ServerHttpSecurity;
-import org.springframework.security.web.server.SecurityWebFilterChain;
 
 
 @Configuration
 public class RouteConfig {
 
-    private final OAuth2TokenRelayGatewayFilterFactory tokenRelayGatewayFilterFactory;
+    private final GatewayFilter clientRegistrationChoiceFilter;
+    private final GatewayFilter oAuth2TokenRelayFilter;
+    private final GatewayFilter productCacheFilter;
 
-    public RouteConfig(OAuth2TokenRelayGatewayFilterFactory tokenRelayGatewayFilterFactory) {
-        this.tokenRelayGatewayFilterFactory = tokenRelayGatewayFilterFactory;
+    public RouteConfig(@Qualifier("clientRegistrationChoiceFilter") GatewayFilter clientRegistrationChoiceFilter,
+                       @Qualifier("OAuth2TokenRelayFilter") GatewayFilter oAuth2TokenRelayFilter,
+                       @Qualifier("productCacheFilter") GatewayFilter productCacheFilter) {
+        this.clientRegistrationChoiceFilter = clientRegistrationChoiceFilter;
+        this.oAuth2TokenRelayFilter = oAuth2TokenRelayFilter;
+        this.productCacheFilter = productCacheFilter;
     }
 
     @Bean
@@ -23,18 +28,15 @@ public class RouteConfig {
 
         return locatorBuilder.routes()
                 .route("suppliers", predicateSpec -> predicateSpec.path("/api/v1/suppliers/**")
-                        .filters(filter -> filter.filters(tokenRelayGatewayFilterFactory.apply(vkMsConfig())))
+                        .filters(f -> f.filter(clientRegistrationChoiceFilter).filter(oAuth2TokenRelayFilter))
                         .uri("lb://SUPPLIER-SERVICE"))
-                .route("ai-service", predicateSpec -> predicateSpec.path("api/v1/get_product_description/**")
+                .route("ai-service", predicateSpec -> predicateSpec.path("/api/v1/ai/**")
+                        .filters(f -> f.filter(clientRegistrationChoiceFilter).filter(oAuth2TokenRelayFilter))
                         .uri("lb://AI-SERVICE"))
+                .route("catalogue-service", predicateSpec -> predicateSpec.path("/api/v1/catalogue/**")
+                        .filters(f-> f.filter(productCacheFilter))
+                        .uri("lb://CATALOGUE-SERVICE")
+                )
                 .build();
     }
-
-    private OAuth2TokenRelayGatewayFilterFactory.Config vkMsConfig() {
-        OAuth2TokenRelayGatewayFilterFactory.Config config = new OAuth2TokenRelayGatewayFilterFactory.Config();
-        config.setClientRegistrationId("vkMicroserviceClient");
-        return config;
-    }
-
-
 }

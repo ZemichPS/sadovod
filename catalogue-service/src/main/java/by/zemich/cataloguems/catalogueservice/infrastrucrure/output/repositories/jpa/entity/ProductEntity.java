@@ -1,12 +1,12 @@
 package by.zemich.cataloguems.catalogueservice.infrastrucrure.output.repositories.jpa.entity;
 
-import io.hypersistence.utils.hibernate.type.json.JsonBinaryType;
 import io.hypersistence.utils.hibernate.type.json.JsonType;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Type;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -20,15 +20,15 @@ import java.util.UUID;
 
 @Entity
 @Table(schema = "app", name = "products")
-//@TypeDef(name = "jsonb", typeClass = JsonBinaryType.class)
 public class ProductEntity {
     @Id
     private UUID uuid;
+    private String name;
     private UUID postUuid;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "supplier_uuid", referencedColumnName = "uuid")
     private SupplierEntity supplier;
-    private String type;
+    private String category;
     private Integer ISO4217CurrencyCode;
     private BigDecimal originPrice;
 
@@ -49,6 +49,10 @@ public class ProductEntity {
 
     public void addSupplier(SupplierEntity supplier) {
         this.supplier = supplier;
+    }
+
+    public void addImage(ImageEntity image){
+        imageEntityList.add(image);
     }
 
 

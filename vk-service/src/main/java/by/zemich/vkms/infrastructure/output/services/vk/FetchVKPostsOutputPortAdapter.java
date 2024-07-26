@@ -96,7 +96,6 @@ public class FetchVKPostsOutputPortAdapter implements FetchVkPostsOutputPort {
                         log.error(e.getMessage());
                         return null;
                     }
-
                 })
                 .filter(Objects::nonNull)
                 .toList();

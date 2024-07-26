@@ -20,6 +20,7 @@ public class EventManagerService {
                 .supplierUuid(supplier.getUuid())
                 .supplierName(supplier.getName())
                 .imageLinks(postPhotoLinks)
+                .postUuid(vkPost.getId().getUuid())
                 .linkToVkPost(vkPost.getLinkToPost().toString())
                 .postText(vkPost.getText().getText())
                 .build();

@@ -11,7 +11,8 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 public class AccessToGatewayService {
     @Bean
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
-        http.authorizeExchange(authorizeExchangeSpec -> authorizeExchangeSpec.anyExchange().permitAll());
+        http.authorizeExchange(authorizeExchangeSpec -> authorizeExchangeSpec.anyExchange().permitAll())
+                .csrf().disable();
         return http.build();
     }
 

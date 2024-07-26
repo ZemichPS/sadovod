@@ -10,13 +10,13 @@ public class Product {
 
     private Supplier supplier;
 
-    private Type type;
-
     private Name name;
+
+    private Category category;
 
     private Price price;
 
-    private PhotoAlbum photoAlbum;
+    private final PhotoAlbum photoAlbum;
 
     private PostId postId;
 
@@ -28,6 +28,7 @@ public class Product {
 
     public Product(ProductId productId) {
         this.productId = productId;
+        this.photoAlbum = new PhotoAlbum();
     }
 
     public Product(ProductId productId, Supplier supplier, PhotoAlbum photoAlbum, PostId postId) {
@@ -47,15 +48,21 @@ public class Product {
         this.name = name;
     }
 
+    public void addPostId(PostId postId) {
+        //TODO add check
+        this.postId = postId;
+    }
+
+
 
     public void addSupplier(Supplier supplier) {
         //TODO add check
         this.supplier = supplier;
     }
 
-    public void addType(Type type) {
+    public void addCategory(Category category) {
         //TODO add check
-        this.type = type;
+        this.category = category;
     }
 
     public void addQuantityInSet(QuantityInSet quantity) {
@@ -71,6 +78,11 @@ public class Product {
     public void addPrice(Price price) {
         //TODO add check
         this.price = price;
+    }
+
+    public void addAvailability(Availability availability){
+        //TODO add check
+        this.availability = availability;
     }
 
     public List<ProductImage> getProductImageList() {
@@ -89,8 +101,8 @@ public class Product {
         return supplier;
     }
 
-    public Type getType() {
-        return type;
+    public Category getCategory() {
+        return category;
     }
 
     public Name getName() {

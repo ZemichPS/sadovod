@@ -6,39 +6,11 @@ spring:
   config:
     import: optional:configserver:http://localhost:8888
 
-  jpa:
-    database: POSTGRESQL
-    properties:
-      hibernate.default_schema: app
-    hibernate:
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
-
-  datasource:
-    hikari:
-      username: postgres
-      password: postgres
-      driver-class-name: org.postgresql.Driver
-      auto-commit: true
-    url: jdbc:postgresql://localhost:5432/ai-service
 
   # cloud config
   cloud:
     discovery:
       enabled: true
-  ai:
-    openai:
-      api-key: sk-proj-u5fH42rsO6Sm14kyQeZyT3BlbkFJibQThHbZkfEyNHoGyewW
-    vertex:
-      ai:
-        gemini:
-          project-id: sadovod-423711
-          location: us-central
-          chat:
-            options:
-              model: gemini-1.0-pro
-              temperature: 0.5
-
 
 # eureka config
 eureka:

@@ -21,10 +21,12 @@ public class OAuth2ClientConfig {
 
     @Bean
     public InMemoryReactiveClientRegistrationRepository clientRegistrationRepository() {
-        return new InMemoryReactiveClientRegistrationRepository(this.vkmicroservicekeycloakClientRegistration());
+        return new InMemoryReactiveClientRegistrationRepository(this.vkmicroserviceKeycloakClientRegistration(),
+                aimicroserviceKeycloakClientRegistration()
+        );
     }
 
-    private ClientRegistration vkmicroservicekeycloakClientRegistration() {
+    private ClientRegistration vkmicroserviceKeycloakClientRegistration() {
         return ClientRegistration.withRegistrationId(VK_MICROSERVICE_CLIENT_REGISTRATION_ID)
                 .clientId(VK_MICROSERVICE_CLIENT_ID)
                 .clientSecret(VK_MICROSERVICE_CLIENT_SECRET)
@@ -36,19 +38,17 @@ public class OAuth2ClientConfig {
                 .build();
     }
 
-    private ClientRegistration cataloguemicroservicekeycloakClientRegistration() {
-        return ClientRegistration.withRegistrationId(VK_MICROSERVICE_CLIENT_REGISTRATION_ID)
-                .clientId(VK_MICROSERVICE_CLIENT_ID)
-                .clientSecret(VK_MICROSERVICE_CLIENT_SECRET)
+    private ClientRegistration aimicroserviceKeycloakClientRegistration() {
+        return ClientRegistration.withRegistrationId("aiMicroserviceClient")
+                .clientId("ai-msclient")
+                .clientSecret("Yuq410gElND816f9hYcsLXiplBMPlqCV")
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
                 .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
                 .tokenUri("http://localhost:8282/realms/sadovod/protocol/openid-connect/token")
                 .jwkSetUri("http://localhost:8282/realms/sadovod/protocol/openid-connect/certs")
-                .clientName(VK_MICROSERVICE_CLIENT_NAME)
+                .clientName("ai-microservice")
                 .build();
     }
-
-
 
 
 //     //КЛИЕНТ ДЛЯ ПОЛЬЗОВАТЕЛЕЙ

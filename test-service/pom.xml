@@ -13,11 +13,10 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>test-service</name>
     <description>Demo project for Spring Boot</description>
+
     <properties>
         <java.version>21</java.version>
         <spring-cloud.version>2023.0.0</spring-cloud.version>
-<!--        <spring-security.version>2023.0.0</spring-security.version>-->
-<!--        <spring-security.version>6.3.1</spring-security.version>-->
     </properties>
 
     <dependencies>
@@ -25,12 +24,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-oauth2-client</artifactId>-->
-<!--        </dependency>-->
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -57,10 +50,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.security</groupId>-->
-<!--            <artifactId>spring-security-oauth2-core</artifactId>-->
-<!--        </dependency>-->
 
     </dependencies>
 
@@ -70,16 +59,9 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
-                <type>pom</type>
                 <scope>import</scope>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.security</groupId>-->
-<!--                <artifactId>spring-security-bom</artifactId>-->
-<!--                <version>{spring-security-version}</version>-->
-<!--                <type>pom</type>-->
-<!--                <scope>import</scope>-->
-<!--            </dependency>-->
+
         </dependencies>
     </dependencyManagement>
 

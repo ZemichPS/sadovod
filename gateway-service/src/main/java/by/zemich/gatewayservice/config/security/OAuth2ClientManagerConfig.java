@@ -1,8 +1,9 @@
-package by.zemich.gatewayservice.config;
+package by.zemich.gatewayservice.config.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.oauth2.client.*;
+import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
 import org.springframework.security.oauth2.client.registration.ReactiveClientRegistrationRepository;
 
 @Configuration
@@ -25,5 +26,12 @@ public class OAuth2ClientManagerConfig {
         authorizedClientManager.setAuthorizedClientProvider(authorizedClientProvider);
 
         return authorizedClientManager;
+    }
+
+    @Bean
+    public ReactiveOAuth2AuthorizedClientService reactiveOAuth2AuthorizedClientService(
+
+            ReactiveClientRegistrationRepository reactiveClientRegistrationRepository) {
+        return new InMemoryReactiveOAuth2AuthorizedClientService(reactiveClientRegistrationRepository);
     }
 }

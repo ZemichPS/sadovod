@@ -11,6 +11,7 @@ import java.util.UUID;
 
 @FeignClient(name = "gateway")
 public interface ExternalFetchSuppliers extends FetchSuppliersOutputPort {
+
     default List<by.zemich.vkms.domain.model.entities.Supplier> fetchSuppliers() {
         return getAll().stream()
                 .map(supplier -> new by.zemich.vkms.domain.model.entities.Supplier(

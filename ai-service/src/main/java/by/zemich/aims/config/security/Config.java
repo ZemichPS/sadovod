@@ -20,7 +20,7 @@ public class Config {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.sessionManagement(sessionManagement ->
                 sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-        http.authorizeHttpRequests((authorize) -> authorize.anyRequest().hasAnyRole("CATALOGUESERVICE"));
+        http.authorizeHttpRequests((authorize) -> authorize.anyRequest().hasAnyRole("CATALOGUESERVICE")).csrf().disable();
         http.oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));
 
         http.oauth2ResourceServer(oauth2ResourceServer ->
@@ -28,7 +28,6 @@ public class Config {
                         jwt.jwtAuthenticationConverter(jwtAuthenticationConverter())
                 )
         );
-
         return http.build();
     }
 
@@ -37,14 +36,11 @@ public class Config {
         return JwtDecoders.fromIssuerLocation("http://localhost:8282/realms/sadovod");
     }
 
-
     private JwtAuthenticationConverter jwtAuthenticationConverter() {
         JwtAuthenticationConverter jwtConverter = new JwtAuthenticationConverter();
         jwtConverter.setJwtGrantedAuthoritiesConverter(new AuthoritiesConverter());
         return jwtConverter;
     }
-
-
 
 
 }

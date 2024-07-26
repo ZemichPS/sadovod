@@ -1,25 +1,26 @@
 package by.zemich.aims.getproductdescription;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.io.IOException;
 
 
 @RestController
-@RequestMapping("api/v1/get_product_description")
+@RequestMapping("api/v1/ai")
 @Slf4j
 class GetProductDescriptionController {
 
-    @Autowired
-    private List<GetProductDescriptionServiceApi> aiServices;
+  private final GetProductDescriptionService aiService;
 
+    GetProductDescriptionController(GetProductDescriptionService aiService) {
+        this.aiService = aiService;
+    }
 
-    @GetMapping
-    public ResponseEntity<String> getProductDescriptionFromText(@RequestParam String request) {
-        String response = aiServices.getFirst().getProductDescription(request);
+    @PostMapping("/get_product_description")
+    public ResponseEntity<String> getProductDescriptionFromText(@RequestBody String requestBody) throws IOException {
+        String response = aiService.getProductDescription(requestBody);
         return ResponseEntity.ok(response);
     }
 

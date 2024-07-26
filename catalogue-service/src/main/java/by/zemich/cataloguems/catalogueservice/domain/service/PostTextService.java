@@ -1,12 +1,14 @@
 package by.zemich.cataloguems.catalogueservice.domain.service;
 
+import com.vdurmont.emoji.EmojiParser;
+
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class PostTextService {
     public static String removeEmojis(String originalText) {
         String firstLevel = originalText.replaceAll("[\\p{So}\\p{Cn}]", "");
-        return firstLevel.replaceAll("[\\p{InEmoticons}\\p{InMiscellaneousSymbolsAndPictographs}\\p{InTransportAndMapSymbols}\\p{InSupplementalSymbolsAndPictographs}\\p{InMiscellaneousSymbols}\\p{InDingbats}\\p{InSymbolsAndPictographsExtendedA}]", "");
+        return EmojiParser.removeAllEmojis(firstLevel);
     }
 
     //TODO добавить подгрузку листа с излишними сообшениями
