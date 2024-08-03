@@ -5,7 +5,7 @@ import by.zemich.vkms.application.ports.output.FetchVkPostsOutputPort;
 import by.zemich.vkms.application.ports.output.PublishEventOutputPort;
 import by.zemich.vkms.application.ports.output.VkPostManagementRepositoryOutputPort;
 import by.zemich.vkms.application.usecases.VkPostManagementUseCase;
-import by.zemich.vkms.domain.model.events.VkPostCreatedEvent;
+import by.zemich.vkms.domain.model.events.VkPostDocument;
 import by.zemich.vkms.domain.model.services.EventManagerService;
 import java.util.Collection;
 
@@ -44,8 +44,8 @@ public class VkPostManagementInputPort implements VkPostManagementUseCase {
                 .filter(post-> !vkPostManagementRepositoryOutputPort.existsByHash(post.getVkPostId().getHash()))
                 .forEach(vkPost -> {
                     vkPostManagementRepositoryOutputPort.savePost(vkPost);
-                    VkPostCreatedEvent vkPostCreatedEvent = eventManagerService.createdEvent(vkPost);
-                    publishEventOutputPort.publish(vkPostCreatedEvent);
+                    VkPostDocument vkPostDocument = eventManagerService.createdEvent(vkPost);
+                    publishEventOutputPort.publish(vkPostDocument);
                 });
     }
 }

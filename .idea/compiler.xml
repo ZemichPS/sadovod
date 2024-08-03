@@ -12,6 +12,7 @@
         <module name="telegram-service" />
         <module name="catalogue-service" />
         <module name="gateway-service" />
+        <module name="ui-service" />
         <module name="ai-micro-service" />
         <module name="test-service" />
         <module name="user-service" />
@@ -40,6 +41,7 @@
       <module name="suppliersms" options="-parameters" />
       <module name="telegram-service" options="-parameters" />
       <module name="test-service" options="-parameters" />
+      <module name="ui-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
       <module name="viber-service" options="-parameters" />
       <module name="vk-service" options="-parameters" />
