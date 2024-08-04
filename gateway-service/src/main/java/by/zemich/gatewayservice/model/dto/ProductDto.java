@@ -27,4 +27,5 @@ public class ProductDto {
     private Supplier supplier;
     private List<Image> imageEntityList;
     private List<Attribute> attributeList;
+    private boolean sale;
 }

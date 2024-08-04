@@ -1,0 +1,60 @@
+.product-card-layout {
+    display: flex;
+    flex-wrap: wrap; /* Перенос на новую строку при нехватке места */
+    justify-content: start; /* Выравнивание элементов по началу */
+    gap: 10px; /* Расстояние между карточками */
+    width: 100%;
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Ширина каждой карточки */
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+    margin: 8px;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-card span {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.product-card p {
+    color: #757575;
+    font-size: 14px;
+}
+
+.product-card .price {
+    color: green;
+    margin-top: 8px;
+}
+
+.details-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: #0056b3;
+}
+

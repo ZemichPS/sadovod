@@ -14,7 +14,8 @@ import java.util.UUID;
 @Getter
 @Setter
 
-public class Product {
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+public class ProductDto {
     private UUID uuid;
     private String name;
     private UUID postUuid;
@@ -26,11 +27,5 @@ public class Product {
     private Supplier supplier;
     private List<Image> imageEntityList;
     private List<Attribute> attributeList;
-
-    public record Image(UUID uuid, String link){}
-    public record Attribute(String key, String value) {}
-    public record Supplier(UUID uuid, String name) {}
+    private boolean sale;
 }
-
-
-

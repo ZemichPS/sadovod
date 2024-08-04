@@ -1,17 +1,17 @@
 package by.zemich.uiservice.representation;
 
-import by.zemich.uiservice.model.Product;
+import by.zemich.uiservice.model.ProductDto;
 import by.zemich.uiservice.representation.components.ProductCard;
+import by.zemich.uiservice.representation.components.ProductDialog;
 import by.zemich.uiservice.service.ProductService;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.avatar.Avatar;
+import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.VaadinIcon;
-import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.FlexLayout;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.Route;
@@ -33,15 +33,16 @@ public class Application extends AppLayout {
     private void createUI() {
         createTitle("Sadovod");
 
+        Div avatarDiv = new Div(getAvatar());
+
         this.addToNavbar(true,
                 createDrawerToggle(),
                 createTitle("Sadovod"),
-                new HorizontalLayout(getAvatar())
+                avatarDiv
         );
         this.addToDrawer(createHorizontalMenu());
-        this.setContent(createFakeProductCardLayout());
+        this.setContent(createProductCardLayout(1, 20));
 
-        // getElement().getStyle().set("height", "100%");
     }
 
     private H1 createTitle(String applicationName) {
@@ -81,33 +82,38 @@ public class Application extends AppLayout {
     private FlexLayout createProductCardLayout(int pageNumber, int pageSize) {
         FlexLayout layout = new FlexLayout();
         layout.setJustifyContentMode(FlexLayout.JustifyContentMode.CENTER);
-        layout.setWidthFull();
+        layout.setFlexWrap(FlexLayout.FlexWrap.WRAP);
 
-        final Page<Product> page = productService.getPage(pageNumber, pageSize);
+        final Page<ProductDto> page = productService.getPage(pageNumber, pageSize);
         page.getContent()
                 .stream()
-                .map(product -> new ProductCard(
-                        product.getImageEntityList().stream().map(Product.Image::link).toList(),
-                        product.getUuid(),
-                        product.getName(),
-                        product.getSupplier().name(),
-                        product.getOriginPrice().toString(),
-                        product.getAttributeList().stream().map(category -> category.key() + " : " + category.value()).collect(Collectors.joining("\n"))
-                ))
-                .peek(layout::add);
+                .map(product -> {
+                    ProductCard productCard = new ProductCard(
+                            product.getImageEntityList().stream().map(image -> image.link()).toList(),
+                            product.getUuid(),
+                            product.getName(),
+                            product.getSupplier().name(),
+                            product.getOriginPrice().toString(),
+                            product.getAttributeList().stream().map(category -> category.key() + " : " + category.value()).collect(Collectors.joining("\n"))
+                    );
+                    productCard.addClickListenerToDetailsButton(buttonClickEvent -> new ProductDialog(product).open());
+                    return productCard;
+                })
+                .forEach(layout::add);
 
         return layout;
     }
 
     private FlexLayout createFakeProductCardLayout() {
         FlexLayout layout = new FlexLayout();
-        layout.setJustifyContentMode(FlexLayout.JustifyContentMode.START);
+        layout.setJustifyContentMode(FlexLayout.JustifyContentMode.CENTER);
+        layout.setFlexWrap(FlexLayout.FlexWrap.WRAP);
 
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 25; i++) {
             ProductCard productCard = new ProductCard(
                     List.of("https://imgcdn.loverepublic.ru/upload/images/62542/625428704_70.jpg"),
                     UUID.randomUUID(),
-                    "Юбка",
+                    "Костюмчик",
                     "Ахмат чай",
                     "15.88",
                     """

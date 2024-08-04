@@ -1,7 +1,7 @@
 package by.zemich.uiservice.service;
 
 import by.zemich.uiservice.dao.feignclient.ProductFeignClient;
-import by.zemich.uiservice.model.Product;
+import by.zemich.uiservice.model.ProductDto;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ public class ProductService {
         this.productFeignClient = productFeignClient;
     }
 
-    public Page<Product> getPage(int pageNo, int pageSize) {
+    public Page<ProductDto> getPage(int pageNo, int pageSize) {
         return productFeignClient.getPage(pageNo, pageSize);
     }
 }
